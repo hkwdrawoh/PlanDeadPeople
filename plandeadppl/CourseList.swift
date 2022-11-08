@@ -25,11 +25,36 @@ struct CourseList: View {
     var body: some View {
         NavigationView {
             VStack {
+                HStack {
+                    Button{} label: {
+                        Image(systemName: "arrow.uturn.backward")
+                            .resizable(resizingMode: .stretch)
+                            .frame(width: 22, height: 22)
+                            .foregroundColor(ColorAux1)
+                    }
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 12)
+                        .background(ColorMain2)
+                        .cornerRadius(10)
+                    Spacer()
+                    Button{} label: {
+                        Image(systemName: "list.bullet.indent")
+                            .resizable(resizingMode: .stretch)
+                            .frame(width: 22, height: 22)
+                            .foregroundColor(ColorAux1)
+                    }
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 12)
+                    .background(ColorMain2)
+                    .cornerRadius(10)
+                }
+                .padding(.horizontal)
+                
                 Text("Course List")
-                    .font(.system(size: 35))
+                    .font(.system(size: 38))
                     .foregroundColor(ColorAux4)
                     .bold()
-                    .padding(.top, 5)
+                    .padding(.top, -15)
                 
                 HStack {
                     Group {
@@ -55,7 +80,7 @@ struct CourseList: View {
                     .font(.title3)
                 }
                 .padding(.bottom, 5)
-                .padding(.top, -5)
+                .padding(.top, -15)
                 
                 List {
                    ForEach(Courses) { course in
