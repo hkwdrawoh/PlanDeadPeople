@@ -13,14 +13,8 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for index in 0..<10 {
-            let newCourse = Course(context: viewContext)
-            newCourse.timestamp = Date()
-            newCourse.cid = UUID()
-            newCourse.csub = "ELEC"
-            newCourse.cnum = "3644"
-            newCourse.title = "Mobile App Development"
-        }
+        importCourse(viewContext)
+        importUser(viewContext)
         do {
             try viewContext.save()
         } catch {

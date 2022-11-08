@@ -13,7 +13,7 @@ struct plandeadpplApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CourseList()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
