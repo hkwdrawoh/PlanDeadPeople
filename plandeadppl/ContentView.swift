@@ -12,40 +12,40 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Course.timestamp, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var Courses: FetchedResults<Course>
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(items) { item in
+                ForEach(Courses) { Course in
                     NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                        Text("Course at \(Course.timestamp!, formatter: CourseFormatter)")
                     } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                        Text(Course.timestamp!, formatter: CourseFormatter)
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .onDelete(perform: deleteCourses)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    Button(action: addCourse) {
+                        Label("Add Course", systemImage: "plus")
                     }
                 }
             }
-            Text("Select an item")
+            Text("Select an Course")
         }
     }
 
-    private func addItem() {
+    private func addCourse() {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let newCourse = Course(context: viewContext)
+            newCourse.timestamp = Date()
 
             do {
                 try viewContext.save()
@@ -58,9 +58,9 @@ struct ContentView: View {
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
+    private func deleteCourses(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
+            offsets.map { Courses[$0] }.forEach(viewContext.delete)
 
             do {
                 try viewContext.save()
@@ -74,7 +74,7 @@ struct ContentView: View {
     }
 }
 
-private let itemFormatter: DateFormatter = {
+private let CourseFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
     formatter.timeStyle = .medium
