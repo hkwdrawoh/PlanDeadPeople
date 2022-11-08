@@ -14,6 +14,7 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         importCourse(viewContext)
+        importUser(viewContext)
         do {
             try viewContext.save()
         } catch {
