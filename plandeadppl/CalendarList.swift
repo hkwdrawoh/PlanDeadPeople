@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 import UIKit
 
+@available(iOS 16.0, *)
 struct CalendarList: View {
     
     init() {
@@ -162,6 +163,7 @@ struct CalendarList: View {
 }
 
 
+@available(iOS 16.0, *)
 struct CalendarList_Previews: PreviewProvider {
     static var previews: some View {
         CalendarList().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).previewInterfaceOrientation(.portrait)

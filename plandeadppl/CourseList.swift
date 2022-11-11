@@ -10,6 +10,7 @@ import SwiftUI
 import CoreData
 import UIKit
 
+@available(iOS 16.0, *)
 struct CourseList: View {
     
     init() {
@@ -97,6 +98,8 @@ struct CourseList: View {
                 }
                 .listStyle(.inset)
                 .foregroundColor(ColorAux4)
+                .scrollContentBackground(.hidden)
+                .background(ColorMain4)
                 .padding(.horizontal, -40)
             }
             .background(ColorMain4)
@@ -114,6 +117,7 @@ private let CourseFormatter: DateFormatter = {
     return formatter
 }()
 
+@available(iOS 16.0, *)
 struct CourseList_Previews: PreviewProvider {
     static var previews: some View {
         CourseList().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)

@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 
+@available(iOS 16.0, *)
 struct CourseRow: View {
     var course: Course
     
