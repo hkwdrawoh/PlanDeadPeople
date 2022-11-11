@@ -9,19 +9,28 @@ import Foundation
 import CoreData
 
 func importCourse(_ viewContext: NSManagedObjectContext) {
-    for index in 1...40 {
+    for index in 1...20 {
         let newCourse = Course(context: viewContext)
         newCourse.id = UUID()
         newCourse.cid = Int16(index)
         newCourse.csub = "ELEC"
         newCourse.cnum = String(Int.random(in: 1001...4999))
-        newCourse.title = "Mobile Application Development"
+        newCourse.title = "Mobile Application Development Development Development"
+        newCourse.sem = ["1", "2", "S"].randomElement()
+    }
+    for index in 1...20 {
+        let newCourse = Course(context: viewContext)
+        newCourse.id = UUID()
+        newCourse.cid = Int16(index)
+        newCourse.csub = "ELEC"
+        newCourse.cnum = String(Int.random(in: 1001...4999))
+        newCourse.title = "Mobile Application Dev"
         newCourse.sem = ["1", "2", "S"].randomElement()
     }
 }
 
 func importUser(_ viewContext: NSManagedObjectContext) {
-    for index in 1..<2 {
+    for _ in 1..<2 {
         let newUser = User(context: viewContext)
         newUser.id = UUID()
         newUser.uid = "guest"

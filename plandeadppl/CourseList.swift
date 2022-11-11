@@ -13,10 +13,6 @@ import UIKit
 @available(iOS 16.0, *)
 struct CourseList: View {
     
-    init() {
-        UITableView.appearance().backgroundColor = UIColor(ColorMain4)
-    }
-    
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Course.cnum, ascending: true)],
@@ -84,23 +80,19 @@ struct CourseList: View {
                 .padding(.bottom, 5)
                 .padding(.top, -15)
                 
-                List {
+                ScrollView {
                    ForEach(Courses) { course in
                        if course.sem == sem {
+                           Rectangle()
+                                .frame(width: .infinity, height: 1)
                            NavigationLink(destination: CourseRow(course: course)) {
                                CourseRow(course: course)
                            }
                        }
                     }
-                    .listRowBackground(ColorMain4)
-                    .listRowSeparatorTint(ColorAux2)
-                    .padding(.horizontal, 30)
                 }
-                .listStyle(.inset)
                 .foregroundColor(ColorAux4)
-                .scrollContentBackground(.hidden)
                 .background(ColorMain4)
-                .padding(.horizontal, -40)
             }
             .background(ColorMain4)
             
@@ -109,13 +101,6 @@ struct CourseList: View {
     }
 
 }
-
-private let CourseFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 @available(iOS 16.0, *)
 struct CourseList_Previews: PreviewProvider {
