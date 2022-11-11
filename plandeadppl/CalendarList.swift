@@ -123,26 +123,16 @@ struct CalendarList: View {
             ScrollView {
                 ZStack(alignment: .top) {
                     TimetableView()
-                    VStack {
-                        ForEach(Users) { user in
-                            if user.uid == "guest" {
-                                Text(user.uid!)
-                                Text(user.uname!)
-                                if sem == "1" {
-                                    ForEach(user.timetablesem1! , id: \.self) { cid in
-                                        Text(String(cid))
-                                    }
-                                } else if sem == "2" {
-                                    ForEach(user.timetablesem2! , id: \.self) { cid in
-                                        Text(String(cid))
-                                    }
-                                } else {
-                                    ForEach(user.timetablesem3! , id: \.self) { cid in
-                                        Text(String(cid))
-                                    }
-                                }
+                    ForEach(Users) { user in
+                        if user.uid == "guest" {
+                            if sem == "1" {
+                                GenTimeslot(Courses, user.timetablesem1!)
+                            } else if sem == "2" {
+                                GenTimeslot(Courses, user.timetablesem2!)
+                            } else {
+                                GenTimeslot(Courses, user.timetablesem3!)
                             }
-                         }
+                        }
                     }
                 }
             }

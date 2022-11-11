@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
         <attribute name="cid" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="classnum" optional="YES" attributeType="String"/>
         <attribute name="cnum" attributeType="String"/>
         <attribute name="csub" attributeType="String"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
@@ -16,8 +17,4 @@
         <attribute name="uid" attributeType="String"/>
         <attribute name="uname" attributeType="String"/>
     </entity>
-    <elements>
-        <element name="Course" positionX="-63" positionY="-18" width="128" height="28"/>
-        <element name="User" positionX="-63" positionY="-9" width="128" height="28"/>
-    </elements>
 </model>

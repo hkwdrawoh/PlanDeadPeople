@@ -23,7 +23,7 @@ struct TimetableView: View {
                     Rectangle()
                         .frame(height: 1)
                 }
-                .padding(.bottom, 40)
+                .padding(.bottom, 35)
             }
         }
         .background(ColorMain4)
