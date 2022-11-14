@@ -10,7 +10,6 @@ import SwiftUI
 import CoreData
 import UIKit
 
-@available(iOS 16.0, *)
 struct CourseList: View {
     
     @Environment(\.managedObjectContext) private var viewContext
@@ -102,7 +101,6 @@ struct CourseList: View {
 
 }
 
-@available(iOS 16.0, *)
 struct CourseList_Previews: PreviewProvider {
     static var previews: some View {
         CourseList().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)

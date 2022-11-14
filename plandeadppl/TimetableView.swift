@@ -9,7 +9,6 @@ import SwiftUI
 import CoreData
 import UIKit
 
-@available(iOS 16.0, *)
 struct TimetableView: View {
     
     var body: some View {
@@ -32,7 +31,6 @@ struct TimetableView: View {
 }
 
 
-@available(iOS 16.0, *)
 struct TimetableView_Previews: PreviewProvider {
     static var previews: some View {
         TimetableView()
