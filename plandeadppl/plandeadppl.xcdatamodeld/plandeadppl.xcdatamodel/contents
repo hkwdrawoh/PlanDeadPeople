@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CClass" representedClassName="CClass" syncable="YES" codeGenerationType="class">
+        <attribute name="cdate" attributeType="Transformable" customClassName="[Int]"/>
+        <attribute name="cend" attributeType="Transformable" customClassName="[Int]"/>
+        <attribute name="cid" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="classid" attributeType="String"/>
+        <attribute name="cstart" attributeType="Transformable" customClassName="[Int]"/>
+    </entity>
     <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
         <attribute name="cid" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="classnum" optional="YES" attributeType="String"/>

@@ -10,7 +10,7 @@ import CoreData
 import UIKit
 
 struct CalendarList: View {
-    
+
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \User.uid, ascending: true)],
@@ -20,11 +20,38 @@ struct CalendarList: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Course.cid, ascending: true)],
         animation: .default)
     private var Courses: FetchedResults<Course>
+    
+    
+    @State var usernow = User()
+    @State var username = "guest"
     @State var sem = "1"
     @State var weekday = "1"
     
+    
+    func loadClass() -> [CClass]? {
+        let Classes: NSFetchRequest<CClass> = CClass.fetchRequest()
+        
+        do {
+            let classes = try self.viewContext.fetch(Classes) as [CClass]
+            return classes
+        } catch {
+            
+        }
+        return nil
+    }
+
+    
     var body: some View {
-        VStack {
+        
+        for user in Users {
+            if user.uid == username {
+                usernow = user
+            }
+        }
+        let classes = loadClass()
+        var timeslots: [TimeSlots] = GenTimeSlot(classes!, [1, 2, 3, 4, 5])
+
+        return VStack {
             HStack {
                 Button{} label: {
                     Image(systemName: "arrow.uturn.backward")
@@ -125,11 +152,14 @@ struct CalendarList: View {
                     ForEach(Users) { user in
                         if user.uid == "guest" {
                             if sem == "1" {
-                                GenTimeslot(Courses, user.timetablesem1!)
+//                                GenTimeslot(Courses, user.timetablesem1!)
+                                Text("HI")
                             } else if sem == "2" {
-                                GenTimeslot(Courses, user.timetablesem2!)
+//                                GenTimeslot(Courses, user.timetablesem2!)
+                                Text("HI")
                             } else {
-                                GenTimeslot(Courses, user.timetablesem3!)
+//                                GenTimeslot(Courses, user.timetablesem3!)
+                                Text("HI")
                             }
                         }
                     }
