@@ -149,20 +149,7 @@ struct CalendarList: View {
             ScrollView {
                 ZStack(alignment: .top) {
                     TimetableView()
-                    ForEach(Users) { user in
-                        if user.uid == "guest" {
-                            if sem == "1" {
-//                                GenTimeslot(Courses, user.timetablesem1!)
-                                Text("HI")
-                            } else if sem == "2" {
-//                                GenTimeslot(Courses, user.timetablesem2!)
-                                Text("HI")
-                            } else {
-//                                GenTimeslot(Courses, user.timetablesem3!)
-                                Text("HI")
-                            }
-                        }
-                    }
+                    TimetableCell(timeslots: timeslots)
                 }
             }
         }

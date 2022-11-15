@@ -18,11 +18,11 @@ struct TimetableView: View {
                     Spacer()
                         .frame(width: 5)
                     Text(div)
-                        .frame(width: 50)
+                        .frame(width: 50, height: 25)
                     Rectangle()
                         .frame(height: 1)
                 }
-                .padding(.bottom, 35)
+                .padding(.bottom, 45)
             }
         }
         .background(ColorMain4)

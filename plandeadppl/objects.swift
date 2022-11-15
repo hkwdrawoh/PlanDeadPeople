@@ -25,13 +25,14 @@ let ColorAux4 = Color(UIColor(red: 13/255, green: 47/255, blue: 48/255, alpha: 1
 let timediv = ["08:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "15:30", "16:30", "17:30", "18:30", "19:30", "20:30", "21:30"]
 
 // Class TimeSlot: Generate timeslot in timetable
-class TimeSlots {
+class TimeSlots: Identifiable {
     var cid: Int16
     var cdate: [Int]
     var cstart: [Int]
     var cend: [Int]
     var div_total: Int
     var div_num: Int
+    var height_down: [Int]
     
     init(_ cclass: CClass) {
         self.cid = cclass.cid
@@ -40,15 +41,21 @@ class TimeSlots {
         self.cend = cclass.cend!
         self.div_total = 1
         self.div_num = 1
+        self.height_down = []
+        for i in 0..<cstart.count {
+            self.height_down.append((78 * (cstart[i] - 8)))
+        }
     }
     
     // check time crash function: compare two timeslots
     func check_crash(_ class2: TimeSlots) -> Bool {
         for i in 0..<cdate.count {
-            if let j = class2.cdate.firstIndex(where: {$0 == cdate[i]}) {
-                if cstart[i] <= class2.cstart[j] && cstart[i] > class2.cend[j] {
+            if class2.cdate.contains(cdate[i]) {
+                let j = class2.cdate.firstIndex(where: {$0 == cdate[i]})!
+                if cstart[i] >= class2.cstart[j] && cstart[i] < class2.cend[j] {
                     return true
-                } else if class2.cstart[j] <= cstart[i] && class2.cstart[j] > cend[i] {
+                }
+                if class2.cstart[j] >= cstart[i] && class2.cstart[j] < cend[i] {
                     return true
                 }
             }
@@ -56,19 +63,10 @@ class TimeSlots {
         return false
     }
     
-    func incdiv_old() {
-        div_total += 1
-    }
-    
-    func incdiv_new() {
-        div_total += 1
-        div_num += 1
-    }
-    
-    func returnString() -> [String] {
-        var output: [String] = []
+    func returnString() -> String {
+        var output: String = ""
         for i in 0..<cdate.count {
-            output.append("\(cdate[i]): \(cstart)-\(cend), div: (\(div_total), \(div_num))")
+            output += "\(cdate[i]): \(cstart[i])-\(cend[i]), div: (\(div_total), \(div_num)), height: \(height_down[0])"
         }
         return output
     }

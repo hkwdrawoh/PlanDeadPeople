@@ -37,7 +37,7 @@ func importUser(_ viewContext: NSManagedObjectContext) {
         newUser.id = UUID()
         newUser.uid = "guest"
         newUser.uname = "Guest"
-        newUser.timetablesem1 = [1, 2, 3, 4, 5]
+        newUser.timetablesem1 = [1, 2, 3, 4, 5, 6, 7, 8]
         newUser.timetablesem2 = [8, 7, 14, 16, 17, 19]
         newUser.timetablesem3 = [6, 9, 13, 21, 22, 24]
     }
@@ -48,7 +48,7 @@ func importClass(_ viewContext: NSManagedObjectContext) {
         let newClass = CClass(context: viewContext)
         newClass.cid = Int16(index)
         newClass.classid = ["A", "B", "C"].randomElement()
-        newClass.cdate = [[1, 2, 3, 4, 5, 6].randomElement()!]
+        newClass.cdate = [1]
         newClass.cstart = [[9, 10, 11, 12, 13, 14, 15, 16, 17].randomElement()!]
         newClass.cend = [newClass.cstart![0]+2]
     }
