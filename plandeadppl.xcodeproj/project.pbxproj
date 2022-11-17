@@ -26,7 +26,6 @@
 		C5F5B670291951C300EE0BC5 /* plandeadpplUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5B66F291951C300EE0BC5 /* plandeadpplUITestsLaunchTests.swift */; };
 		C5F5B67F291A38EA00EE0BC5 /* objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5B67E291A38EA00EE0BC5 /* objects.swift */; };
 		C5F5B685291A5A3F00EE0BC5 /* CourseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5B684291A5A3F00EE0BC5 /* CourseRow.swift */; };
-		C5F5B687291A8BAE00EE0BC5 /* modelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5B686291A8BAE00EE0BC5 /* modelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +68,6 @@
 		C5F5B66F291951C300EE0BC5 /* plandeadpplUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plandeadpplUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C5F5B67E291A38EA00EE0BC5 /* objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = objects.swift; sourceTree = "<group>"; };
 		C5F5B684291A5A3F00EE0BC5 /* CourseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRow.swift; sourceTree = "<group>"; };
-		C5F5B686291A8BAE00EE0BC5 /* modelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +130,6 @@
 				C5F5B67E291A38EA00EE0BC5 /* objects.swift */,
 				C59E27EF2925E1BB00C4742F /* functions.swift */,
 				C5F5B656291951C200EE0BC5 /* Persistence.swift */,
-				C5F5B686291A8BAE00EE0BC5 /* modelData.swift */,
 				C5F5B658291951C200EE0BC5 /* plandeadppl.xcdatamodeld */,
 				ACEF29872925D99100CADB98 /* CourseData.json */,
 				C5F5B651291951C200EE0BC5 /* Assets.xcassets */,
@@ -309,7 +306,6 @@
 				C59E27F22925E3D900C4742F /* MainMenu.swift in Sources */,
 				C5F5B650291951BC00EE0BC5 /* CoursePage.swift in Sources */,
 				C5F5B67F291A38EA00EE0BC5 /* objects.swift in Sources */,
-				C5F5B687291A8BAE00EE0BC5 /* modelData.swift in Sources */,
 				C5F5B64E291951BC00EE0BC5 /* plandeadpplApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

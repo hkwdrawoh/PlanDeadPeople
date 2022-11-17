@@ -22,7 +22,7 @@ struct TimetableCell: View {
                     // top separation
                     Spacer()
                         .frame(height: CGFloat(height))
-                    EachCell(div_num: timeslot.div_num, div_total: timeslot.div_total, inText1: "\(timeslot.cid), \(height)", inText2: timeslot.returnString())
+                    EachCell(cid: timeslot.cid, div_num: timeslot.div_num, div_total: timeslot.div_total, inText1: "\(timeslot.cid), \(height)", inText2: timeslot.returnString())
                 }
             }
         }
@@ -33,6 +33,7 @@ struct TimetableCell: View {
 
 struct EachCell: View {
     @Environment(\.managedObjectContext) private var viewContext
+    var cid: Int16
     var div_num: Int
     var div_total: Int
     var inText1: String
