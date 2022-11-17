@@ -73,26 +73,34 @@ struct EachCell: View {
                     .frame(width: 2)
             }
             
-            VStack (alignment: .leading) {
-                Text(inText1+"\n"+inText2)
-                    .bold()
-                    .font(.title3)
-                    .foregroundColor(ColorAux1)
-                    .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 0))
-                Spacer()
-            }
-            .frame(maxWidth: .infinity, maxHeight: 78*2-3, alignment: .leading)
-            .background(ColorMain1a)
-            .cornerRadius(10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10).fill(ColorMain2).mask(
-                    HStack {
-                        Rectangle().frame(width: 10)
-                        Spacer()
-                    }
+            ZStack {
+                VStack (alignment: .leading) {
+                    Text(inText1+"\n"+inText2)
+                        .bold()
+                        .font(.title3)
+                        .foregroundColor(ColorAux1)
+                        .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 0))
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity, maxHeight: 78*2-3, alignment: .leading)
+                .background(ColorMain1a)
+                .cornerRadius(10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10).fill(ColorMain2).mask(
+                        HStack {
+                            Rectangle().frame(width: 10)
+                            Spacer()
+                        }
+                    )
+                    .allowsHitTesting(false)
                 )
-                .allowsHitTesting(false)
-            )
+                
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(style: div_total != 1 ? StrokeStyle(lineWidth: 3, dash: [5]) : StrokeStyle(lineWidth: 0))
+                    .foregroundColor(ColorAux3)
+                    .allowsHitTesting(false)
+                    .frame(maxWidth: .infinity, maxHeight: 78*2-3, alignment: .leading)
+            }
             
             ForEach(0..<(div_total - div_num)) { _ in
                 Spacer()
