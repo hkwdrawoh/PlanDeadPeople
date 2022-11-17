@@ -24,6 +24,9 @@ let ColorAux4 = Color(UIColor(red: 13/255, green: 47/255, blue: 48/255, alpha: 1
 // Time division
 let timediv = ["08:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "15:30", "16:30", "17:30", "18:30", "19:30", "20:30", "21:30"]
 
+// Menu selection
+let menuselect = ["Welcome", "CourseList", "CourseDetail", "Timetable", "Personal"]
+
 // Class TimeSlot: Generate timeslot in timetable
 class TimeSlots: Identifiable {
     var cid: Int16
