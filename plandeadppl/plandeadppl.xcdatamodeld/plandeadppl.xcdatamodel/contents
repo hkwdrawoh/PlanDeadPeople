@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CClass" representedClassName="CClass" syncable="YES" codeGenerationType="class">
         <attribute name="cdate" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="cend" attributeType="Transformable" customClassName="[Int]"/>
@@ -12,6 +12,7 @@
         <attribute name="classnum" optional="YES" attributeType="String"/>
         <attribute name="cnum" attributeType="String"/>
         <attribute name="csub" attributeType="String"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="sem" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
@@ -24,4 +25,9 @@
         <attribute name="uid" attributeType="String"/>
         <attribute name="uname" attributeType="String"/>
     </entity>
+    <elements>
+        <element name="CClass" positionX="160" positionY="192" width="128" height="104"/>
+        <element name="Course" positionX="160" positionY="192" width="128" height="149"/>
+        <element name="User" positionX="160" positionY="192" width="128" height="119"/>
+    </elements>
 </model>
