@@ -16,30 +16,12 @@ struct CalendarList: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \User.uid, ascending: true)],
         animation: .default)
     private var Users: FetchedResults<User>
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Course.cid, ascending: true)],
-        animation: .default)
-    private var Courses: FetchedResults<Course>
     
     
     @State var usernow = User()
     @State var username = "guest"
     @State var sem = "1"
     @State var weekday = "1"
-    
-    
-    func loadClass() -> [CClass]? {
-        let Classes: NSFetchRequest<CClass> = CClass.fetchRequest()
-        
-        do {
-            let classes = try self.viewContext.fetch(Classes) as [CClass]
-            return classes
-        } catch {
-            
-        }
-        return nil
-    }
-
     
     var body: some View {
         
@@ -48,8 +30,8 @@ struct CalendarList: View {
                 usernow = user
             }
         }
-        let classes = loadClass()
-        var timeslots: [TimeSlots] = GenTimeSlot(classes!, Array(1...17))
+        let classes = loadClass(viewContext)!
+        var timeslots: [TimeSlots] = GenTimeSlot(classes, Array(1...17))
 
         return VStack {
             HStack {
