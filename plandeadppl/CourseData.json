@@ -1,0 +1,425 @@
+[
+   {
+    "cid"=1
+    "csub"="ELEC"
+    "cnum"="2243"
+    "title"="Introduction to Electricity and Magnetism"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=2
+    "csub"="ELEC"
+    "cnum"="2346"
+    "title"="Electric Circuit Theory"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=3
+    "csub"="ELEC"
+    "cnum"="2347"
+    "title"="Fundamentals of Optics"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=4
+    "csub"="ELEC"
+    "cnum"="2441"
+    "title"="Computer Organization and Microprocessors"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=5
+    "csub"="ELEC"
+    "cnum"="2843"
+    "title"="Multivariable Calculus and Elementary Partial Differential Equations"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=6
+    "csub"="ELEC"
+    "cnum"="3141"
+    "title"="Power Transmission and Distribution"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=7
+    "csub"="ELEC"
+    "cnum"="3143"
+    "title"="Power Electronics"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=8
+    "csub"="ELEC"
+    "cnum"="3243"
+    "title"="Fundamentals of Next-Generation Communications"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=9
+    "csub"="ELEC"
+    "cnum"="3342"
+    "title"="Digital System Design"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=10
+    "csub"="ELEC"
+    "cnum"="3347"
+    "title"="Electronic Material and Quantum Physics"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=11
+    "csub"="ELEC"
+    "cnum"="3350"
+    "title"="Electronic Circuits and Devices I"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=12
+    "csub"="ELEC"
+    "cnum"="3443"
+    "title"="Computer Network"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=13
+    "csub"="ELEC"
+    "cnum"="3543"
+    "title"="Advanced Systems Programming"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=14
+    "csub"="ELEC"
+    "cnum"="3644"
+    "title"="Advanced Mobile Apps Development"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=15
+    "csub"="ELEC"
+    "cnum"="3844"
+    "title"="Engineering Management and Society"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=16
+    "csub"="ELEC"
+    "cnum"="3845"
+    "title"="Economics, Finance and Marketing for Engineers"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=17
+    "csub"="ELEC"
+    "cnum"="3848"
+    "title"="Integrated Design Project"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=18
+    "csub"="ELEC"
+    "cnum"="4144"
+    "title"="Electric Vehicle Technology"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=19
+    "csub"="ELEC"
+    "cnum"="4146"
+    "title"="Building Services - Electrical Installations"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=20
+    "csub"="ELEC"
+    "cnum"="4148"
+    "title"="Smart Grid and Renewable Energy Systems"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=21
+    "csub"="ELEC"
+    "cnum"="4149"
+    "title"="Basic Lighting Engineering"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=22
+    "csub"="ELEC"
+    "cnum"="4546"
+    "title"="Investment and Trading for Engineering Students"
+    "sem"="1"
+    "classnum"="1A"
+   }
+   ,
+   {
+    "cid"=23
+    "csub"="ELEC"
+    "cnum"="1310"
+    "title"="Electricity and Electronics"
+    "sem"="1"
+    "classnum"="1B"
+   }
+   ,
+   {
+    "cid"=24
+    "csub"="ELEC"
+    "cnum"="1320"
+    "title"="Engineers in the Modern World"
+    "sem"="1"
+    "classnum"="1B"
+   }
+   ,
+   {
+    "cid"=25
+    "csub"="ELEC"
+    "cnum"="2147"
+    "title"="Electrical Energy Technology"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=26
+    "csub"="ELEC"
+    "cnum"="2245"
+    "title"="Control Systems I"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=27
+    "csub"="ELEC"
+    "cnum"="2543"
+    "title"="Object-Oriented Programming and Data Structure"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=28
+    "csub"="ELEC"
+    "cnum"="2544"
+    "title"="Introduction to Electronic Commerce and Financial Technology"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=29
+    "csub"="ELEC"
+    "cnum"="2844"
+    "title"="Probabilistic Systems Analysis"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=30
+    "csub"="ELEC"
+    "cnum"="3142"
+    "title"="Electrical Energy Conversion"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=31
+    "csub"="ELEC"
+    "cnum"="3241"
+    "title"="Signals and Linear Systems"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=32
+    "csub"="ELEC"
+    "cnum"="3244"
+    "title"="Digital Signal Processing"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=33
+    "csub"="ELEC"
+    "cnum"="3249"
+    "title"="Pattern Recognition and Machine Intelligence"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=34
+    "csub"="ELEC"
+    "cnum"="3349"
+    "title"="Optical Devices"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=35
+    "csub"="ELEC"
+    "cnum"="3441"
+    "title"="Computer Architecture"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=36
+    "csub"="ELEC"
+    "cnum"="3442"
+    "title"="Embedded Systems"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=37
+    "csub"="ELEC"
+    "cnum"="3846"
+    "title"="Numerical Methods and Optimization"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=38
+    "csub"="ELEC"
+    "cnum"="4141"
+    "title"="Electric Railway Systems"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=39
+    "csub"="ELEC"
+    "cnum"="4142"
+    "title"="Power System Protection and Switchgear"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=40
+    "csub"="ELEC"
+    "cnum"="4145"
+    "title"="Building Services - Electrical Services"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=41
+    "csub"="ELEC"
+    "cnum"="4147"
+    "title"="Power System Analysis and Control"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=42
+    "csub"="ELEC"
+    "cnum"="4245"
+    "title"="Digital Image Processing"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=43
+    "csub"="ELEC"
+    "cnum"="4343"
+    "title"="Design of Digital Integrated Circuits"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=44
+    "csub"="ELEC"
+    "cnum"="4544"
+    "title"="Artificial Intelligence and Deep Learning"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=45
+    "csub"="ELEC"
+    "cnum"="4642"
+    "title"="VLSI Design Principles"
+    "sem"="2"
+    "classnum"="2A"
+   }
+   ,
+   {
+    "cid"=46
+    "csub"="ELEC"
+    "cnum"="2840"
+    "title"="Engineering Training"
+    "sem"="S"
+    "classnum"="SA"
+   }
+   ,
+   {
+    "cid"=47
+    "csub"="ELEC"
+    "cnum"="3841"
+    "title"="Internship"
+    "sem"="S"
+    "classnum"="SA"
+   }
+   ,
+]
