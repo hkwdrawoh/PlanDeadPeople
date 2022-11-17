@@ -21,3 +21,57 @@ let ColorAux2 = Color(UIColor(red: 0, green: 0, blue: 0, alpha: 1))             
 let ColorAux3 = Color(UIColor(red: 1, green: 0, blue: 0, alpha: 1))                         //red
 let ColorAux4 = Color(UIColor(red: 13/255, green: 47/255, blue: 48/255, alpha: 1))          //dark green
 
+// Time division
+let timediv = ["08:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "15:30", "16:30", "17:30", "18:30", "19:30", "20:30", "21:30"]
+
+// Menu selection
+let menuselect = ["Welcome", "CourseList", "CourseDetail", "Timetable", "Personal"]
+
+// Class TimeSlot: Generate timeslot in timetable
+class TimeSlots: Identifiable {
+    var cid: Int16
+    var cdate: [String]
+    var cstart: [Int]
+    var cend: [Int]
+    var div_total: Int
+    var div_num: Int
+    var height_down: [Int]
+    
+    init(_ cclass: CClass) {
+        self.cid = cclass.cid
+        self.cdate = cclass.cdate!
+        self.cstart = cclass.cstart!
+        self.cend = cclass.cend!
+        self.div_total = 1
+        self.div_num = 1
+        self.height_down = []
+        for i in 0..<cstart.count {
+            self.height_down.append((78 * (cstart[i] - 8)))
+        }
+    }
+    
+    // check time crash function: compare two timeslots
+    func check_crash(_ class2: TimeSlots) -> Bool {
+        for i in 0..<cdate.count {
+            if class2.cdate.contains(cdate[i]) {
+                let j = class2.cdate.firstIndex(where: {$0 == cdate[i]})!
+                if cstart[i] >= class2.cstart[j] && cstart[i] < class2.cend[j] {
+                    return true
+                }
+                if class2.cstart[j] >= cstart[i] && class2.cstart[j] < cend[i] {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+    
+    func returnString() -> String {
+        var output: String = ""
+        for i in 0..<cdate.count {
+            output += "\(cdate[i]): \(cstart[i])-\(cend[i]), div: (\(div_total), \(div_num)), height: \(height_down[0])"
+        }
+        return output
+    }
+}
+

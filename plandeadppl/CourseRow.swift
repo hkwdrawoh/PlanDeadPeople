@@ -12,13 +12,21 @@ struct CourseRow: View {
     var course: Course
     
     var body: some View {
-        HStack {
-            Text(course.csub! + " " + course.cnum!)
-                .font(.system(size: 20))
-                .frame(width: 110)
-            Text(course.title!)
-                .font(.system(size: 18))
+        VStack {
+            HStack {
+                Spacer()
+                    .frame(width: 3)
+                Text(course.csub! + " " + course.cnum!)
+                    .font(.system(size: 20))
+                    .frame(width: 110)
+                    .multilineTextAlignment(.leading)
+                Text(course.title!)
+                    .font(.system(size: 18))
+                    .multilineTextAlignment(.leading)
+                Spacer()
+            }
+            .frame(height: 50)
+            .frame(maxWidth: .infinity)
         }
-        .frame(height: 50)
     }
 }
