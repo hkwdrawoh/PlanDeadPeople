@@ -7,9 +7,9 @@
 
 import Foundation
 import SwiftUI
+import CoreData
 
 struct TimetableCell: View {
-    
     @Binding var weekday: String
     var timeslots: [TimeSlots]
     
@@ -18,7 +18,6 @@ struct TimetableCell: View {
             if (timeslot.cdate[0] == weekday) {
                 VStack {
                     let height = timeslot.height_down[0] + 14
-//                    let height = 14
                     
                     // top separation
                     Spacer()
@@ -31,14 +30,16 @@ struct TimetableCell: View {
     
 }
 
+
 struct EachCell: View {
-    
+    @Environment(\.managedObjectContext) private var viewContext
     var div_num: Int
     var div_total: Int
     var inText1: String
     var inText2: String
     
     var body: some View {
+        let courses = loadCourse(viewContext)!
         HStack {
             Spacer()
                 .frame(width: 65)
@@ -52,34 +53,37 @@ struct EachCell: View {
             }
             
             // actual cell
-            ZStack {
-                VStack (alignment: .leading) {
-                    Text(inText1+"\n"+inText2)
-                        .bold()
-                        .font(.title3)
-                        .foregroundColor(ColorAux1)
-                        .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 0))
-                    Spacer()
-                }
-                .frame(maxWidth: .infinity, maxHeight: 78*2-3, alignment: .leading)
-                .background(ColorMain1a)
-                .cornerRadius(10)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10).fill(ColorMain2).mask(
-                        HStack {
-                            Rectangle().frame(width: 10)
-                            Spacer()
-                        }
-                    )
-                    .allowsHitTesting(false)
-                )
-                
-                // dotted lines overlay
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(style: div_total != 1 ? StrokeStyle(lineWidth: 3, dash: [7]) : StrokeStyle(lineWidth: 0))
-                    .foregroundColor(ColorAux3)
-                    .allowsHitTesting(false)
+            Button(action: {}) {
+                ZStack {
+                    VStack (alignment: .leading) {
+                        Text(inText1+"\n"+inText2)
+                            .bold()
+                            .font(.title3)
+                            .foregroundColor(ColorAux1)
+                            .padding(EdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 0))
+                        Spacer()
+                    }
                     .frame(maxWidth: .infinity, maxHeight: 78*2-3, alignment: .leading)
+                    .background(ColorMain1a)
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10).fill(ColorMain2).mask(
+                            HStack {
+                                Rectangle().frame(width: 10)
+                                Spacer()
+                            }
+                        )
+                        .allowsHitTesting(false)
+                    )
+                    
+                    // dotted lines overlay
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(style: div_total != 1 ? StrokeStyle(lineWidth: 3, dash: [7]) : StrokeStyle(lineWidth: 0))
+                        .foregroundColor(ColorAux3)
+                        .allowsHitTesting(false)
+                        .frame(maxWidth: .infinity, maxHeight: 78*2-3, alignment: .leading)
+                }
+                .multilineTextAlignment(.leading)
             }
             
             // right separation

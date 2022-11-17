@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CoursePage.swift
 //  plandeadppl
 //
 //  Created by Hobo on 7/11/2022.
@@ -13,6 +13,7 @@ import UIKit
 struct CourseList: View {
     
     @Environment(\.managedObjectContext) private var viewContext
+    @Binding var menu: String
     @State var sem = "1"
 
     var body: some View {
@@ -21,7 +22,7 @@ struct CourseList: View {
         NavigationView {
             VStack {
                 HStack {
-                    Button{} label: {
+                    Button{menu = menuselect[0]} label: {
                         Image(systemName: "arrow.uturn.backward")
                             .resizable(resizingMode: .stretch)
                             .frame(width: 22, height: 22)
@@ -58,7 +59,10 @@ struct CourseList: View {
                        if course.sem == sem {
                            Rectangle()
                                 .frame(width: .infinity, height: 1)
-                           NavigationLink(destination: CourseRow(course: course)) {
+                           Button {
+                               menu = menuselect[3]
+                               
+                           } label: {
                                CourseRow(course: course)
                            }
                        }
@@ -77,6 +81,6 @@ struct CourseList: View {
 
 struct CourseList_Previews: PreviewProvider {
     static var previews: some View {
-        CourseList().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        CourseList(menu: .constant(menuselect[2])).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

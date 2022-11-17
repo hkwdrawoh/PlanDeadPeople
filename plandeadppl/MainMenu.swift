@@ -20,9 +20,9 @@ struct MainMenu: View {
             case menuselect[1]:
                 CalendarList()
             case menuselect[2]:
-                CourseList()
+                CourseList(menu: $menu)
             case menuselect[3]:
-                CourseList()
+                CourseList(menu: $menu)
             case menuselect[4]:
                 ScrollView{HomePage()}
             default:
