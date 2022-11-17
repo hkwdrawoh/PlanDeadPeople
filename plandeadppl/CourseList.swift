@@ -13,13 +13,11 @@ import UIKit
 struct CourseList: View {
     
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Course.cnum, ascending: true)],
-        animation: .default)
-    private var Courses: FetchedResults<Course>
     @State var sem = "1"
 
     var body: some View {
+        let courses = loadCourse(viewContext)!
+        
         NavigationView {
             VStack {
                 HStack {
@@ -56,7 +54,7 @@ struct CourseList: View {
                 SemSelect(sem: $sem)
                 
                 ScrollView {
-                   ForEach(Courses) { course in
+                   ForEach(courses) { course in
                        if course.sem == sem {
                            Rectangle()
                                 .frame(width: .infinity, height: 1)

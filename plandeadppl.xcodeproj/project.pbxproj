@@ -12,6 +12,7 @@
 		C55990BD291E309B00C9DF7D /* CalendarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55990BC291E309B00C9DF7D /* CalendarList.swift */; };
 		C55990BF291E49D500C9DF7D /* TimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55990BE291E49D500C9DF7D /* TimetableView.swift */; };
 		C59E27EE2925CD5400C4742F /* SelectButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E27ED2925CD5400C4742F /* SelectButtons.swift */; };
+		C59E27F02925E1BB00C4742F /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E27EF2925E1BB00C4742F /* functions.swift */; };
 		C5F5B64E291951BC00EE0BC5 /* plandeadpplApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5B64D291951BC00EE0BC5 /* plandeadpplApp.swift */; };
 		C5F5B650291951BC00EE0BC5 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5B64F291951BC00EE0BC5 /* CourseList.swift */; };
 		C5F5B652291951C200EE0BC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F5B651291951C200EE0BC5 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		C55990BC291E309B00C9DF7D /* CalendarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarList.swift; sourceTree = "<group>"; };
 		C55990BE291E49D500C9DF7D /* TimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableView.swift; sourceTree = "<group>"; };
 		C59E27ED2925CD5400C4742F /* SelectButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectButtons.swift; sourceTree = "<group>"; };
+		C59E27EF2925E1BB00C4742F /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 		C5F5B64A291951BC00EE0BC5 /* plandeadppl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plandeadppl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F5B64D291951BC00EE0BC5 /* plandeadpplApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plandeadpplApp.swift; sourceTree = "<group>"; };
 		C5F5B64F291951BC00EE0BC5 /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				C5F5B64F291951BC00EE0BC5 /* CourseList.swift */,
 				C5F5B684291A5A3F00EE0BC5 /* CourseRow.swift */,
 				C5F5B67E291A38EA00EE0BC5 /* objects.swift */,
+				C59E27EF2925E1BB00C4742F /* functions.swift */,
 				C5F5B656291951C200EE0BC5 /* Persistence.swift */,
 				C5F5B686291A8BAE00EE0BC5 /* modelData.swift */,
 				C5F5B658291951C200EE0BC5 /* plandeadppl.xcdatamodeld */,
@@ -291,6 +294,7 @@
 				C5F5B657291951C200EE0BC5 /* Persistence.swift in Sources */,
 				C5F5B685291A5A3F00EE0BC5 /* CourseRow.swift in Sources */,
 				C59E27EE2925CD5400C4742F /* SelectButtons.swift in Sources */,
+				C59E27F02925E1BB00C4742F /* functions.swift in Sources */,
 				C5F5B65A291951C200EE0BC5 /* plandeadppl.xcdatamodeld in Sources */,
 				C55990BD291E309B00C9DF7D /* CalendarList.swift in Sources */,
 				C55990BF291E49D500C9DF7D /* TimetableView.swift in Sources */,
