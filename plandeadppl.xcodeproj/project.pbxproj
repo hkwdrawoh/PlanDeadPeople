@@ -12,6 +12,7 @@
 		C504FB5C2922943B00C8E376 /* TimetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504FB5B2922943B00C8E376 /* TimetableCell.swift */; };
 		C55990BD291E309B00C9DF7D /* CalendarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55990BC291E309B00C9DF7D /* CalendarPage.swift */; };
 		C55990BF291E49D500C9DF7D /* TimetableLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55990BE291E49D500C9DF7D /* TimetableLine.swift */; };
+		C57990A4292626E900453E9C /* DescriptionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57990A3292626E900453E9C /* DescriptionPage.swift */; };
 		C59E27EE2925CD5400C4742F /* HeaderButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E27ED2925CD5400C4742F /* HeaderButtons.swift */; };
 		C59E27F02925E1BB00C4742F /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E27EF2925E1BB00C4742F /* functions.swift */; };
 		C59E27F22925E3D900C4742F /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E27F12925E3D900C4742F /* MainMenu.swift */; };
@@ -51,6 +52,7 @@
 		C504FB5B2922943B00C8E376 /* TimetableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableCell.swift; sourceTree = "<group>"; };
 		C55990BC291E309B00C9DF7D /* CalendarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPage.swift; sourceTree = "<group>"; };
 		C55990BE291E49D500C9DF7D /* TimetableLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableLine.swift; sourceTree = "<group>"; };
+		C57990A3292626E900453E9C /* DescriptionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionPage.swift; sourceTree = "<group>"; };
 		C59E27ED2925CD5400C4742F /* HeaderButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderButtons.swift; sourceTree = "<group>"; };
 		C59E27EF2925E1BB00C4742F /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 		C59E27F12925E3D900C4742F /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				372FB002291E98B9003E8D4D /* WelcomePage.swift */,
 				C55990BC291E309B00C9DF7D /* CalendarPage.swift */,
 				C5F5B64F291951BC00EE0BC5 /* CoursePage.swift */,
+				C57990A3292626E900453E9C /* DescriptionPage.swift */,
 				C504FB5B2922943B00C8E376 /* TimetableCell.swift */,
 				C55990BE291E49D500C9DF7D /* TimetableLine.swift */,
 				C5F5B684291A5A3F00EE0BC5 /* CourseRow.swift */,
@@ -297,6 +300,7 @@
 				C504FB5C2922943B00C8E376 /* TimetableCell.swift in Sources */,
 				C5F5B657291951C200EE0BC5 /* Persistence.swift in Sources */,
 				C5F5B685291A5A3F00EE0BC5 /* CourseRow.swift in Sources */,
+				C57990A4292626E900453E9C /* DescriptionPage.swift in Sources */,
 				C59E27EE2925CD5400C4742F /* HeaderButtons.swift in Sources */,
 				C59E27F02925E1BB00C4742F /* functions.swift in Sources */,
 				C5F5B65A291951C200EE0BC5 /* plandeadppl.xcdatamodeld in Sources */,
