@@ -40,13 +40,13 @@ struct MainMenu: View {
                     .background(menu == menuselect[0] ? ColorMain2 : nil)
                     .cornerRadius(10)
                 Button{menu = menuselect[1]} label: {
-                    Image(systemName: "calendar.day.timeline.left")
+                    Image(systemName: "calendar.badge.clock")
                         .resizable(resizingMode: .stretch)
-                        .frame(width: 45, height: 35)
+                        .frame(width: 45, height: 39)
                         .foregroundColor(ColorAux1)
                 }
                     .padding(.horizontal, 10)
-                    .padding(.vertical, 15)
+                    .padding(.vertical, 13)
                     .background(menu == menuselect[1] ? ColorMain2 : nil)
                     .cornerRadius(10)
                 Button{menu = menuselect[2]} label: {
