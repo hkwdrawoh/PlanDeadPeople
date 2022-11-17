@@ -51,33 +51,9 @@ struct CourseList: View {
                     .font(.system(size: 38))
                     .foregroundColor(ColorAux4)
                     .bold()
-                    .padding(.top, -15)
+                    .padding(.vertical, -5)
                 
-                HStack {
-                    Group {
-                        Button("Sem 1", action: {sem = "1"})
-                        .foregroundColor(sem == "1" ? ColorAux1 : ColorAux4)
-                        .padding(.horizontal, 15)
-                        .padding(.vertical, 8)
-                        .background(sem == "1" ? ColorMain2 : ColorMain4)
-                        
-                        Button("Sem 2", action: {sem = "2"})
-                        .foregroundColor(sem == "2" ? ColorAux1 : ColorAux4)
-                        .padding(.horizontal, 15)
-                        .padding(.vertical, 8)
-                        .background(sem == "2" ? ColorMain2 : ColorMain4)
-                        
-                        Button("Sem S", action: {sem = "S"})
-                        .foregroundColor(sem == "S" ? ColorAux1 : ColorAux4)
-                        .padding(.horizontal, 15)
-                        .padding(.vertical, 8)
-                        .background(sem == "S" ? ColorMain2 : ColorMain4)
-                    }
-                    .cornerRadius(10)
-                    .font(.title3)
-                }
-                .padding(.bottom, 5)
-                .padding(.top, -15)
+                SemSelect(sem: $sem)
                 
                 ScrollView {
                    ForEach(Courses) { course in

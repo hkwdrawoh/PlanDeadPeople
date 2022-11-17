@@ -27,7 +27,7 @@ let timediv = ["08:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "1
 // Class TimeSlot: Generate timeslot in timetable
 class TimeSlots: Identifiable {
     var cid: Int16
-    var cdate: [Int]
+    var cdate: [String]
     var cstart: [Int]
     var cend: [Int]
     var div_total: Int

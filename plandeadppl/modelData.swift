@@ -48,7 +48,7 @@ func importClass(_ viewContext: NSManagedObjectContext) {
         let newClass = CClass(context: viewContext)
         newClass.cid = Int16(index)
         newClass.classid = ["A", "B", "C"].randomElement()
-        newClass.cdate = [1]
+        newClass.cdate = [["1", "2", "3", "4", "5", "6"].randomElement()!]
         newClass.cstart = [[9, 10, 11, 12, 13, 14, 15, 16, 17].randomElement()!]
         newClass.cend = [newClass.cstart![0]+2]
     }
