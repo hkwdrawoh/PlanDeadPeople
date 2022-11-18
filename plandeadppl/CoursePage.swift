@@ -15,9 +15,12 @@ struct CourseList: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Binding var menu: String
     @State var sem = "1"
+    let coursesData = loadCourse()
+    
 
     var body: some View {
-        let courses = loadCourse(viewContext)!.sorted(by: {$0.csub! == $1.csub! ? $0.cnum! < $1.cnum! : $0.csub! < $1.csub!})
+        
+        var courses = coursesData.sorted(by: {$0.csub == $1.csub ? $0.cnum < $1.cnum : $0.csub < $1.csub})
         
         NavigationView {
             VStack {

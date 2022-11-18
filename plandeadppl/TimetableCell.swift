@@ -40,7 +40,7 @@ struct EachCell: View {
     var inText2: String
     
     var body: some View {
-        let courses = loadCourse(viewContext)!
+        let courses = loadCourse()
         HStack {
             Spacer()
                 .frame(width: 65)

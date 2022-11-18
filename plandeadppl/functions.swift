@@ -9,27 +9,31 @@ import Foundation
 import CoreData
 
 // import course to Course
-func importCourse(_ viewContext: NSManagedObjectContext) {
-    for index in 1...20 {
-        let newCourse = Course(context: viewContext)
-        newCourse.id = UUID()
-        newCourse.cid = Int16(index)
-        newCourse.csub = "ELEC"
-        newCourse.cnum = String(Int.random(in: 1001...4999))
-        newCourse.title = "Mobile Application Development Development Development"
-        newCourse.sem = ["1", "2", "S"].randomElement()
-        newCourse.classnum = newCourse.sem! + "A"
+func importCourse() -> [Course] {
+    
+    var courses: [Course] = []
+    
+    let pathString = Bundle.main.path(forResource: "CourseData", ofType: "json")
+    
+    if let path = pathString {
+        let url = URL(fileURLWithPath: path)
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            do {
+                let courseData = try decoder.decode([Course].self, from: data)
+                courses = courseData
+            }
+            catch {
+                print(error)
+            }
+        }
+        catch {
+            print(error)
+        }
     }
-    for index in 21...40 {
-        let newCourse = Course(context: viewContext)
-        newCourse.id = UUID()
-        newCourse.cid = Int16(index)
-        newCourse.csub = "COMP"
-        newCourse.cnum = String(Int.random(in: 1001...4999))
-        newCourse.title = "Mobile Application Dev"
-        newCourse.sem = ["1", "2", "S"].randomElement()
-        newCourse.classnum = newCourse.sem! + "A"
-    }
+    
+    return courses
 }
 
 // import user to User
@@ -58,16 +62,9 @@ func importClass(_ viewContext: NSManagedObjectContext) {
 }
 
 // load courses from Course
-func loadCourse(_ viewContext: NSManagedObjectContext) -> [Course]? {
-    let Courses: NSFetchRequest<Course> = Course.fetchRequest()
-    
-    do {
-        let courses = try viewContext.fetch(Courses) as [Course]
-        return courses
-    } catch {
-        
-    }
-    return nil
+func loadCourse() -> [Course] {
+    let courses = importCourse()
+    return courses
 }
 
 // load classes from CClass

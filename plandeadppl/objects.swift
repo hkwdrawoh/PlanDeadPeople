@@ -27,6 +27,18 @@ let timediv = ["08:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "1
 // Menu selection
 let menuselect = ["Welcome", "CourseList", "CourseDetail", "Timetable", "Personal"]
 
+// Courses: provide course details
+class Course: Identifiable, Codable {
+    var cid: Int16
+    var csub: String
+    var cnum: String
+    var title: String
+    var sem: String
+    var classnum: String
+    var desc: String
+    
+}
+
 // Class TimeSlot: Generate timeslot in timetable
 class TimeSlots: Identifiable {
     var cid: Int16
