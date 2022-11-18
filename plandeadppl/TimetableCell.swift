@@ -24,7 +24,7 @@ struct TimetableCell: View {
                     // top separation
                     Spacer()
                         .frame(height: CGFloat(height))
-                    EachCell(menu: $menu, course_desc: $course_desc, cid: timeslot.cid, div_num: timeslot.div_num, div_total: timeslot.div_total, inText1: "\(timeslot.cid), \(height)", inText2: timeslot.returnString())
+                    EachCell(menu: $menu, course_desc: $course_desc, cid: timeslot.cid, div_num: timeslot.div_num, div_total: timeslot.div_total)
                 }
             }
         }
@@ -40,11 +40,10 @@ struct EachCell: View {
     var cid: Int16
     var div_num: Int
     var div_total: Int
-    var inText1: String
-    var inText2: String
     
     var body: some View {
         let courses = loadCourse()
+        let course = courses[courses.firstIndex(where: {$0.cid == cid})!]
         HStack {
             Spacer()
                 .frame(width: 65)
@@ -59,12 +58,12 @@ struct EachCell: View {
             
             // actual cell
             Button(action: {
-                course_desc = courses[courses.firstIndex(where: {$0.cid == cid})!]
+                course_desc = course
                 menu = menuselect[3]
             }) {
                 ZStack {
                     VStack (alignment: .leading) {
-                        Text(inText1+"\n"+inText2)
+                        Text("\(course.csub) \(course.cnum)\n\(course.loc) \(course.room)")
                             .bold()
                             .font(.title3)
                             .foregroundColor(ColorAux1)
