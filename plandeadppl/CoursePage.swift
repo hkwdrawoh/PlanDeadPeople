@@ -14,6 +14,7 @@ struct CourseList: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     @Binding var menu: String
+    @Binding var course_desc: Course
     @State var sem = "1"
     let coursesData = loadCourse()
     
@@ -64,7 +65,7 @@ struct CourseList: View {
                                 .frame(width: .infinity, height: 1)
                            Button {
                                menu = menuselect[3]
-                               
+                               course_desc = course
                            } label: {
                                CourseRow(course: course)
                            }
@@ -84,6 +85,7 @@ struct CourseList: View {
 
 struct CourseList_Previews: PreviewProvider {
     static var previews: some View {
-        CourseList(menu: .constant(menuselect[2])).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        let courses = loadCourse()
+        CourseList(menu: .constant(menuselect[2]), course_desc: .constant(courses[0])).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

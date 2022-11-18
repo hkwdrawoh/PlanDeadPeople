@@ -10,7 +10,13 @@ import CoreData
 
 struct MainMenu: View {
     
+    let courses = loadCourse()
     @State var menu = menuselect[0]
+    @State var course: Course
+    
+    init() {
+        course = courses[0]
+    }
     
     var body: some View {
         VStack(spacing: 0) {
@@ -20,9 +26,9 @@ struct MainMenu: View {
             case menuselect[1]:
                 CalendarList()
             case menuselect[2]:
-                CourseList(menu: $menu)
+                CourseList(menu: $menu, course_desc: $course)
             case menuselect[3]:
-                CourseDescription()
+                CourseDescription(menu: $menu, course: $course)
             case menuselect[4]:
                 ScrollView{HomePage()}
             default:
