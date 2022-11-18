@@ -13,6 +13,14 @@ struct ListFilter: View {
     
     @Binding var filter: [String]
     
+    init(filter: Binding<[String]>) {
+        self._filter = filter
+        
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(ColorMain2)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(ColorAux1)], for: .selected)
+//        UISegmentedControl.appearance().tintColor = UIColor(ColorMain2)
+    }
+    
     var body: some View {
         ScrollView {
             VStack (alignment: .center) {
@@ -32,7 +40,11 @@ struct ListFilter: View {
                     Spacer()
                     Picker("", selection: $filter[1]) {
                         ForEach(["A", "D"], id: \.self) {
-                            Text($0)
+                            if $0 == "A" {
+                                Text("Ascending")
+                            } else {
+                                Text("Descending")
+                            }
                         }
                     }
                     .pickerStyle(.segmented)
