@@ -28,7 +28,7 @@ struct CourseDescription: View {
                     .cornerRadius(10)
                 Spacer()
                 Button{} label: {
-                    Image(systemName: "list.bullet.indent")
+                    Image(systemName: "heart")
                         .resizable(resizingMode: .stretch)
                         .frame(width: 22, height: 22)
                         .foregroundColor(ColorAux1)
@@ -54,9 +54,9 @@ struct CourseDescription: View {
                     .padding(.vertical, -5)
                     .multilineTextAlignment(.center)
                 
-                Text("Goodbye World!")
-                    .font(.title)
+                Text("Description: "+course.desc)
                     .foregroundColor(ColorAux4)
+                    .padding(.all)
                     .frame(maxWidth: .infinity)
                     
             }

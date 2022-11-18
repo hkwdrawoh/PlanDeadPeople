@@ -36,6 +36,9 @@ class Course: Identifiable, Codable {
     var sem: String
     var classnum: String
     var desc: String
+    var loc: String
+    var room: String
+    var prof: String
     
 }
 
