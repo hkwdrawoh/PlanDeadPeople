@@ -28,7 +28,7 @@ struct CourseDescription: View {
                     .cornerRadius(10)
                 Spacer()
                 Button{} label: {
-                    Image(systemName: "list.bullet.indent")
+                    Image(systemName: "heart")
                         .resizable(resizingMode: .stretch)
                         .frame(width: 22, height: 22)
                         .foregroundColor(ColorAux1)
@@ -53,10 +53,34 @@ struct CourseDescription: View {
                     .bold()
                     .padding(.vertical, -5)
                     .multilineTextAlignment(.center)
-                
-                Text("Goodbye World!")
-                    .font(.title)
+                HStack {
+                    Text("Teacher: "+course.prof)
+                        .font(.system(size: 20))
+                        .foregroundColor(ColorAux4)
+                        .multilineTextAlignment(.leading)
+                        .padding([.top, .leading, .trailing], 10.0)
+                    Spacer()}
+                HStack {
+                    Text("Location: "+course.loc+course.room)
+                        .font(.system(size: 20))
+                        .foregroundColor(ColorAux4)
+                        .multilineTextAlignment(.leading)
+                        .padding([.top, .leading, .trailing], 10)
+                    Button{} label: {
+                        Image(systemName: "map")
+                            .resizable(resizingMode: .stretch)
+                            .frame(width: 22, height: 22)
+                            .foregroundColor(ColorAux1)
+                    }
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 8)
+                    .background(ColorMain2)
+                    .cornerRadius(10)
+                    Spacer()}
+                Text("Description: "+course.desc)
+                    .font(.system(size: 20))
                     .foregroundColor(ColorAux4)
+                    .padding(.all, 10.0)
                     .frame(maxWidth: .infinity)
                     
             }
