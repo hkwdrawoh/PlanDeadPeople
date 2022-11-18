@@ -23,7 +23,20 @@ struct ListFilter: View {
                         .font(.system(size: 22))
                     Spacer()
                 }
-                
+                HStack {
+                    Picker("", selection: $filter[0]) {
+                        ForEach(["Course code", "Course title"], id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    Spacer()
+                    Picker("", selection: $filter[1]) {
+                        ForEach(["A", "D"], id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                }
             }
         }
         .padding()

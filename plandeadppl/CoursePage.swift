@@ -19,6 +19,7 @@ struct CourseList: View {
     @State var sem = "1"
     @State var showSheet = false
     @State var filter = ["Course code", "A"]
+    @State var filter_true = ["Course code", "A"]
     let coursesData = loadCourse()
     
 
@@ -39,11 +40,24 @@ struct CourseList: View {
         NavigationView {
             VStack (spacing: 0) {
                 HStack {
-                    Button{menu = menuselect[0]} label: {
-                        Image(systemName: "arrow.uturn.backward")
-                            .resizable(resizingMode: .stretch)
-                            .frame(width: 22, height: 22)
-                            .foregroundColor(ColorAux1)
+                    Button{
+                        if showSheet {
+                            filter = filter_true
+                            showSheet.toggle()
+                        } else {
+                            menu = menuselect[0]
+                        }
+                    } label: {
+                        if showSheet {
+                            Text("Cancel")
+                                .foregroundColor(ColorAux1)
+                                .bold()
+                        } else {
+                            Image(systemName: "arrow.uturn.backward")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 22, height: 22)
+                                .foregroundColor(ColorAux1)
+                        }
                     }
                         .padding(.horizontal, 12)
                         .padding(.vertical, 12)
@@ -51,10 +65,13 @@ struct CourseList: View {
                         .cornerRadius(10)
                     Spacer()
                     Button{
+                        if showSheet {
+                            filter_true = filter
+                        }
                         showSheet.toggle()
                     } label: {
                         if showSheet {
-                            Text("Enter")
+                            Text("Apply")
                                 .foregroundColor(ColorAux1)
                                 .bold()
                         } else {
