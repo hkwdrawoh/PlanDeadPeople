@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		372FB003291E98B9003E8D4D /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372FB002291E98B9003E8D4D /* WelcomePage.swift */; };
+		374574822927D28100A3085E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374574812927D28100A3085E /* LocationManager.swift */; };
 		ACEF29882925D99100CADB98 /* CourseData.json in Resources */ = {isa = PBXBuildFile; fileRef = ACEF29872925D99100CADB98 /* CourseData.json */; };
 		C504FB5C2922943B00C8E376 /* TimetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504FB5B2922943B00C8E376 /* TimetableCell.swift */; };
 		C55990BD291E309B00C9DF7D /* CalendarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55990BC291E309B00C9DF7D /* CalendarPage.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		372FB002291E98B9003E8D4D /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		374574812927D28100A3085E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		ACEF29872925D99100CADB98 /* CourseData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseData.json; sourceTree = "<group>"; };
 		C504FB5B2922943B00C8E376 /* TimetableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableCell.swift; sourceTree = "<group>"; };
 		C55990BC291E309B00C9DF7D /* CalendarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPage.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				C5F5B67E291A38EA00EE0BC5 /* objects.swift */,
 				C59E27EF2925E1BB00C4742F /* functions.swift */,
 				C5F5B656291951C200EE0BC5 /* Persistence.swift */,
+				374574812927D28100A3085E /* LocationManager.swift */,
 				C5F5B658291951C200EE0BC5 /* plandeadppl.xcdatamodeld */,
 				ACEF29872925D99100CADB98 /* CourseData.json */,
 				C5F5B651291951C200EE0BC5 /* Assets.xcassets */,
@@ -304,6 +307,7 @@
 				C5F5B657291951C200EE0BC5 /* Persistence.swift in Sources */,
 				C5F5B685291A5A3F00EE0BC5 /* CourseRow.swift in Sources */,
 				C57990A4292626E900453E9C /* DescriptionPage.swift in Sources */,
+				374574822927D28100A3085E /* LocationManager.swift in Sources */,
 				C59E27EE2925CD5400C4742F /* HeaderButtons.swift in Sources */,
 				C59E27F02925E1BB00C4742F /* functions.swift in Sources */,
 				C5F5B65A291951C200EE0BC5 /* plandeadppl.xcdatamodeld in Sources */,
