@@ -27,6 +27,41 @@ let timediv = ["08:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "1
 // Menu selection
 let menuselect = ["Welcome", "CourseList", "CourseDetail", "Timetable", "Personal"]
 
+// Building locations enum
+enum Buildings: CaseIterable {
+    case LE, MWT
+    
+    var name: String {
+        switch self {
+        case .LE: return "Library Extension"
+        case .MWT: return "Meng Wah Theatre"
+        }
+    }
+    
+    var coordinates: (Float64, Float64) {
+        switch self {
+        case .LE: return (22.283309, 114.137784)
+        case .MWT: return (22.282276, 114.139125)
+        }
+    }
+}
+
+
+// Courses: provide course details
+class Course: Identifiable, Codable {
+    var cid: Int16
+    var csub: String
+    var cnum: String
+    var title: String
+    var sem: String
+    var classnum: String
+    var desc: String
+    var loc: String
+    var room: String
+    var prof: String
+    
+}
+
 // Class TimeSlot: Generate timeslot in timetable
 class TimeSlots: Identifiable {
     var cid: Int16

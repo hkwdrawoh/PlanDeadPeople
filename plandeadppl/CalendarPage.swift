@@ -1,5 +1,5 @@
 //
-//  CalendarList.swift
+//  CalendarPage.swift
 //  plandeadppl
 //
 //  Created by Hobo on 11/11/2022.
@@ -17,7 +17,8 @@ struct CalendarList: View {
         animation: .default)
     private var Users: FetchedResults<User>
     
-    
+    @Binding var menu: String
+    @Binding var course_desc: Course
     @State var usernow = User()
     @State var username = "guest"
     @State var sem = "1"
@@ -66,7 +67,7 @@ struct CalendarList: View {
             ScrollView {
                 ZStack(alignment: .top) {
                     TimetableView()
-                    TimetableCell(weekday: $weekday, timeslots: timeslots)
+                    TimetableCell(menu: $menu, course_desc: $course_desc, weekday: $weekday, timeslots: timeslots)
                 }
             }
         }
@@ -78,6 +79,7 @@ struct CalendarList: View {
 
 struct CalendarList_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarList().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).previewInterfaceOrientation(.portrait)
+        let courses = loadCourse()
+        CalendarList(menu: .constant(menuselect[1]), course_desc: .constant(courses[0])).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).previewInterfaceOrientation(.portrait)
     }
 }

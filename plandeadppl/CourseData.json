@@ -1,471 +1,612 @@
 [
    {
-    "cid"=1
-    "csub"="ELEC"
-    "cnum"="2243"
-    "title"="Introduction to Electricity and Magnetism"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="This is the first course introducing basic mathematical and physical concepts of electromagnetism. It aims at providing fundamental understanding about key electromagnetic principles and scope of their applications. It covers the fundamentals of electrostatics, magnetostatics, time-varying fields, dielectric materials, ferromagnetism, magnetic circuits and wave propagation. The close relationship between electromagnetism and circuit models will be introduced together with basic circuit elements, concepts, laws, and circuit theorems. The extended applications of theories are introduced after each part of theoretical studies. Specifically, the course covers the following topics in contemporary electromagnetics: 1) Electrostatics: Coulomb's law, Gauss’ Law, electrostatic field, potential, capacitance and energy storage, 2) Magnetostatics: Biot-Savart law, magnetic fields, Ampere's circuital law, force on a current-carrying conductor, Lorentz force. 3) Time-varying fields: Faraday’s Law, Lenz's Law, self-inductance, mutual inductance and stored energy. 4) Dielectric material: dipole, polarisation, permittivity and capacitors. 5) Ferromagnetism: magnetisation curve, permeability, hysteresis and saturation. 6) Magnetic circuits: magnetomotive force, reluctance. 5) Wave propagations, material properties, and transmission lines (optional). It serves as the entry class of engineering electromagnetism."
+    "cid":1,
+    "csub":"ELEC",
+    "cnum":"2243",
+    "title":"Introduction to Electricity and Magnetism",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"This is the first course introducing basic mathematical and physical concepts of electromagnetism. It aims at providing fundamental understanding about key electromagnetic principles and scope of their applications. It covers the fundamentals of electrostatics, magnetostatics, time-varying fields, dielectric materials, ferromagnetism, magnetic circuits and wave propagation. The close relationship between electromagnetism and circuit models will be introduced together with basic circuit elements, concepts, laws, and circuit theorems. The extended applications of theories are introduced after each part of theoretical studies. Specifically, the course covers the following topics in contemporary electromagnetics: 1) Electrostatics: Coulomb's law, Gauss' Law, electrostatic field, potential, capacitance and energy storage, 2) Magnetostatics: Biot-Savart law, magnetic fields, Ampere's circuital law, force on a current-carrying conductor, Lorentz force. 3) Time-varying fields: Faraday’s Law, Lenz's Law, self-inductance, mutual inductance and stored energy. 4) Dielectric material: dipole, polarisation, permittivity and capacitors. 5) Ferromagnetism: magnetisation curve, permeability, hysteresis and saturation. 6) Magnetic circuits: magnetomotive force, reluctance. 7) Wave propagations, material properties, and transmission lines (optional). It serves as the entry class of engineering electromagnetism.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Li C."
    }
    ,
    {
-    "cid"=2
-    "csub"="ELEC"
-    "cnum"="2346"
-    "title"="Electric Circuit Theory"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="This is an introductory course that provides students with a solid foundation of knowledge on analog and digital electric circuits and concepts, to prepare them for subsequent circuit-related courses. At the end of the course, the student will be able to identify, analyse, design and optimize basic circuits based on fundamental circuit laws and theorems, using passive and active circuit components as well as the op-amp. The topics to be covered include basic circuit concepts and laws, methods of analysis, circuit theorems, op-amps, first and second order circuits, diode and diode circuits and introductory digital electronics."
+    "cid":2,
+    "csub":"ELEC",
+    "cnum":"2346",
+    "title":"Electric Circuit Theory",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"This is an introductory course that provides students with a solid foundation of knowledge on analog and digital electric circuits and concepts, to prepare them for subsequent circuit-related courses. At the end of the course, the student will be able to identify, analyse, design and optimize basic circuits based on fundamental circuit laws and theorems, using passive and active circuit components as well as the op-amp. The topics to be covered include basic circuit concepts and laws, methods of analysis, circuit theorems, op-amps, first and second order circuits, diode and diode circuits and introductory digital electronics.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Lee A."
    }
    ,
    {
-    "cid"=3
-    "csub"="ELEC"
-    "cnum"="2347"
-    "title"="Fundamentals of Optics"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="This is an introductory course that provides students with a solid foundation of knowledge on optics, to prepare them for subsequent photonics-related courses. At the end of the course, the student will be able to identify, analyse, design and optimize optical systems such as microscopy based on fundamental laws and theorems. The topics to be covered include ray optics, wave optics, beam optics, polarization optics, guided-wave optics and quantum optics."
+    "cid":3,
+    "csub":"ELEC",
+    "cnum":"2347",
+    "title":"Fundamentals of Optics",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"This is an introductory course that provides students with a solid foundation of knowledge on optics, to prepare them for subsequent photonics-related courses. At the end of the course, the student will be able to identify, analyse, design and optimize optical systems such as microscopy based on fundamental laws and theorems. The topics to be covered include ray optics, wave optics, beam optics, polarization optics, guided-wave optics and quantum optics.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Choy W."
    }
    ,
    {
-    "cid"=4
-    "csub"="ELEC"
-    "cnum"="2441"
-    "title"="Computer Organization and Microprocessors"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="This course aims at providing fundamental knowledge on the principles of computer organization and microprocessors, and serves as the first course to other more advanced computer courses. In order to bring out the essential principles, a simple processor is used for illustration and is studied in detail, and on top of it, more general systems are also introduced. Specifically, the course covers the following topics: integer and floating point number representations; basic computer building blocks; register transfers and phases of instruction execution; micro-computer system organization - bus signals, timing, and address decoding; study of a simple model microprocessor and the latest processor development: signals, instruction set and addressing modes; binary arithmetic; subroutines; I/O programming; interrupt I/O and DMA; memory and storage systems; exception handling; system software."
+    "cid":4,
+    "csub":"ELEC",
+    "cnum":"2441",
+    "title":"Computer Organization and Microprocessors",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"This course aims at providing fundamental knowledge on the principles of computer organization and microprocessors, and serves as the first course to other more advanced computer courses. In order to bring out the essential principles, a simple processor is used for illustration and is studied in detail, and on top of it, more general systems are also introduced. Specifically, the course covers the following topics: integer and floating point number representations; basic computer building blocks; register transfers and phases of instruction execution; micro-computer system organization - bus signals, timing, and address decoding; study of a simple model microprocessor and the latest processor development: signals, instruction set and addressing modes; binary arithmetic; subroutines; I/O programming; interrupt I/O and DMA; memory and storage systems; exception handling; system software.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Tam V."
    }
    ,
    {
-    "cid"=5
-    "csub"="ELEC"
-    "cnum"="2843"
-    "title"="Multivariable Calculus and Elementary Partial Differential Equations"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="This course aims to further develop the foundation of mathematics used in engineering discipline. Students will be introduced and explored to 1)The concepts of multivariable functions in multivariable spaces. 2)The concepts of differentiation and integration of multivariable functions. 3) Basic extensions of multivariable calculus to vector analysis. 4)The ideas of periodic functions and their Fourier series representations. 5)The methods for solving elementary partial differential equations. Through the development of solution methods, students will enrich their experience in critical analysis and problem solving"
+    "cid":5,
+    "csub":"ELEC",
+    "cnum":"2843",
+  "title":"Multivariable Calculus and Elementary Partial Differential Equations",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"This course aims to further develop the foundation of mathematics used in engineering discipline. Students will be introduced and explored to 1)The concepts of multivariable functions in multivariable spaces. 2)The concepts of differentiation and integration of multivariable functions. 3) Basic extensions of multivariable calculus to vector analysis. 4)The ideas of periodic functions and their Fourier series representations. 5)The methods for solving elementary partial differential equations. Through the development of solution methods, students will enrich their experience in critical analysis and problem solving",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Chesi G."
    }
    ,
    {
-    "cid"=6
-    "csub"="ELEC"
-    "cnum"="3141"
-    "title"="Power Transmission and Distribution"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="The course aims at providing detailed understanding about power transmission and distribution systems. The emphasis is on the mathematical models and equivalent circuits of power transmission lines and the basic structure of distribution systems. The model for high voltage transmission system is the basis for power system analysis and operation. The introduction of distribution systems provides the basic understanding of how power is distributed to customers and the technologies applied in power distribution. Specifically, the course covers the following topics: 1)Power transmission systems 2)Transmission line model 3)Power distribution systems 4)Distribution overhead lines and underground cables 5)Various issues in distribution systems"
+    "cid":6,
+    "csub":"ELEC",
+    "cnum":"3141",
+    "title":"Power Transmission and Distribution",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"The course aims at providing detailed understanding about power transmission and distribution systems. The emphasis is on the mathematical models and equivalent circuits of power transmission lines and the basic structure of distribution systems. The model for high voltage transmission system is the basis for power system analysis and operation. The introduction of distribution systems provides the basic understanding of how power is distributed to customers and the technologies applied in power distribution. Specifically, the course covers the following topics: 1)Power transmission systems 2)Transmission line model 3)Power distribution systems 4)Distribution overhead lines and underground cables 5)Various issues in distribution systems",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Wang Y."
    }
    ,
    {
-    "cid"=7
-    "csub"="ELEC"
-    "cnum"="3143"
-    "title"="Power Electronics"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="Electrical energy is essential today. In order to effectively utilize electrical energy it must be converted and processed to the right forms for different types of loads. A modern microprocessor might need low voltage high current DC for its power supply whereas a rotational machine might need high voltage high frequency AC for its operation. Power electronics is a power conversion technology. It enables conversion of electrical energy to the right form. It also enables the conversion process to be carried out with high efficiency. High efficiency power conversion plays a crucial role in energy saving, reducing carbon emission and global warming. Power electronics is based on the application of electronics technology to control the electrical conversion process. It is a field that spreads across various disciplines such as electrical, electronics and control. The course starts with an introduction to various power semiconductors. Power semiconductors are the basic components for power converters. Power converters for AC to DC, AC to AC, DC to DC and DC to AC conversions are studied. Students are expected to learn the operation and design of these converters. Students should also know where and how these converters are applied in various electrical and electronic engineering systems."
+    "cid":7,
+    "csub":"ELEC",
+    "cnum":"3143",
+    "title":"Power Electronics",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"Electrical energy is essential today. In order to effectively utilize electrical energy it must be converted and processed to the right forms for different types of loads. A modern microprocessor might need low voltage high current DC for its power supply whereas a rotational machine might need high voltage high frequency AC for its operation. Power electronics is a power conversion technology. It enables conversion of electrical energy to the right form. It also enables the conversion process to be carried out with high efficiency. High efficiency power conversion plays a crucial role in energy saving, reducing carbon emission and global warming. Power electronics is based on the application of electronics technology to control the electrical conversion process. It is a field that spreads across various disciplines such as electrical, electronics and control. The course starts with an introduction to various power semiconductors. Power semiconductors are the basic components for power converters. Power converters for AC to DC, AC to AC, DC to DC and DC to AC conversions are studied. Students are expected to learn the operation and design of these converters. Students should also know where and how these converters are applied in various electrical and electronic engineering systems.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Lee C.K."
    }
    ,
    {
-    "cid"=8
-    "csub"="ELEC"
-    "cnum"="3243"
-    "title"="Fundamentals of Next-Generation Communications"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="The current mobile communication system is in its fifth generation (5G). The last decade has witnessed the invention of many new wireless technologies, including massive MIMO, OFDMA, SDMA, cross-layer design, network slicing, non-orthogonal access, interference management, and cloud/fog networking. This course is aimed at explaining some fundamental ideas and principles for 5G communications in a simple and intuitive way. The list of topics discussed introduced in this course include: 1)Overview of 5G 2)Baseband models 3)Communication channels and coding 4) Sharing of wireless medium 5)Time and frequency in communication 6)Space in communication 7)Multi-antenna communication 8)Layering and slicing 9)Cells, clouds, and fogs. Through this course, students will gain useful insights and intuitions how practical communication systems and networks are designed and operated."
+    "cid":8,
+    "csub":"ELEC",
+    "cnum":"3243",
+    "title":"Fundamentals of Next-Generation Communications",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"The current mobile communication system is in its fifth generation (5G). The last decade has witnessed the invention of many new wireless technologies, including massive MIMO, OFDMA, SDMA, cross-layer design, network slicing, non-orthogonal access, interference management, and cloud/fog networking. This course is aimed at explaining some fundamental ideas and principles for 5G communications in a simple and intuitive way. The list of topics discussed introduced in this course include: 1)Overview of 5G 2)Baseband models 3)Communication channels and coding 4) Sharing of wireless medium 5)Time and frequency in communication 6)Space in communication 7)Multi-antenna communication 8)Layering and slicing 9)Cells, clouds, and fogs. Through this course, students will gain useful insights and intuitions how practical communication systems and networks are designed and operated.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Huang K.B., Lam A."
    }
    ,
    {
-    "cid"=9
-    "csub"="ELEC"
-    "cnum"="3342"
-    "title"="Digital System Design"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="This course aims at providing students the fundamental understanding of digital system structures and system design techniques using discrete and programmable devices. Digital system design as a synthesis process using building block components, and characteristics of various block components are discussed. The analysis and synthesis of digital system structure, especially those related to timing, pipeling, and debugging are discussed. Typically, digital systems have lots of electronic modules interfaced with each other. Thus, designers have to use various tools to design and analyze an entire digital system. In the course, students are guided to acquire skills in using hardware and software development tools through lectures, laboratory sessions and projects."
+    "cid":9,
+    "csub":"ELEC",
+    "cnum":"3342",
+    "title":"Digital System Design",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"This course aims at providing students the fundamental understanding of digital system structures and system design techniques using discrete and programmable devices. Digital system design as a synthesis process using building block components, and characteristics of various block components are discussed. The analysis and synthesis of digital system structure, especially those related to timing, pipeling, and debugging are discussed. Typically, digital systems have lots of electronic modules interfaced with each other. Thus, designers have to use various tools to design and analyze an entire digital system. In the course, students are guided to acquire skills in using hardware and software development tools through lectures, laboratory sessions and projects.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"So H."
    }
    ,
    {
-    "cid"=10
-    "csub"="ELEC"
-    "cnum"="3347"
-    "title"="Electronic Material and Quantum Physics"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="This course deals with the fundamental aspects of electronic materials, including solid-state physics, material growth and processing, material properties and material properties at the nano-scale: quantum physics. It begins with coverage of crystal structures and a study crystallography, followed by the physics and methods of crystal growth and ways of processing crystals for the formation of functional devices. In the next section, the properties of materials will be studied in detail. The optical properties of materials, including absorption and luminescence, will be covered. The dielectric properties of insulating materials, including the different mechanisms of polarization, will be taught. This is followed by understanding the electrical properties of semiconductors in terms of carrier transport. Towards the end of the course, an introduction to quantum mechanics will be given."
+    "cid":10,
+    "csub":"ELEC",
+    "cnum":"3347",
+    "title":"Electronic Material and Quantum Physics",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"This course deals with the fundamental aspects of electronic materials, including solid-state physics, material growth and processing, material properties and material properties at the nano-scale: quantum physics. It begins with coverage of crystal structures and a study crystallography, followed by the physics and methods of crystal growth and ways of processing crystals for the formation of functional devices. In the next section, the properties of materials will be studied in detail. The optical properties of materials, including absorption and luminescence, will be covered. The dielectric properties of insulating materials, including the different mechanisms of polarization, will be taught. This is followed by understanding the electrical properties of semiconductors in terms of carrier transport. Towards the end of the course, an introduction to quantum mechanics will be given.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Li C."
    }
    ,
    {
-    "cid"=11
-    "csub"="ELEC"
-    "cnum"="3350"
-    "title"="Electronic Circuits and Devices I"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="The aim of this course is to provide students with a basic understanding of (i) the principles underlying the operation of some common semiconductor devices, and (ii) some simple analog and digital circuits based on these semiconductor devices."
+    "cid":11,
+    "csub":"ELEC",
+    "cnum":"3350",
+    "title":"Electronic Circuits and Devices I",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"The aim of this course is to provide students with a basic understanding of (i) the principles underlying the operation of some common semiconductor devices, and (ii) some simple analog and digital circuits based on these semiconductor devices.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Lai P.T."
    }
    ,
    {
-    "cid"=12
-    "csub"="ELEC"
-    "cnum"="3443"
-    "title"="Computer Network"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="This course aims at providing detailed understanding of the basic principles of computer and data communications, and the essential functions and protocols for co-ordinated exchange of data through computer networks. It covers data communication networks and facilities; network structures; protocols; local area networks; wide area networks; network trends; data security."
+    "cid":12,
+    "csub":"ELEC",
+    "cnum":"3443",
+    "title":"Computer Network",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"This course aims at providing detailed understanding of the basic principles of computer and data communications, and the essential functions and protocols for co-ordinated exchange of data through computer networks. It covers data communication networks and facilities; network structures; protocols; local area networks; wide area networks; network trends; data security.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Ngai E.C.H."
    }
    ,
    {
-    "cid"=13
-    "csub"="ELEC"
-    "cnum"="3543"
-    "title"="Advanced Systems Programming"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="This course aims to provide students with solid background on concepts and programming skills for advanced systems programming, in particular, system architectures, programming paradigms, advanced UNIX system facilities and programming, graphics processing unit (GPU) programming, and working level software systems and development for cloud computing and other sophisticated applications. It covers both advanced UNIX multiprogramming software development, concurrency control, and GPU programming for modern applications. After finishing the course, students will be able to: 1)Master the basic concepts and programming skills for advanced systems programming. 2)Master the working principles of advanced systems programming, GPU programming and cloud computing. 3)Apply advanced UNIX system programming and/or GPU programming in modern applications."
+    "cid":13,
+    "csub":"ELEC",
+    "cnum":"3543",
+    "title":"Advanced Systems Programming",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"This course aims to provide students with solid background on concepts and programming skills for advanced systems programming, in particular, system architectures, programming paradigms, advanced UNIX system facilities and programming, graphics processing unit (GPU) programming, and working level software systems and development for cloud computing and other sophisticated applications. It covers both advanced UNIX multiprogramming software development, concurrency control, and GPU programming for modern applications. After finishing the course, students will be able to: 1)Master the basic concepts and programming skills for advanced systems programming. 2)Master the working principles of advanced systems programming, GPU programming and cloud computing. 3)Apply advanced UNIX system programming and/or GPU programming in modern applications.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Tam V."
    }
    ,
    {
-    "cid"=14
-    "csub"="ELEC"
-    "cnum"="3644"
-    "title"="Advanced Mobile Apps Development"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="This course is designed for senior engineering students who have basic computer programming knowledge to learn how to create innovative and advanced mobile apps on iOS platform. Students will acquire essential Swift programing skills including optionals, functions, closures, structures, classes, properties and protocols. The course will also cover latest technologies for developing mobile apps to meet emerging needs of the society including SwiftUI, List and Navigation, GitHub, JSON, Databases, Camera and Photo, Location-based services, Machine Learning and Augment Reality. On successful completion of the course, students should be able to: 1) Evaluate and compare the strength and weakness of contemporary mobile apps 2)Master the essential concepts and skills in iOS development 3) Demonstrate the working knowledge of design patterns and frameworks in iOS development 4) Design mobile apps to solve real life problem using latest technologies"
+    "cid":14,
+    "csub":"ELEC",
+    "cnum":"3644",
+    "title":"Advanced Mobile Apps Development",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"This course is designed for senior engineering students who have basic computer programming knowledge to learn how to create innovative and advanced mobile apps on iOS platform. Students will acquire essential Swift programing skills including optionals, functions, closures, structures, classes, properties and protocols. The course will also cover latest technologies for developing mobile apps to meet emerging needs of the society including SwiftUI, List and Navigation, GitHub, JSON, Databases, Camera and Photo, Location-based services, Machine Learning and Augment Reality. On successful completion of the course, students should be able to: 1) Evaluate and compare the strength and weakness of contemporary mobile apps 2)Master the essential concepts and skills in iOS development 3) Demonstrate the working knowledge of design patterns and frameworks in iOS development 4) Design mobile apps to solve real life problem using latest technologies",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Lee V.C.S."
    }
    ,
    {
-    "cid"=15
-    "csub"="ELEC"
-    "cnum"="3844"
-    "title"="Engineering Management and Society"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="The aims of this course are to develop basic understanding of organization and management skills, professional ethics and legal foundation for the engineering discipline. Topics on engineering organization, project management and managerial skills, decision making processes, contingency and crisis management, leadership, corporate culture and philanthropy will be discussed. In order to provide a clear and right insight for engineering students to interact and contribute to the society, topics related to professional conduct, social responsibility, sustainability and safety issues, technology and environment, professional ethics are included. For the legal foundation, topics such as contract, intellectual property, tort, professional negligence and related law issues are discussed."
+    "cid":15,
+    "csub":"ELEC",
+    "cnum":"3844",
+    "title":"Engineering Management and Society",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"The aims of this course are to develop basic understanding of organization and management skills, professional ethics and legal foundation for the engineering discipline. Topics on engineering organization, project management and managerial skills, decision making processes, contingency and crisis management, leadership, corporate culture and philanthropy will be discussed. In order to provide a clear and right insight for engineering students to interact and contribute to the society, topics related to professional conduct, social responsibility, sustainability and safety issues, technology and environment, professional ethics are included. For the legal foundation, topics such as contract, intellectual property, tort, professional negligence and related law issues are discussed.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Fok W.T., Ho C.S."
    }
    ,
    {
-    "cid"=16
-    "csub"="ELEC"
-    "cnum"="3845"
-    "title"="Economics, Finance and Marketing for Engineers"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="The aims of this course are to develop basic understanding of economics, finance and marketing for the engineering discipline. The syllabus includes macroeconomics, microeconomics, value chain, financial management, cost and profit, shares and bonds, accounting concepts and financial statements, cash flow, rate of return; risk management, investment portfolio, technical analysis; marketing management, marketing mix, marketing media, marketing plan, and business ethics."
+    "cid":16,
+    "csub":"ELEC",
+    "cnum":"3845",
+    "title":"Economics, Finance and Marketing for Engineers",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"The aims of this course are to develop basic understanding of economics, finance and marketing for the engineering discipline. The syllabus includes macroeconomics, microeconomics, value chain, financial management, cost and profit, shares and bonds, accounting concepts and financial statements, cash flow, rate of return; risk management, investment portfolio, technical analysis; marketing management, marketing mix, marketing media, marketing plan, and business ethics.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Fok W."
    }
    ,
    {
-    "cid"=17
-    "csub"="ELEC"
-    "cnum"="3848"
-    "title"="Integrated Design Project"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="This course aims at providing senior undergraduate students in small teams an opportunity to apply and integrate their knowledge and skills in electrical and electronic engineering courses, as well as project management, to implement a practical system that requires knowledge and skills from different EEE disciplines (i.e., Computer Engineering, Electronic Engineering, and Electrical Engineering). Typically, the system to be built has electrical components for interfacing with the real world (e.g., a smart plug that can measure and regulate power consumption as well as display measured data to user through an external user interface), electronic components that integrated the external interfaces with the processing and networking cores, and computing components that handle the data manipulations. Thus, by design, each project team should consist of students from electrical engineering, electronic engineering and computer engineering. At the beginning of the course, students are guided to acquire skills in using hardware and software development tools through introductory lectures and laboratory exercises. Students then begin working on the project. Technical consultation sessions are conducted as supplementary to help students throughout the process. Assessment and grading will be made according to the quality of design product, demonstration and documentations. Besides implementing the system to the required project specification, students are encouraged to extend the project with their own inputs."
+    "cid":17,
+    "csub":"ELEC",
+    "cnum":"3848",
+    "title":"Integrated Design Project",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"This course aims at providing senior undergraduate students in small teams an opportunity to apply and integrate their knowledge and skills in electrical and electronic engineering courses, as well as project management, to implement a practical system that requires knowledge and skills from different EEE disciplines (i.e., Computer Engineering, Electronic Engineering, and Electrical Engineering). Typically, the system to be built has electrical components for interfacing with the real world (e.g., a smart plug that can measure and regulate power consumption as well as display measured data to user through an external user interface), electronic components that integrated the external interfaces with the processing and networking cores, and computing components that handle the data manipulations. Thus, by design, each project team should consist of students from electrical engineering, electronic engineering and computer engineering. At the beginning of the course, students are guided to acquire skills in using hardware and software development tools through introductory lectures and laboratory exercises. Students then begin working on the project. Technical consultation sessions are conducted as supplementary to help students throughout the process. Assessment and grading will be made according to the quality ofdesign product, demonstration and documentations. Besides implementing the system to the required project specification, students are encouraged to extend the project with their own inputs.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Lam K.H., Lee A."
    }
    ,
    {
-    "cid"=18
-    "csub"="ELEC"
-    "cnum"="4144"
-    "title"="Electric Vehicle Technology"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="This course aims at providing sound understanding of various electric vehicle (EV) technologies. The emphasis is on fiver key areas of EVs – System integration, propulsion systems, energy sources, auxiliaries and impacts. Specifically, the course covers the following topics: system integration including battery EVs, hybrid EVs and fuel cell EVs; propulsion systems including single-motor and multiple-motor drives, geared and gearless in-wheel motors and hybrid powertrains; energy sources including batteries, fuel cells, ultracapacitors and ultrahigh-speed flywheels; auxiliaries including battery chargers and indicators, temperature control units, power steering units, auxiliary power supplies and regenerative braking units; impacts including power system, environment and economy."
+    "cid":18,
+    "csub":"ELEC",
+    "cnum":"4144",
+    "title":"Electric Vehicle Technology",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"This course aims at providing sound understanding of various electric vehicle (EV) technologies. The emphasis is on fiver key areas of EVs – System integration, propulsion systems, energy sources, auxiliaries and impacts. Specifically, the course covers the following topics: system integration including battery EVs, hybrid EVs and fuel cell EVs; propulsion systems including single-motor and multiple-motor drives, geared and gearless in-wheel motors and hybrid powertrains; energy sources including batteries, fuel cells, ultracapacitors and ultrahigh-speed flywheels; auxiliaries including battery chargers and indicators, temperature control units, power steering units, auxiliary power supplies and regenerative braking units; impacts including power system, environment and economy.",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Ching T.W."
    }
    ,
    {
-    "cid"=19
-    "csub"="ELEC"
-    "cnum"="4146"
-    "title"="Building Services - Electrical Installations"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="To develop classmates’ potential in selecting electrical equipment, designing electrical installation, and making them professional in achieving optimal benefits in building services without compromising safety. At the end of this course, students who fulfill the requirements of this course will be able to: 1) describe and understand the electrical installation as a system; and the major components that build up the installations; 2) be aware of the potential hazards of electrical installations, yet be able to prevent those hazards; 3) select proper equipment and protective devices to facilitate expected functions of the electrical installations; 4) be competent in electrical safety and codes of practice"
+    "cid":19,
+    "csub":"ELEC",
+    "cnum":"4146",
+    "title":"Building Services - Electrical Installations",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"To develop classmates’ potential in selecting electrical equipment, designing electrical installation, and making them professional in achieving optimal benefits in building services without compromising safety. At the end of this course, students who fulfill the requirements of this course will be able to: 1) describe and understand the electrical installation as a system; and the major components that build up the installations; 2) be aware of the potential hazards of electrical installations, yet be able to prevent those hazards; 3) select proper equipment and protective devices to facilitate expected functions of the electrical installations; 4) be competent in electrical safety and codes of practice",
+    "loc":"LE",
+    "room":"4",
+    "prof":"Lee A."
    }
    ,
    {
-    "cid"=20
-    "csub"="ELEC"
-    "cnum"="4148"
-    "title"="Smart Grid and Renewable Energy Systems"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="The aim of this course is to introduce the disciplinary knowledge of smart grid. It is an in-depth study of the ways in which the renewable energy sources, microgrids, and information and communication technologies are being employed to modernize the electrical energy infrastructure. It elaborates on definitions and functions of smart grids, types of renewable energy resources, wind power and photovoltaic systems, micro-grids and distribution systems. Wide-area monitoring systems are discussed. Information and communication technologies for smart grids are introduced. At the end of this course, students who fulfill the requirements of this course will be able to: 1) understand the basic architectures and technologies of smart grid; 2) have a general concept on various types of renewable energy resources; 3) grasp the basic principles of wind power and photovoltaic systems; 4) have a general concept on the design of a renewable energy system; 5) understand the basic concepts of information and communication technologies applied in smart grids."
+    "cid":20,
+    "csub":"ELEC",
+    "cnum":"4148",
+    "title":"Smart Grid and Renewable Energy Systems",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"The aim of this course is to introduce the disciplinary knowledge of smart grid. It is an in-depth study of the ways in which the renewable energy sources, microgrids, and information and communication technologies are being employed to modernize the electrical energy infrastructure. It elaborates on definitions and functions of smart grids, types of renewable energy resources, wind power and photovoltaic systems, micro-grids and distribution systems. Wide-area monitoring systems are discussed. Information and communication technologies for smart grids are introduced. At the end of this course, students who fulfill the requirements of this course will be able to: 1) understand the basic architectures and technologies of smart grid; 2) have a general concept on various types of renewable energy resources; 3) grasp the basic principles of wind power and photovoltaic systems; 4) have a general concept on the design of a renewable energy system; 5) understand the basic concepts of information and communication technologies applied in smart grids.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Zhong J."
    }
    ,
    {
-    "cid"=21
-    "csub"="ELEC"
-    "cnum"="4149"
-    "title"="Basic Lighting Engineering"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="The aim of this course is to provide basic knowledge on electrical principles applied in lighting systems design and installation, on system and component levels. It elaborates on the lighting physics, operating principles, mathematical models, and design criteria in Lighting Installation. It is suitable to potential lighting specialists as well as to general building services engineers. Various lighting systems are discussed covering engineering fundamentals, system components, electrical design and statutory requirements, system integration as well as practical familiarization of systems. At the end of this course, students who fulfill the requirements of this course will be able to: 1) Describe and understand the construction and functions of building services installation for building to operate; and their forming part of a building. 2) Understand the physics and mathematics behind lighting engineering, and carry out fundamental calculations related to “how much light”. 3) Logically choose different types of lighting schemes for different applications. 4) Gain a solid fundamental for carrying out lighting design in future. 5) Acquire lighting design skills. 6) Understand the issues of light pollution, and design for proper outdoor lighting systems."
+    "cid":21,
+    "csub":"ELEC",
+    "cnum":"4149",
+    "title":"Basic Lighting Engineering",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"The aim of this course is to provide basic knowledge on electrical principles applied in lighting systems design and installation, on system and component levels. It elaborates on the lighting physics, operating principles, mathematical models, and design criteria in Lighting Installation. It is suitable to potential lighting specialists as well as to general building services engineers. Various lighting systems are discussed covering engineering fundamentals, system components, electrical design and statutory requirements, system integration as well as practical familiarization of systems. At the end of this course, students who fulfill the requirements of this course will be able to: 1) Describe and understand the construction and functions of building services installation for building to operate; and their forming part of a building. 2) Understand the physics and mathematics behind lighting engineering, and carry out fundamental calculations related to 'how much light'. 3) Logically choose different types of lighting schemes for different applications. 4) Gain a solid fundamental for carrying out lighting design in future. 5) Acquire lighting design skills. 6) Understand the issues of light pollution, and design for proper outdoor lighting systems.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Lam K.H., Lo E."
    }
    ,
    {
-    "cid"=22
-    "csub"="ELEC"
-    "cnum"="4546"
-    "title"="Investment and Trading for Engineering Students"
-    "sem"="1"
-    "classnum"="1A"
-    "desc"="This course is designed for engineering students who wish to start a career in the financial industry. The depth of this course will be at senior undergraduate students with good technical skills are welcome to take. This course helps the students to integrate the technical skills, for example, programming and statistical analysis, they have learned in other engineering courses and to develop the basic knowledge, skill sets, and vocabulary that can communicate with the practitioners in the financial industry. The most important is that students are expected to learn how to develop market view by analyzing the driving factors of the financial markets to forecast the movement of financial assets like equities and foreign exchange, which is extremely important when interviewing for a job in the financial industry. Then, students are expected to build up the basic knowledge on various financial instruments, such as, options and futures, as well as quantitative models for investment management and development of trading strategies. The financial products or instruments include: equities, bonds, options, futures and other derivatives. Also, we will discuss various investment/trading strategies, such as, VWAP, TWAP, Bollinger Band, RSI, etc."
+    "cid":22,
+    "csub":"ELEC",
+    "cnum":"4546",
+    "title":"Investment and Trading for Engineering Students",
+    "sem":"1",
+    "classnum":"1A",
+    "desc":"This course is designed for engineering students who wish to start a career in the financial industry. The depth of this course will be at senior undergraduate students with good technical skills are welcome to take. This course helps the students to integrate the technical skills, for example, programming and statistical analysis, they have learned in other engineering courses and to develop the basic knowledge, skill sets, and vocabulary that can communicate with the practitioners in the financial industry. The most important is that students are expected to learn how to develop market view by analyzing the driving factors of the financial markets to forecast the movement of financial assets like equities and foreign exchange, which is extremely important when interviewing for a job in the financial industry. Then, students are expected to build up the basic knowledge on various financial instruments, such as, options and futures, as well as quantitative models for investment management and development of trading strategies. The financial products or instruments include: equities, bonds, options, futures and other derivatives. Also, we will discuss various investment/trading strategies, such as, VWAP, TWAP, Bollinger Band, RSI, etc.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Lin J."
    }
    ,
    {
-    "cid"=23
-    "csub"="ELEC"
-    "cnum"="1310"
-    "title"="Electricity and Electronics"
-    "sem"="1"
-    "classnum"="1B"
-    "desc"="This is an introductory course for common first-year engineering students to broadly learn about some fundamental aspects of electricity and electronics. The course aims to provide students elementary exposure to electrical and electronic engineering theories, practices and technologies, while also enhancing their general knowledge of the subject matter to better prepare them for their future engineering careers, irrespective of their intended discipline and field of studies. In this course, the key areas in electrical and electronic engineering, such as electrical conduction, power generation and transmission, circuit elements and calculation, electromagnetic theories and applications, energy conversion technologies and renewables, optical science and fiber, signal processing applications, wireless communication technologies, and sensors and control instrumentations, will be covered at an introductory level. A system-level overview of how these engineering components have been adoptively integrated to form different existing and emerging technologies (such as mobile phones, electric vehicles, and smart grids etc.) that are playing or may play a big impact on our modern society will be discussed. Outlooks of the possible trends of electrical and electronic engineering development will be embedded in the lecture discussions. Upon completing this course, the student should be able to 1) Understand the scope of electrical and electronic engineering in the modern world; 2)Understand basic design of electrical and electronic systems and their applications, and some common engineering practices and standards; 3)Understand the impact of EEE technologies on our modern society and their possible developments."
+    "cid":23,
+    "csub":"ELEC",
+    "cnum":"1310",
+    "title":"Electricity and Electronics",
+    "sem":"1",
+    "classnum":"1B",
+    "desc":"This is an introductory course for common first-year engineering students to broadly learn about some fundamental aspects of electricity and electronics. The course aims to provide students elementary exposure to electrical and electronic engineering theories, practices and technologies, while also enhancing their general knowledge of the subject matter to better prepare them for their future engineering careers, irrespective of their intended discipline and field of studies. In this course, the key areas in electrical and electronic engineering, such as electrical conduction, power generation and transmission, circuit elements and calculation, electromagnetic theories and applications, energy conversion technologies and renewables, optical science and fiber, signal processing applications, wireless communication technologies, and sensors and control instrumentations, will be covered at an introductory level. A system-level overview of how these engineering components have been adoptively integrated to form different existing and emerging technologies (such as mobile phones, electric vehicles, and smart grids etc.) that are playing or may play a big impact on our modern society will be discussed. Outlooks of the possible trends of electrical and electronic engineering development will be embedded in the lecture discussions. Upon completing this course, the student should be able to 1) Understand the scope of electrical and electronic engineering in the modern world; 2)Understand basic design of electrical and electronic systems and their applications, and some common engineering practices and standards; 3)Understand the impact of EEE technologies on our modern society and their possible developments.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Choi A., Hou Y., Tam V."
    }
    ,
    {
-    "cid"=24
-    "csub"="ELEC"
-    "cnum"="1320"
-    "title"="Engineers in the Modern World"
-    "sem"="1"
-    "classnum"="1B"
-    "desc"="Concept and fundamentals of engineering businesses and systems, basic techniques for system design, integration, and operation; introduction to engineering entrepreneurship and innovation; business models and financing, SWOT and market analysis; product design and realization, maturity process and life cycle, concepts of green manufacturing, carbon control and engineering sustainability."
+    "cid":24,
+    "csub":"ELEC",
+    "cnum":"1320",
+    "title":"Engineers in the Modern World",
+    "sem":"1",
+    "classnum":"1B",
+    "desc":"Concept and fundamentals of engineering businesses and systems, basic techniques for system design, integration, and operation; introduction to engineering entrepreneurship and innovation; business models and financing, SWOT and market analysis; product design and realization, maturity process and life cycle, concepts of green manufacturing, carbon control and engineering sustainability.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Fok W., Lee V.C.S."
    }
    ,
    {
-    "cid"=25
-    "csub"="ELEC"
-    "cnum"="2147"
-    "title"="Electrical Energy Technology"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="This is an introductory course that provides students with a solid foundation of knowledge on alternating current (A.C.) systems. The emphasis is on FOUR key topics of single phase A.C. system - fundamental characteristics, phasor algebra, circuit analysis and magnetic components. At the end of this course, students who fulfill the requirements of this course will be able to: 1) identify the fundamental characteristics of A.C. systems; 2) use circuit diagrams, phasor diagrams and mathematical equations to describe A.C. systems and to analyse performances; 3) describe the working principle, analyse and design inductors and transformers; 4) use electrical measuring instruments, measurement of resistance, inductance, capacitance, frequency, phase, current, voltage and power"
+    "cid":25,
+    "csub":"ELEC",
+    "cnum":"2147",
+    "title":"Electrical Energy Technology",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"This is an introductory course that provides students with a solid foundation of knowledge on alternating current (A.C.) systems. The emphasis is on FOUR key topics of single phase A.C. system - fundamental characteristics, phasor algebra, circuit analysis and magnetic components. At the end of this course, students who fulfill the requirements of this course will be able to: 1) identify the fundamental characteristics of A.C. systems; 2) use circuit diagrams, phasor diagrams and mathematical equations to describe A.C. systems and to analyse performances; 3) describe the working principle, analyse and design inductors and transformers; 4) use electrical measuring instruments, measurement of resistance, inductance, capacitance, frequency, phase, current, voltage and power",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Lee C.K."
    }
    ,
    {
-    "cid"=26
-    "csub"="ELEC"
-    "cnum"="2245"
-    "title"="Control Systems I"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="Control systems is fundamental to many engineering disciplines. In this course, a general approach will be taken to study of control systems, so that the theory and methods are applicable to other disciplines at the system level. The course is aimed at providing a general understanding of the fundamental principles of control systems. The following topics will be covered in the course: system modeling, transient response, principles of feedback, root locus, frequency response methods, state-space models, introduction to digital control. At the end of the course, students should have gained an understanding of the concepts and methodologies for the complete process of modeling, analysis and design of a feedback control system"
+    "cid":26,
+    "csub":"ELEC",
+    "cnum":"2245",
+    "title":"Control Systems I",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"Control systems is fundamental to many engineering disciplines. In this course, a general approach will be taken to study of control systems, so that the theory and methods are applicable to other disciplines at the system level. The course is aimed at providing a general understanding of the fundamental principles of control systems. The following topics will be covered in the course: system modeling, transient response, principles of feedback, root locus, frequency response methods, state-space models, introduction to digital control. At the end of the course, students should have gained an understanding of the concepts and methodologies for the complete process of modeling, analysis and design of a feedback control system",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Liu T."
    }
    ,
    {
-    "cid"=27
-    "csub"="ELEC"
-    "cnum"="2543"
-    "title"="Object-Oriented Programming and Data Structure"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="This course aims to provide a hands-on and in depth survey of object oriented programming paradigm, and the basic concepts of data structures through the Java programming language. It serves to provide a solid foundation of essential concepts on object oriented programming and data structures that will be required in some other courses. Specifically, the course covers the following topics: basics of the Java development environment; Java applications and applets; Java syntaxes; control structures; methods in Java; iteration; recursion; objects; classes; interfaces; inheritance; polymorphism; overloading; overriding; wrapper classes; type conversions; strings; string manipulations in Java; Java exceptions; try blocks; throwing and catching exceptions in Java; byte and character streams; stream classes; file classes; file manipulation in Java; arrays; dynamic memory allocation; dynamic data structures including the dynamically linked lists, stacks, queues, trees, graphs, hash tables; sorting; searching; examples of Java applications."
+    "cid":27,
+    "csub":"ELEC",
+    "cnum":"2543",
+    "title":"Object-Oriented Programming and Data Structure",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"This course aims to provide a hands-on and in depth survey of object oriented programming paradigm, and the basic concepts of data structures through the Java programming language. It serves to provide a solid foundation of essential concepts on object oriented programming and data structures that will be required in some other courses. Specifically, the course covers the following topics: basics of the Java development environment; Java applications and applets; Java syntaxes; control structures; methods in Java; iteration; recursion; objects; classes; interfaces; inheritance; polymorphism; overloading; overriding; wrapper classes; type conversions; strings; string manipulations in Java; Java exceptions; try blocks; throwing and catching exceptions in Java; byte and character streams; stream classes; file classes; file manipulation in Java; arrays; dynamic memory allocation; dynamic data structures including the dynamically linked lists, stacks, queues, trees, graphs, hash tables; sorting; searching; examples of Java applications.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Ngai E.C.H."
    }
    ,
    {
-    "cid"=28
-    "csub"="ELEC"
-    "cnum"="2544"
-    "title"="Introduction to Electronic Commerce and Financial Technology"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="This course aims at introducing basic technical knowledge on electronic commerce and financial technology. The course will introduce different e-commerce models: B2C and B2B model and overview different enabling technologies e-Commerce and FinTech such as the location base technology, RFID, GPS, e-payment, server-side and channel security, Near Field Communication, QR Code, augmented reality and other latest technologies deploying in the industry. By the end of the course, the latest trend and the way forward of e-commerce and Fintech in Hong Kong and overseas will be discussed."
+    "cid":28,
+    "csub":"ELEC",
+    "cnum":"2544",
+    "title":"Introduction to Electronic Commerce and Financial Technology",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"This course aims at introducing basic technical knowledge on electronic commerce and financial technology. The course will introduce different e-commerce models: B2C and B2B model and overview different enabling technologies e-Commerce and FinTech such as the location base technology, RFID, GPS, e-payment, server-side and channel security, Near Field Communication, QR Code, augmented reality and other latest technologies deploying in the industry. By the end of the course, the latest trend and the way forward of e-commerce and Fintech in Hong Kong and overseas will be discussed.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Fok W., Lee V.C.S."
    }
    ,
    {
-    "cid"=29
-    "csub"="ELEC"
-    "cnum"="2844"
-    "title"="Probabilistic Systems Analysis"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="This course aims to introduce students to the modelling and analysis of real world phenomena with the tools of probability and statistics. It involves both theoretical and computational components, where probabilistic concepts are taught through many engineering examples ranging from pattern analysis and image processing to forecasting and finance. Topics include random variables, independence and conditional probability, mathematical expectation, functions of random variables, classical estimation, Bayesian estimation, hypothesis testing, and linear regression."
+    "cid":29,
+    "csub":"ELEC",
+    "cnum":"2844",
+    "title":"Probabilistic Systems Analysis",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"This course aims to introduce students to the modelling and analysis of real world phenomena with the tools of probability and statistics. It involves both theoretical and computational components, where probabilistic concepts are taught through many engineering examples ranging from pattern analysis and image processing to forecasting and finance. Topics include random variables, independence and conditional probability, mathematical expectation, functions of random variables, classical estimation, Bayesian estimation, hypothesis testing, and linear regression.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Lam E."
    }
    ,
    {
-    "cid"=30
-    "csub"="ELEC"
-    "cnum"="3142"
-    "title"="Electrical Energy Conversion"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="This course aims at providing sound understanding of various electrical energy conversion devices and systems. The emphasis is on four kinds of electrical energy conversion – electromechanical motion, electric heating, electric lighting and electrochemistry. Specifically, the course covers the following topics: electric machines including DC machines, synchronous machines, induction machines and special machines; electric heating including resistive heating, induction heating and dielectric heating; electric lighting including incandescent lighting, discharge lighting and LED lighting; electrochemical sources including batteries and ultracapacitors."
+    "cid":30,
+    "csub":"ELEC",
+    "cnum":"3142",
+    "title":"Electrical Energy Conversion",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"This course aims at providing sound understanding of various electrical energy conversion devices and systems. The emphasis is on four kinds of electrical energy conversion – electromechanical motion, electric heating, electric lighting and electrochemistry. Specifically, the course covers the following topics: electric machines including DC machines, synchronous machines, induction machines and special machines; electric heating including resistive heating, induction heating and dielectric heating; electric lighting including incandescent lighting, discharge lighting and LED lighting; electrochemical sources including batteries and ultracapacitors.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Chau K.T., Ching T.W."
    }
    ,
    {
-    "cid"=31
-    "csub"="ELEC"
-    "cnum"="3241"
-    "title"="Signals and Linear Systems"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="Signals and linear system theory is fundamental to all engineering discipline, especially in the field of electrical, computer and medical engineering. This is a first course in signals and linear systems for engineering students without any pre-requisite knowledge in signal theory or signal processing other than some knowledge in fundamental calculus and use of complex numbers. The course uses simple real life examples of signals and systems to illustrate how signal theory can be used in practical application, and will including an introduction to MATLAB as a tool for signal analysis and system modelling. This course aims to help students gain a firm understanding of the fundamentals of signal and linear systems concepts and theory using adequate mathematical and computing techniques to tackle simple signal processing problems. It serves as a pre-requisite course for many other courses including Digital Signal Processing, Control and Instrumentation, Communication Systems, and Digital Image Processing. Specifically, the course covers the following topics: time-domain signal representation, periodic and aperiodic signals; spectral representation of signals, Fourier series and Fourier transform; system responses and linear system modelling; sampling, aliasing and analog-to-digital conversion; z-transform and concepts of poles and zeros; convolution; FIR filters and digital filtering; IIR filters and frequency response of digital filters; continuous-time systems and Fourier transform properties; application examples of signal analysis and processing. At the end of the course, students should have a clear understanding of the fundamentals of signals and system theory to enable them to perform simple signal analysis and processing using both analytical method as well as using computing tools, link the mathematical representation of signals to some very simple real life signals and vice versa, and appreciate the applications of linear systems theory in solving some simple real life problems. In addition, students should be aware of the complexity of real life problems and the need to continue investigation in practice after graduation."
+    "cid":31,
+    "csub":"ELEC",
+    "cnum":"3241",
+    "title":"Signals and Linear Systems",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"Signals and linear system theory is fundamental to all engineering discipline, especially in the field of electrical, computer and medical engineering. This is a first course in signals and linear systems for engineering students without any pre-requisite knowledge in signal theory or signal processing other than some knowledge in fundamental calculus and use of complex numbers. The course uses simple real life examples of signals and systems to illustrate how signal theory can be used in practical application, and will including an introduction to MATLAB as a tool for signal analysis and system modelling. This course aims to help students gain a firm understanding of the fundamentals of signal and linear systems concepts and theory using adequate mathematical and computing techniques to tackle simple signal processing problems. It serves as a pre-requisite course for many other courses including Digital Signal Processing, Control and Instrumentation, Communication Systems, and Digital Image Processing. Specifically, the course covers the following topics: time-domain signal representation, periodic and aperiodic signals; spectral representation of signals, Fourier series and Fourier transform; system responses and linear system modelling; sampling, aliasing and analog-to-digital conversion; z-transform and concepts of poles and zeros; convolution; FIR filters and digital filtering; IIR filters and frequency response of digital filters; continuous-time systems and Fourier transform properties; application examples of signal analysis and processing. At the end of the course, students should have a clear understanding of the fundamentals of signals and system theory to enable them to perform simple signal analysis and processing using both analytical method as well as using computing tools, link the mathematical representation of signals to some very simple real life signals and vice versa, and appreciate the applications of linear systems theory in solving some simple real life problems. In addition, students should be aware of the complexity of real life problems and the need to continue investigation in practice after graduation.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Huang K.B., Lam A."
    }
    ,
    {
-    "cid"=32
-    "csub"="ELEC"
-    "cnum"="3244"
-    "title"="Digital Signal Processing"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="This course aims to introduce students to the various applications of digital signal processing (DSP) and focuses on the classical frequency domain theory and tools for the design and realization of frequency selective digital filters, sampling-rate converters and adaptive filters. It first starts with a brief general introduction to various DSP applications including digital communications, multimedia signals processing, estimation theory, machine learning and biomedical signal processing, etc. The classical frequency domain modelling of digital-time signals and linear systems, and their relationship to continuous time counterparts will be reviewed, where topics such as z-transform, stability, and spectrum will be reviewed. The short-time Fourier transform (STFT) will be introduced as a tool for spectral analysis of signals. The frequency domain specification of digital filters, various types of linear-phase finite impulse response (FIR) filters and their optimal design techniques will be studied in details. Realization techniques such as the cascade form for infinite impulse response (IIR) filters and the application of fast Fourier transform (FFT) algorithm for realizing FIR filters will also be discussed. Finally, the theory and design of sampling rate conversion and the concept of adaptive filters will be briefly introduced. Specifically, the course covers the following topics: DSP applications; review of linear system theory and frequency domain representation; Spectral Analysis – STFT, time-frequency resolution; structure of DSP systems and AD/DA converters – sampling theorem, filter specification, four types of linear-phase filters; Design of FIR (linear-phase and low-delay) and IIR filters – Windowing method, Park McClellan algorithm, second order cone programming, bilinear transform and model order reduction; Realization of digital filters – cascade form, overlap add/save methods using FFT; Discrete Fourier transform (DFT) - properties and fast algorithms; Sampling conversion – upsampler, downsampler, specification, design and realization methods; adaptive filters – Wiener-Hopf equation, least mean squares algorithm, applications."
+    "cid":32,
+    "csub":"ELEC",
+    "cnum":"3244",
+    "title":"Digital Signal Processing",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"This course aims to introduce students to the various applications of digital signal processing (DSP) and focuses on the classical frequency domain theory and tools for the design and realization of frequency selective digital filters, sampling-rate converters and adaptive filters. It first starts with a brief general introduction to various DSP applications including digital communications, multimedia signals processing, estimation theory, machine learning and biomedical signal processing, etc. The classical frequency domain modelling of digital-time signals and linear systems, and their relationship to continuous time counterparts will be reviewed, where topics such as z-transform, stability, and spectrum will be reviewed. The short-time Fourier transform (STFT) will be introduced as a tool for spectral analysis of signals. The frequency domain specification of digital filters, various types of linear-phase finite impulse response (FIR) filters and their optimal design techniques will be studied in details. Realization techniques such as the cascade form for infinite impulse response (IIR) filters and the application of fast Fourier transform (FFT) algorithm for realizing FIR filters will also be discussed. Finally, the theory and design of sampling rate conversion and the concept of adaptive filters will be briefly introduced. Specifically, the course covers the following topics: DSP applications; review of linear system theory and frequency domain representation; Spectral Analysis – STFT, time-frequency resolution; structure of DSP systems and AD/DA converters – sampling theorem, filter specification, four types of linear-phase filters; Design of FIR (linear-phase and low-delay) and IIR filters – Windowing method, Park McClellan algorithm, second order cone programming, bilinear transform and model order reduction; Realization of digital filters – cascade form, overlap add/save methods using FFT; Discrete Fourier transform (DFT) - properties and fast algorithms; Sampling conversion – upsampler, downsampler, specification, design and realization methods; adaptive filters – Wiener-Hopf equation, least mean squares algorithm, applications.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Chan S.C."
    }
    ,
    {
-    "cid"=33
-    "csub"="ELEC"
-    "cnum"="3249"
-    "title"="Pattern Recognition and Machine Intelligence"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="This module aims at providing fundamental knowledge on the principles and techniques of pattern recognition and machine learning. Specifically, the module covers the following topics: Estimation theory and Bayes decision theory; parametric and non-parametric methods; linear discriminant functions; design of classifiers, unsupervised learning and clustering; feature extraction; neural networks and deep learning; case studies. After finish the course, students will be able to 1) Master the basic concept of pattern recognition and techniques for preprocessing and feature extraction. 2) Master the application of statistical techniques to the estimation of probability densities from samples. 3)Master the techniques of designing classifiers for pattern classification."
+    "cid":33,
+    "csub":"ELEC",
+    "cnum":"3249",
+    "title":"Pattern Recognition and Machine Intelligence",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"This module aims at providing fundamental knowledge on the principles and techniques of pattern recognition and machine learning. Specifically, the module covers the following topics: Estimation theory and Bayes decision theory; parametric and non-parametric methods; linear discriminant functions; design of classifiers, unsupervised learning and clustering; feature extraction; neural networks and deep learning; case studies. After finish the course, students will be able to 1) Master the basic concept of pattern recognition and techniques for preprocessing and feature extraction. 2) Master the application of statistical techniques to the estimation of probability densities from samples. 3)Master the techniques of designing classifiers for pattern classification.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Qi X.J."
    }
    ,
    {
-    "cid"=34
-    "csub"="ELEC"
-    "cnum"="3349"
-    "title"="Optical Devices"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="The course aims at providing detailed understanding about active and passive optical devices and optical systems. Students will learn optical components such as optical waveguides, fibers, variety of light sources (e.g. laser and light emitting diodes), passive and active components, wavelength division multiplexer, transmitters, receivers, photovoltaic devices and systems. Students will gain the knowledge in the physics, operation principles and the applications of optical components."
+    "cid":34,
+    "csub":"ELEC",
+    "cnum":"3349",
+    "title":"Optical Devices",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"The course aims at providing detailed understanding about active and passive optical devices and optical systems. Students will learn optical components such as optical waveguides, fibers, variety of light sources (e.g. laser and light emitting diodes), passive and active components, wavelength division multiplexer, transmitters, receivers, photovoltaic devices and systems. Students will gain the knowledge in the physics, operation principles and the applications of optical components.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Choy W."
    }
    ,
    {
-    "cid"=35
-    "csub"="ELEC"
-    "cnum"="3441"
-    "title"="Computer Architecture"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="This course aims at providing detailed understanding about how modern high performance microprocessors are designed and the rationales behind their different design principles. The emphasis is on the relationship between the microarchitecture and the system software (e.g., operating system and compiler). Contemporary processors such as MIPS and Pentium are used as practical cases to illustrate the different design principles. Pipelining microarchitecture and some elementary concepts on instruction level parallelism (ILP) are discussed. Compiler support and optimizations for exploiting the parallel processing capability provided by the microarchitecture are discussed. Specifically, the course covers the following topics in contemporary computer architecture design: Design and performance issues of a computer system; RISC vs CISC; design of control unit; design of ALU; instruction pipeline; memory system; input/output system; and parallel processors."
+    "cid":35,
+    "csub":"ELEC",
+    "cnum":"3441",
+    "title":"Computer Architecture",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"This course aims at providing detailed understanding about how modern high performance microprocessors are designed and the rationales behind their different design principles. The emphasis is on the relationship between the microarchitecture and the system software (e.g., operating system and compiler). Contemporary processors such as MIPS and Pentium are used as practical cases to illustrate the different design principles. Pipelining microarchitecture and some elementary concepts on instruction level parallelism (ILP) are discussed. Compiler support and optimizations for exploiting the parallel processing capability provided by the microarchitecture are discussed. Specifically, the course covers the following topics in contemporary computer architecture design: Design and performance issues of a computer system; RISC vs CISC; design of control unit; design of ALU; instruction pipeline; memory system; input/output system; and parallel processors.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"So H."
    }
    ,
    {
-    "cid"=36
-    "csub"="ELEC"
-    "cnum"="3442"
-    "title"="Embedded Systems"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="This course introduces the design concepts of modern embedded systems, with an emphasis on the integration of hardware and software. Topics include: hardware/software interface design and implementation, the role of operating system in embedded systems, embedded application development and the tradeoffs involving the use of hardware accelerators. A key component of the course is to design and implement a real-world embedded system using field-programmable gate array (FPGA) as a platform. Upon completing this course, the student should be able to: 1) Develop basic understanding of the role of embedded systems in contemporary electronic systems. 2) Evaluate embedded systems in terms of performance, power and energy consumptions. 3) Understand the fundamentals of hardware-software codesign in embedded system. 4) Develop practical techniques in constructing embedded systems with hardware and software components addressing real-world challenges."
+    "cid":36,
+    "csub":"ELEC",
+    "cnum":"3442",
+    "title":"Embedded Systems",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"This course introduces the design concepts of modern embedded systems, with an emphasis on the integration of hardware and software. Topics include: hardware/software interface design and implementation, the role of operating system in embedded systems, embedded application development and the tradeoffs involving the use of hardware accelerators. A key component of the course is to design and implement a real-world embedded system using field-programmable gate array (FPGA) as a platform. Upon completing this course, the student should be able to: 1) Develop basic understanding of the role of embedded systems in contemporary electronic systems. 2) Evaluate embedded systems in terms of performance, power and energy consumptions. 3) Understand the fundamentals of hardware-software codesign in embedded system. 4) Develop practical techniques in constructing embedded systems with hardware and software components addressing real-world challenges.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Tam V."
    }
    ,
    {
-    "cid"=37
-    "csub"="ELEC"
-    "cnum"="3846"
-    "title"="Numerical Methods and Optimization"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="This course aims at introducing numerical methods and optimization used for the solution of engineering problems. Specifically: In the first part of the course, numerical algorithms to solve various mathematical problems are provided. Development of algorithms, their mathematical analysis, and an analysis of their errors and performance are discussed. The applications of numerical methods in solving equations, differentiation and integration, ordinary differential equations, and linear algebra, are illustrated. In the second part of the course, essential concepts of optimization theory are introduced, and fundamental classes of optimization problems are analyzed. Theoretical results and practical algorithms for solving optimization problems are introduced and explained. Applications in engineering fields and other areas are illustrated. At the end of this course, students who fulfill the requirements of this course will be able to: 1) demonstrate knowledge and understanding of the basic concepts of numerical methods and optimization; 2) apply theoretical results and practical algorithms for solving equations and optimization problems."
+    "cid":37,
+    "csub":"ELEC",
+    "cnum":"3846",
+    "title":"Numerical Methods and Optimization",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"This course aims at introducing numerical methods and optimization used for the solution of engineering problems. Specifically: In the first part of the course, numerical algorithms to solve various mathematical problems are provided. Development of algorithms, their mathematical analysis, and an analysis of their errors and performance are discussed. The applications of numerical methods in solving equations, differentiation and integration, ordinary differential equations, and linear algebra, are illustrated. In the second part of the course, essential concepts of optimization theory are introduced, and fundamental classes of optimization problems are analyzed. Theoretical results and practical algorithms for solving optimization problems are introduced and explained. Applications in engineering fields and other areas are illustrated. At the end of this course, students who fulfill the requirements of this course will be able to: 1) demonstrate knowledge and understanding of the basic concepts of numerical methods and optimization; 2) apply theoretical results and practical algorithms for solving equations and optimization problems.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Wang Z."
    }
    ,
    {
-    "cid"=38
-    "csub"="ELEC"
-    "cnum"="4141"
-    "title"="Electric Railway Systems"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="The aim of this course is to provide fundamental knowledge of electric power in railways, on system and component levels. It elaborates on the power supply systems, rolling-stocks, traction systems, supporting systems, automatic train operation, control, and protection systems. Magnetic levitation systems are discussed. Topics on high-speed rail networks, railway engineering management, health and safety are included. At the end of this course, students who fulfill the requirements of this course will be able to: 1) describe and understand the construction and functions of electrical installations and the prerequisites that apply in the operation of installations; 2) explain different electrical installations that are parts of the operation of electric railway traffic with respect to both function and the essential connections with the parts of the installation; 3) understand the basic concepts of power supply systems for railways; 4) understand the rolling-stocks, traction systems and supporting systems of electric railway systems; 5) understand the automatic train operation, control, and protection systems; 6) have a general grasp on the basic concepts of magnetic levitation systems; 7) demonstrate knowledge, understanding of high-speed rail networks and railway engineering management, health and safety."
+    "cid":38,
+    "csub":"ELEC",
+    "cnum":"4141",
+    "title":"Electric Railway Systems",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"The aim of this course is to provide fundamental knowledge of electric power in railways, on system and component levels. It elaborates on the power supply systems, rolling-stocks, traction systems, supporting systems, automatic train operation, control, and protection systems. Magnetic levitation systems are discussed. Topics on high-speed rail networks, railway engineering management, health and safety are included. At the end of this course, students who fulfill the requirements of this course will be able to: 1) describe and understand the construction and functions ofelectrical installations and the prerequisites that apply in the operation of installations; 2) explain different electrical installations that are parts of the operation of electric railway traffic with respect to both function and the essential connections with the parts of the installation; 3) understand the basic concepts of power supply systems for railways; 4) understand the rolling-stocks, traction systems and supporting systems of electric railway systems; 5) understand the automatic train operation, control, and protection systems; 6) have a general grasp on the basic concepts of magnetic levitation systems; 7) demonstrate knowledge, understanding of high-speed rail networks and railway engineering management, health and safety.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Wang Y."
    }
    ,
    {
-    "cid"=39
-    "csub"="ELEC"
-    "cnum"="4142"
-    "title"="Power System Protection and Switchgear"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="The aim of this course is to provide fundamental knowledge of electric power in power system protection and switchgear. It elaborates on protective relays, protection transformer, transmission line protection, rotating machine protection, substation protection. Principles of over-voltages and electrical breakdown are discussed. Circuit breaker technologies, switchgears and their protection schemes, and auto-recloser and sectionalizer are included.At the end of this course, students who fulfill the requirements of this course will be able to: 1) grasp and understand the basic principles and functions of protection relays and switchgears; 2) have a general grasp on the basic concepts of electric arc and switching overvoltage; 3) understand the basic concepts of over-current protection, distance protection, pilot protection of transmission lines, and understand the basic concepts of rotating machinery protection, substation protection; 4) understand the general principles of protection transformer, circuit breaker technologies and switchgear technologies; 5) understand the basic concepts of auto-recloser and sectionalizer for power systems."
+    "cid":39,
+    "csub":"ELEC",
+    "cnum":"4142",
+    "title":"Power System Protection and Switchgear",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"The aim of this course is to provide fundamental knowledge of electric power in power system protection and switchgear. It elaborates on protective relays, protection transformer, transmission line protection, rotating machine protection, substation protection. Principles of over-voltages and electrical breakdown are discussed. Circuit breaker technologies, switchgears and their protection schemes, and auto-recloser and sectionalizer are included.At the end of this course, students who fulfill the requirements of this course will be able to: 1) grasp and understand the basic principles and functions of protection relays and switchgears; 2) have a general grasp on the basic concepts of electric arc and switching overvoltage; 3) understand the basic concepts of over-current protection, distance protection, pilot protection of transmission lines, and understand the basic concepts of rotating machinery protection, substation protection; 4) understand the general principles of protection transformer, circuit breaker technologies and switchgear technologies; 5) understand the basic concepts of auto-recloser and sectionalizer for power systems.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Zhong J."
    }
    ,
    {
-    "cid"=40
-    "csub"="ELEC"
-    "cnum"="4145"
-    "title"="Building Services - Electrical Services"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="The aim of this course is to provide knowledge on electrical principles applied in building services design and installation, on system and component levels. It elaborates on those electrical subsystems within the Heating, Ventilation and Air-conditioning System, Plumbing & Drainage System, Fire & Security Services System. Various building services systems are discussed covering engineering fundamentals, system components, electrical design and statutory requirements, system integration as well as practical familiarization of systems. At the end of this course, students who fulfill the requirements of this course will be able to: 1) describe and understand the construction and functions of building services installation for building to operate; and their forming part of a building and its connection between each other; 2) understand the basic electric drives and control for motors in building systems, plumbing and drainage systems; 3) understand the security systems for buildings, including electronic alarm and detection systems, and latest surveillance systems; 4) understand the principles of variable speed drives, highly efficient motors and its modern control, as well as its applications in HVAC (heating, ventilation and air-conditioning) systems; 5) understand the issues and strategies in power quality, its impacts from and to other building services systems, in terms of performance and energy efficiency, relating to HVAC systems."
+    "cid":40,
+    "csub":"ELEC",
+    "cnum":"4145",
+    "title":"Building Services - Electrical Services",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"The aim of this course is to provide knowledge on electrical principles applied in building services design and installation, on system and component levels. It elaborates on those electrical subsystems within the Heating, Ventilation and Air-conditioning System, Plumbing & Drainage System, Fire & Security Services System. Various building services systems are discussed covering engineering fundamentals, system components, electrical design and statutory requirements, system integration as well as practical familiarization of systems. At the end of this course, students who fulfill the requirements of this course will be able to: 1) describe and understand the construction and functions of building services installation for building to operate; and their forming part of a building and its connection between each other; 2) understand the basic electric drives and control for motors in building systems, plumbing and drainage systems; 3) understand the security systems for buildings, including electronic alarm and detection systems, and latest surveillance systems; 4) understand the principles of variable speed drives, highly efficient motors and its modern control, as well as its applications in HVAC (heating, ventilation and air-conditioning) systems; 5) understand the issues and strategies in power quality, its impacts from and to other building services systems, in terms of performance and energy efficiency, relating to HVAC systems.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Lam K.H., Lo E."
    }
    ,
    {
-    "cid"=41
-    "csub"="ELEC"
-    "cnum"="4147"
-    "title"="Power System Analysis and Control"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="The aim of this course is to provide fundamental knowledge of electric power in power system analysis and control. It elaborates on the power flow analysis, fault analysis, economic dispatch algorithms, and small/large disturbance stability. Power system component models and network matrices are included. At the end of this course, students who fulfill the requirements of this course will be able to: 1) describe and understand the structure and functions of electrical power systems; 2) understand electrical power network modeling and algorithms for network matrices construction; 3) understand the basic concepts of steady-state analysis for power systems and some algorithms for power flow analysis; 4) have a general grasp on the basic concepts of power system operation and understand some algorithms for power system economic dispatch; 5) understand the basic concepts and methods of fault analysis for power systems; 6) understand the basic concepts and methods of stability analysis for power systems."
+    "cid":41,
+    "csub":"ELEC",
+    "cnum":"4147",
+    "title":"Power System Analysis and Control",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"The aim of this course is to provide fundamental knowledge of electric power in power system analysis and control. It elaborates on the power flow analysis, fault analysis, economic dispatch algorithms, and small/large disturbance stability. Power system component models and network matrices are included. At the end of this course, students who fulfill the requirements of this course will be able to: 1) describe and understand the structure and functions of electrical power systems; 2) understand electrical power network modeling and algorithms for network matrices construction; 3) understand the basic concepts of steady-state analysis for power systems and some algorithms for power flow analysis; 4) have a general grasp on the basic concepts of power system operation and understand some algorithms for power system economic dispatch; 5) understand the basic concepts and methods of fault analysis for power systems; 6) understand the basic concepts and methods of stability analysis for power systems.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Hou Y."
    }
    ,
    {
-    "cid"=42
-    "csub"="ELEC"
-    "cnum"="4245"
-    "title"="Digital Image Processing"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="This course aims to help students gain a firm understanding in digital image processing and master its methods and techniques. The course in general begins with the basics in 2D signals and systems, visual perception, image sensing and acquisition. It then proceeds to study various problems including image enhancement, image reconstruction and restoration, image segmentation, and image analysis and recognition. The course concludes with modern image processing applications using convolutional neural networks and deep learning such as image classification, face detection, and biomedical image analysis. Specifically, it covers the following topics: 1) Image acquisition and image representations: imaging systems and examples of images such as natural image, biomedical images and depth images, and color image processing. 2) Image enhancement: intensity transformations, histogram processing, image filtering in spatial and frequency domains with case studies. 3) Image restoration: deconvolution, wiener filter and image quality measure. 4) Image analysis (feature extraction): image features – corner detection, Sobel and Canny edge detectors, Line detection, Scale-invariant feature transforms with case studies. 5) Image segmentation: mean-shift and graph-cut algorithms. 6) Image processing and recognition with deep learning: convolutional neural networks, feedforward and backpropagation, example architectures for image processing and recognition: AlexNet, VGG, ResNet and UNet with applications to image segmentation and object detection, etc."
+    "cid":42,
+    "csub":"ELEC",
+    "cnum":"4245",
+    "title":"Digital Image Processing",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"This course aims to help students gain a firm understanding in digital image processing and master its methods and techniques. The course in general begins with the basics in 2D signals and systems, visual perception, image sensing and acquisition. It then proceeds to study various problems including image enhancement, image reconstruction and restoration, image segmentation, and image analysis and recognition. The course concludes with modern image processing applications using convolutional neural networks and deep learning such as image classification, face detection, and biomedical image analysis. Specifically, it covers the following topics: 1) Image acquisition and image representations: imaging systems and examples of images such as natural image, biomedical images and depth images, and color image processing. 2) Image enhancement: intensity transformations, histogram processing, image filtering in spatial and frequency domains with case studies. 3) Image restoration: deconvolution, wiener filter and image quality measure. 4) Image analysis (feature extraction): image features – corner detection, Sobel and Canny edge detectors, Line detection, Scale-invariant feature transforms with case studies. 5) Image segmentation: mean-shift and graph-cut algorithms. 6) Image processing and recognition with deep learning: convolutional neural networks, feedforward and backpropagation, example architectures for image processing and recognition: AlexNet, VGG, ResNet and UNet with applications to image segmentation and object detection, etc.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Qi X.J."
    }
    ,
    {
-    "cid"=43
-    "csub"="ELEC"
-    "cnum"="4343"
-    "title"="Design of Digital Integrated Circuits"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="The aim of this course is to design logic and memory circuits on silicon micro-chips fabricated by various IC technologies. Specifically, the course covers the following topics: MOS processing : polysilicon gate, LOCOS isolation; MOSFET, as a switch in an inverter; NMOS logic : R-load, E-load, D-load, and their comparisons; Layout design of NMOS circuits; Design rules, extraction of device parameters, isolation concerns; Design of memory circuits : ROM, EPROM, EEPROM, DRAM, SRAM; CMOS processing : different types of well, threshold control; Problems in CMOS circuits : field inversion, latchup, SOI; CMOS circuits : analysis, layout design; Effects of scaling on the performance of MOS circuits; Bipolar junction transistor, BiCMOS circuits."
+    "cid":43,
+    "csub":"ELEC",
+    "cnum":"4343",
+    "title":"Design of Digital Integrated Circuits",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"The aim of this course is to design logic and memory circuits on silicon micro-chips fabricated by various IC technologies. Specifically, the course covers the following topics: MOS processing : polysilicon gate, LOCOS isolation; MOSFET, as a switch in an inverter; NMOS logic : R-load, E-load, D-load, and their comparisons; Layout design of NMOS circuits; Design rules, extraction of device parameters, isolation concerns; Design of memory circuits : ROM, EPROM, EEPROM, DRAM, SRAM; CMOS processing : different types of well, threshold control; Problems in CMOS circuits : field inversion, latchup, SOI; CMOS circuits : analysis, layout design; Effects of scaling on the performance of MOS circuits; Bipolar junction transistor, BiCMOS circuits.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Lai P.T."
    }
    ,
    {
-    "cid"=44
-    "csub"="ELEC"
-    "cnum"="4544"
-    "title"="Artificial Intelligence and Deep Learning"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="This course aims at providing students with a basic understanding on artificial intelligence and deep learning technology. The topics to be covered are artificial neural networks, backpropagation, deep auto-encoder, convolutional Neural Network (CNN), recurrent Neural Network (RNN), strategies for training deep architectures, handling overfitting, cross-validation, meta-heuristic searching for parameter tuning. This is followed by hands-on implementation of deep/machine learning algorithms using Python, with applications ranging from image classification, speech processing, and financial data analysis. After finishing the course, students will be able to 1) Master the basic concept of artificial intelligence and deep learning. 2) Master the Python programing language for implementing deep/machine learning models. 3) Apply deep/machine learning in novel applications."
+    "cid":44,
+    "csub":"ELEC",
+    "cnum":"4544",
+    "title":"Artificial Intelligence and Deep Learning",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"This course aims at providing students with a basic understanding on artificial intelligence and deep learning technology. The topics to be covered are artificial neural networks, backpropagation, deep auto-encoder, convolutional Neural Network (CNN), recurrent Neural Network (RNN), strategies for training deep architectures, handling overfitting, cross-validation, meta-heuristic searching for parameter tuning. This is followed by hands-on implementation of deep/machinelearning algorithms using Python, with applications ranging from image classification, speech processing, and financial data analysis. After finishing the course, students will be able to 1) Master the basic concept of artificial intelligence and deep learning. 2) Master the Python programing language for implementing deep/machine learning models. 3) Apply deep/machine learning in novel applications.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Peng Y."
    }
    ,
    {
-    "cid"=45
-    "csub"="ELEC"
-    "cnum"="4642"
-    "title"="VLSI Design Principles"
-    "sem"="2"
-    "classnum"="2A"
-    "desc"="To give a detailed treatment on the principles and methods for designing large-scale digital integrated circuits. The course content ranges from low level fabrics like MOSFET (metal-oxide-semiconductor field-effect transistor) basics, logic gate families, layout and fabrication practices, to higher level system knowledge like timing, memory, design optimization and tests; and eventually extends into basic analog circuit blocks like CMOS (complementary metal-oxide-semiconductor) transistor amplifiers and opamps etc. The course also includes a Verilog design project that covers the typical VLSI design flow using the most popular electronic design automation (EDA) tools."
+    "cid":45,
+    "csub":"ELEC",
+    "cnum":"4642",
+    "title":"VLSI Design Principles",
+    "sem":"2",
+    "classnum":"2A",
+    "desc":"To give a detailed treatment on the principles and methods for designing large-scale digital integrated circuits. The course content ranges from low level fabrics like MOSFET (metal-oxide-semiconductor field-effect transistor) basics, logic gate families, layout and fabrication practices, to higher level system knowledge like timing, memory, design optimization and tests; and eventually extends into basic analog circuit blocks like CMOS (complementary metal-oxide-semiconductor) transistor amplifiers and opamps etc. The course also includes a Verilog design project that covers the typical VLSI design flow using the most popular electronic design automation (EDA) tools.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Wong N."
    }
    ,
    {
-    "cid"=46
-    "csub"="ELEC"
-    "cnum"="2840"
-    "title"="Engineering Training"
-    "sem"="S"
-    "classnum"="SA"
-    "desc"="The aims of ELEC2840 Engineering Training are to provide practical trainings for students to acquire essential practical skills related to Electrical and Electronic Engineering. There are 6 modules namely Electronic Practice, Practical Networking, CAD/CAE tools practice, Virtual Instrumentation, Main Circuit Board and Microcontroller. For the Computer Engineering (CE) and Electronic Engineering (ElecE), they are required to take the following modules to fulfill the workshop training requirement: 1) Electronic practice (EP); 2) Practical Networking (NET); 3) CAD/CAE tools practice (CAD); 4) Virtual Instrumentation (VI) | For the Electrical Engineering (EE), they are required to take the following modules to fulfill the workshop training requirement: 1) CAD/CAE tools practice (CAD); 2) Virtual Instrumentation (VI); 3) Microcontroller (MIC); 4) MCB installation (MCB) | The aims of each module are: CAD/CAE tools practice – To learn how to use CAD software application to design circuit; Electronics Practice – To learn how to produce a PCB circuit broad and soldering technique; Practical Networking – To learn how to design and configure a data network; Microcontroller – To learn how to design and program a microcontroller; Virtual instrumentation – To learn how to write codes and build hardware on virtual instrumentation circuits; Main Circuit Board – to learn how to design and install a main circuit board for electric power distribution"
+    "cid":46,
+    "csub":"ELEC",
+    "cnum":"2840",
+    "title":"Engineering Training",
+    "sem":"S",
+    "classnum":"SA",
+    "desc":"The aims of ELEC2840 Engineering Training are to provide practical trainings for students to acquire essential practical skills related to Electrical and Electronic Engineering. There are 6 modules namely Electronic Practice, Practical Networking, CAD/CAE tools practice, Virtual Instrumentation, Main Circuit Board and Microcontroller. For the Computer Engineering (CE) and Electronic Engineering (ElecE), they are required to take the following modules to fulfill the workshop training requirement: 1) Electronic practice (EP); 2) Practical Networking (NET); 3) CAD/CAE tools practice (CAD); 4) Virtual Instrumentation (VI) | For the Electrical Engineering (EE), they are required to take the following modules to fulfill the workshop training requirement: 1) CAD/CAE tools practice (CAD); 2) Virtual Instrumentation (VI); 3) Microcontroller (MIC); 4) MCB installation (MCB) | The aims of each module are: CAD/CAE tools practice – To learn how to use CAD software application to design circuit; Electronics Practice – To learn how to produce a PCB circuit broad and soldering technique; Practical Networking – To learn how to design and configure a data network; Microcontroller – To learn how to design and program a microcontroller; Virtual instrumentation – To learn how to write codes and build hardware on virtual instrumentation circuits; Main Circuit Board – to learn how to design and install a main circuit board for electric power distribution",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Fok W."
    }
    ,
    {
-    "cid"=47
-    "csub"="ELEC"
-    "cnum"="3841"
-    "title"="Internship"
-    "sem"="S"
-    "classnum"="SA"
-    "desc"="Students are trained with hands-on practice under the supervision of either a company, a research and development unit, or an experiential learning organizer. At the end of the training, every student is required to submit a training report to the Department for assessment."
+    "cid":47,
+    "csub":"ELEC",
+    "cnum":"3841",
+    "title":"Internship",
+    "sem":"S",
+    "classnum":"SA",
+    "desc":"Students are trained with hands-on practice under the supervision of either a company, a research and development unit, or an experiential learning organizer. At the end of the training, every student is required to submit a training report to the Department for assessment.",
+    "loc":"MWT",
+    "room":"2",
+    "prof":"Fok W."
    }
 ]

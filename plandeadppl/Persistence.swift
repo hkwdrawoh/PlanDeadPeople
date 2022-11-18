@@ -13,7 +13,6 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        importCourse(viewContext)
         importUser(viewContext)
         importClass(viewContext)
         do {
