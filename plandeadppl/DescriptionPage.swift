@@ -25,17 +25,6 @@ struct CourseDescription: View {
     @State var mapItem:MKMapItem?
     @State var placemark:CLPlacemark?
     
-    enum places: CaseIterable {
-        case LE, MWT
-        
-        var rawValue: (Float64, Float64) {
-            switch self {
-                case .LE: return (22.283309, 114.137784)
-                case .MWT: return (22.282276, 114.139125)
-            }
-        }
-    }
-    
     var body: some View {
         VStack (spacing: 0) {
             HStack {
@@ -65,17 +54,20 @@ struct CourseDescription: View {
             .background(ColorMain4)
             
             ScrollView {
+                
                 Text("\(course.csub) \(course.cnum)")
                     .font(.system(size: 38))
                     .foregroundColor(ColorAux4)
                     .bold()
                     .padding(.vertical, -5)
+                
                 Text(course.title)
                     .font(.system(size: 25))
                     .foregroundColor(ColorAux4)
                     .bold()
                     .padding(.vertical, -5)
                     .multilineTextAlignment(.center)
+                
                 HStack {
                     Text("Teacher: "+course.prof)
                         .font(.system(size: 20))
@@ -83,20 +75,21 @@ struct CourseDescription: View {
                         .multilineTextAlignment(.leading)
                         .padding([.top, .leading, .trailing], 10.0)
                     Spacer()}
-                HStack {
-                    Text("Location: "+course.loc+course.room)
+                
+                HStack (alignment: .center) {
+                    Text("Location: \(course.loc) \(course.room)")
                         .font(.system(size: 20))
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)
                         .padding([.top, .leading, .trailing], 10)
                     Button{
-                        for place in places.allCases {
+                        for place in Buildings.allCases {
                             let value = place
                             let str = String(describing: value)
                             if str == course.loc {
-                                var lat = value.rawValue.0
-                                var long = value.rawValue.1
-                                locationName = "\(lat),\(long)"
+                                let lat = value.coordinates.0
+                                let long = value.coordinates.1
+                                locationName = value.name
                                 let url = URL(string: "http://maps.apple.com/?daddr=\(lat),\(long)")
                                 if UIApplication.shared.canOpenURL(url!) {
                                     UIApplication.shared.open(url!)
@@ -117,11 +110,23 @@ struct CourseDescription: View {
                     .background(ColorMain2)
                     .cornerRadius(10)
                     Spacer()}
-                Text("Description: "+course.desc)
-                    .font(.system(size: 20))
-                    .foregroundColor(ColorAux4)
-                    .padding(.all, 10.0)
-                    .frame(maxWidth: .infinity)
+                
+                HStack {
+                    Text("Description: ")
+                        .font(.system(size: 20))
+                        .foregroundColor(ColorAux4)
+                        .multilineTextAlignment(.leading)
+                        .padding([.top, .leading, .trailing], 10.0)
+                    Spacer()}
+                
+                HStack {
+                    Text(course.desc)
+                        .font(.system(size: 20))
+                        .foregroundColor(ColorAux4)
+                        .multilineTextAlignment(.leading)
+                        .padding(.horizontal, 10.0)
+                        .padding(.top, 5)
+                    Spacer()}
                     
             }
             .background(ColorMain4)
