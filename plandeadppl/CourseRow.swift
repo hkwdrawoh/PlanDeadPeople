@@ -18,7 +18,7 @@ struct CourseRow: View {
                     .frame(width: 3)
                 Text(course.csub! + " " + course.cnum!)
                     .font(.system(size: 20))
-                    .frame(width: 110)
+                    .frame(width: 115)
                     .multilineTextAlignment(.leading)
                 Text(course.title!)
                     .font(.system(size: 18))

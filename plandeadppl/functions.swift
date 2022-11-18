@@ -24,7 +24,7 @@ func importCourse(_ viewContext: NSManagedObjectContext) {
         let newCourse = Course(context: viewContext)
         newCourse.id = UUID()
         newCourse.cid = Int16(index)
-        newCourse.csub = "ELEC"
+        newCourse.csub = "COMP"
         newCourse.cnum = String(Int.random(in: 1001...4999))
         newCourse.title = "Mobile Application Dev"
         newCourse.sem = ["1", "2", "S"].randomElement()

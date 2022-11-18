@@ -17,7 +17,7 @@ struct CourseList: View {
     @State var sem = "1"
 
     var body: some View {
-        let courses = loadCourse(viewContext)!
+        let courses = loadCourse(viewContext)!.sorted(by: {$0.csub! == $1.csub! ? $0.cnum! < $1.cnum! : $0.csub! < $1.csub!})
         
         NavigationView {
             VStack {
