@@ -117,7 +117,6 @@ struct CourseDescription: View {
                     .background(ColorMain2)
                     .cornerRadius(10)
                     Spacer()}
-                Text(locationName)
                 Text("Description: "+course.desc)
                     .font(.system(size: 20))
                     .foregroundColor(ColorAux4)
