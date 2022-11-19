@@ -12,6 +12,7 @@ struct MainMenu: View {
     @State var menu = menuselect[0]
     @State var course = loadCourse()[0]
     @State var username = "guest"
+    @State var user = "test"
     
     var body: some View {
         VStack(spacing: 0) {
