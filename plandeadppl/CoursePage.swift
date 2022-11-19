@@ -38,6 +38,7 @@ struct CourseList: View {
         NavigationView {
             VStack (spacing: 0) {
                 HStack {
+                    //Button - Cancel<->Back Switching Mechanism
                     Button{
                         if showSheet {
                             filter = filter_true
@@ -62,6 +63,7 @@ struct CourseList: View {
                         .background(ColorMain2)
                         .cornerRadius(10)
                     Spacer()
+                    //Button - Filter<->Apply Switching Mechanism
                     Button{
                         if showSheet {
                             filter_true = filter
@@ -92,10 +94,12 @@ struct CourseList: View {
                     .bold()
                 
                 if showSheet {
+                    //Call Filter Config view
                     ListFilter(filter: $filter)
                 } else {
+                    //Show back CourseList default view
                     VStack {
-                        SemSelect(sem: $sem)
+                        SemSelect(sem: $sem)    //HeaderButtons
                         
                         ScrollView {
                            ForEach(courses) { course in

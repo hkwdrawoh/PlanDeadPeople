@@ -37,6 +37,7 @@ struct CalendarList: View {
                     .background(ColorMain2)
                     .cornerRadius(10)
                 Spacer()
+                //Button - Edit (Action TBC)
                 Button{} label: {
                     Text("Edit")
                         .foregroundColor(ColorAux1)

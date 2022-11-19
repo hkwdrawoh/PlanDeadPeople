@@ -37,6 +37,7 @@ struct CourseDescription: View {
             
             //Top button icon
             HStack {
+                //Button - Back
                 Button{menu = menuselect[2]} label: {
                     Image(systemName: "arrow.uturn.backward")
                         .resizable(resizingMode: .stretch)
@@ -48,6 +49,7 @@ struct CourseDescription: View {
                     .background(ColorMain2)
                     .cornerRadius(10)
                 Spacer()
+                //Button - Add to fav
                 Button{} label: {
                     Image(systemName: "heart")
                         .resizable(resizingMode: .stretch)
