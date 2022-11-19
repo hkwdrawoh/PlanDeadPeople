@@ -26,6 +26,12 @@ struct CourseDescription: View {
     @State var placemark:CLPlacemark?
     
     var body: some View {
+        
+        var dayname = ["MON", "TUE", "WED", "THUR", "FRI", "SAT"]
+        
+        let timeslots = loadClass()
+        let timeslot = timeslots[timeslots.firstIndex(where: {$0.cid == course.cid})!]
+        
         VStack (spacing: 0) {
             //Top button icon
             HStack {
@@ -114,6 +120,15 @@ struct CourseDescription: View {
                     .background(ColorMain2)
                     .cornerRadius(10)
                     Spacer()}
+                
+                HStack {
+                    Text("Time: \(dayname[timeslots.firstIndex(where: {$0.cid == course.cid})!]) \(timeslot.cstart):30-\(timeslot.cend):20")
+                        .font(.system(size: 20))
+                        .foregroundColor(ColorAux4)
+                        .multilineTextAlignment(.leading)
+                        .padding([.top, .leading, .trailing], 10.0)
+                    Spacer()
+                }
                 
                 //HStack for course desc header
                 HStack {
