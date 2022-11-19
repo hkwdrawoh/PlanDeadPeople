@@ -6,17 +6,13 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct MainMenu: View {
     
-    let courses = loadCourse()
     @State var menu = menuselect[0]
-    @State var course: Course
-    
-    init() {
-        course = courses[0]
-    }
+    @State var course = loadCourse()[0]
+    @State var username = "guest"
+    @State var user = "test"
     
     var body: some View {
         VStack(spacing: 0) {
@@ -34,6 +30,7 @@ struct MainMenu: View {
             default:
                 ScrollView{HomePage()}
             }
+            
             HStack (alignment: .center) {
                 Spacer()
                 Button{menu = menuselect[0]} label: {
@@ -95,6 +92,6 @@ struct MainMenu: View {
 
 struct MainMenu_Preview: PreviewProvider {
     static var previews: some View {
-        MainMenu().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        MainMenu()
     }
 }

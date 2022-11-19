@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreData
 import MapKit
 import Contacts
 
@@ -26,7 +25,14 @@ struct CourseDescription: View {
     @State var placemark:CLPlacemark?
     
     var body: some View {
+        
+        var dayname = ["MON", "TUE", "WED", "THUR", "FRI", "SAT"]
+        
+        let timeslots = loadClass()
+        let timeslot = timeslots[timeslots.firstIndex(where: {$0.cid == course.cid})!]
+        
         VStack (spacing: 0) {
+            //Top button icon
             HStack {
                 Button{menu = menuselect[2]} label: {
                     Image(systemName: "arrow.uturn.backward")
@@ -53,6 +59,7 @@ struct CourseDescription: View {
             .padding(.horizontal)
             .background(ColorMain4)
             
+            //Show content of selected course in ScrollView format, HStack to pack them tgt
             ScrollView {
                 
                 Text("\(course.csub) \(course.cnum)")
@@ -68,6 +75,7 @@ struct CourseDescription: View {
                     .padding(.vertical, -5)
                     .multilineTextAlignment(.center)
                 
+                //HStack for Teacher
                 HStack {
                     Text("Teacher: "+course.prof)
                         .font(.system(size: 20))
@@ -76,6 +84,7 @@ struct CourseDescription: View {
                         .padding([.top, .leading, .trailing], 10.0)
                     Spacer()}
                 
+                //Hstack for Location and Button Placement
                 HStack (alignment: .center) {
                     Text("Location: \(course.loc) \(course.room)")
                         .font(.system(size: 20))
@@ -112,6 +121,16 @@ struct CourseDescription: View {
                     Spacer()}
                 
                 HStack {
+                    Text("Time: \(dayname[timeslots.firstIndex(where: {$0.cid == course.cid})!]) \(timeslot.cstart):30-\(timeslot.cend):20")
+                        .font(.system(size: 20))
+                        .foregroundColor(ColorAux4)
+                        .multilineTextAlignment(.leading)
+                        .padding([.top, .leading, .trailing], 10.0)
+                    Spacer()
+                }
+                
+                //HStack for course desc header
+                HStack {
                     Text("Description: ")
                         .font(.system(size: 20))
                         .foregroundColor(ColorAux4)
@@ -119,6 +138,7 @@ struct CourseDescription: View {
                         .padding([.top, .leading, .trailing], 10.0)
                     Spacer()}
                 
+                //HStack for course desc_full
                 HStack {
                     Text(course.desc)
                         .font(.system(size: 20))
@@ -126,13 +146,27 @@ struct CourseDescription: View {
                         .multilineTextAlignment(.leading)
                         .padding(.horizontal, 10.0)
                         .padding(.top, 5)
-                    Spacer()}
-                    
+                    Spacer()
+                }
             }
             .background(ColorMain4)
+            
+            //Add to Planner Button (Pending Action TBC)
+            Button{} label: {
+                HStack{
+                    Spacer()
+                    Text("Add to Planner")
+                        .font(.title2)
+                        .foregroundColor(ColorAux1)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                    Spacer()
+                }
+            }.background(ColorMain2)
         }
     }
     
+    //Update MapPin address to selected enum lat, long
     func updateAddress(placemarks:[CLPlacemark]?,error:Error?) {
         mapItem = nil
         if error != nil {

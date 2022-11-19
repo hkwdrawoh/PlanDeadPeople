@@ -29,12 +29,15 @@ let menuselect = ["Welcome", "CourseList", "CourseDetail", "Timetable", "Persona
 
 // Building locations enum
 enum Buildings: CaseIterable {
-    case LE, MWT
+    case LE, MWT, CB, MB, CYPP
     
     var name: String {
         switch self {
         case .LE: return "Library Extension"
         case .MWT: return "Meng Wah Theatre"
+        case .CB: return "Chow Yei Ching Building"
+        case .MB: return "Main Building"
+        case .CYPP: return "Chong Yuet Ming Physics Building"
         }
     }
     
@@ -42,71 +45,71 @@ enum Buildings: CaseIterable {
         switch self {
         case .LE: return (22.283309, 114.137784)
         case .MWT: return (22.282276, 114.139125)
+        case .CB: return (22.283069, 114.135441)
+        case .MB: return (22.283979, 114.137837)
+        case .CYPP: return (22.283229, 114.139854)
         }
     }
 }
 
 
-// Courses: provide course details
+// Course: provide course details
 class Course: Identifiable, Codable {
     var cid: Int16
     var csub: String
     var cnum: String
     var title: String
     var sem: String
-    var classnum: String
     var desc: String
     var loc: String
     var room: String
     var prof: String
-    
+}
+
+// CClass: provide class details
+class CClass: Identifiable, Codable {
+    var cid: Int16
+    var classid: String
+    var cdate: String
+    var cstart: Int
+    var cend: Int
 }
 
 // Class TimeSlot: Generate timeslot in timetable
 class TimeSlots: Identifiable {
     var cid: Int16
-    var cdate: [String]
-    var cstart: [Int]
-    var cend: [Int]
+    var cdate: String
+    var cstart: Int
+    var cend: Int
     var div_total: Int
     var div_num: Int
-    var height_down: [Int]
+    var height_down: Int
     
     init(_ cclass: CClass) {
         self.cid = cclass.cid
-        self.cdate = cclass.cdate!
-        self.cstart = cclass.cstart!
-        self.cend = cclass.cend!
+        self.cdate = cclass.cdate
+        self.cstart = cclass.cstart
+        self.cend = cclass.cend
         self.div_total = 1
         self.div_num = 1
-        self.height_down = []
-        for i in 0..<cstart.count {
-            self.height_down.append((78 * (cstart[i] - 8)))
-        }
+        self.height_down = 78 * (cstart - 8)
     }
     
     // check time crash function: compare two timeslots
     func check_crash(_ class2: TimeSlots) -> Bool {
-        for i in 0..<cdate.count {
-            if class2.cdate.contains(cdate[i]) {
-                let j = class2.cdate.firstIndex(where: {$0 == cdate[i]})!
-                if cstart[i] >= class2.cstart[j] && cstart[i] < class2.cend[j] {
-                    return true
-                }
-                if class2.cstart[j] >= cstart[i] && class2.cstart[j] < cend[i] {
-                    return true
-                }
+        if class2.cdate == cdate {
+            if cstart >= class2.cstart && cstart < class2.cend {
+                return true
+            }
+            if class2.cstart >= cstart && class2.cstart < cend {
+                return true
             }
         }
         return false
     }
     
     func returnString() -> String {
-        var output: String = ""
-        for i in 0..<cdate.count {
-            output += "\(cdate[i]): \(cstart[i])-\(cend[i]), div: (\(div_total), \(div_num)), height: \(height_down[0])"
-        }
-        return output
+        return "\(cdate): \(cstart)-\(cend), div: (\(div_total), \(div_num)), height: \(height_down)"
     }
 }
 

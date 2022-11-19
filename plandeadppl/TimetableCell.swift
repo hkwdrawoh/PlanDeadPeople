@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import CoreData
 
 struct TimetableCell: View {
     @Binding var menu: String
@@ -17,9 +16,9 @@ struct TimetableCell: View {
     
     var body: some View {
         ForEach(timeslots) { timeslot in
-            if (timeslot.cdate[0] == weekday) {
+            if (timeslot.cdate == weekday) {
                 VStack {
-                    let height = timeslot.height_down[0] + 14
+                    let height = timeslot.height_down + 14
                     
                     // top separation
                     Spacer()
