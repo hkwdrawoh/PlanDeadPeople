@@ -29,12 +29,15 @@ let menuselect = ["Welcome", "CourseList", "CourseDetail", "Timetable", "Persona
 
 // Building locations enum
 enum Buildings: CaseIterable {
-    case LE, MWT
+    case LE, MWT, CB, MB, CYPP
     
     var name: String {
         switch self {
         case .LE: return "Library Extension"
         case .MWT: return "Meng Wah Theatre"
+        case .CB: return "Chow Yei Ching Building"
+        case .MB: return "Main Building"
+        case .CYPP: return "Chong Yuet Ming Physics Building"
         }
     }
     
@@ -42,6 +45,9 @@ enum Buildings: CaseIterable {
         switch self {
         case .LE: return (22.283309, 114.137784)
         case .MWT: return (22.282276, 114.139125)
+        case .CB: return (22.283069, 114.135441)
+        case .MB: return (22.283979, 114.137837)
+        case .CYPP: return (22.283229, 114.139854)
         }
     }
 }
@@ -54,7 +60,6 @@ class Course: Identifiable, Codable {
     var cnum: String
     var title: String
     var sem: String
-    var classnum: String
     var desc: String
     var loc: String
     var room: String
