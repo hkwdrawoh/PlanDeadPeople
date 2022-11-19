@@ -18,6 +18,7 @@ struct CalendarList: View {
     @State var sem = "1"
     @State var weekday = "1"
     @State var timeslots: [TimeSlots]
+    @State var editTimeslot = false
     
     var body: some View {
         
@@ -25,31 +26,57 @@ struct CalendarList: View {
         let user = users[users.firstIndex(where: {$0.uid == uid})!]
 
         return VStack {
-            HStack {
-                Button{} label: {
-                    Image(systemName: "arrow.uturn.backward")
-                        .resizable(resizingMode: .stretch)
-                        .frame(width: 22, height: 22)
-                        .foregroundColor(ColorAux1)
-                }
+            ZStack {
+                Text("2022 - 2023")
+                    .font(.system(size: 25))
+                    .foregroundColor(ColorAux4)
+                    .bold()
+                
+                HStack {
+                    /*
+                    Button{} label: {
+                        Image(systemName: "arrow.uturn.backward")
+                            .resizable(resizingMode: .stretch)
+                            .frame(width: 22, height: 22)
+                            .foregroundColor(ColorAux1)
+                    }
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 12)
+                        .background(ColorMain2)
+                        .cornerRadius(10)
+                     */
+                    Spacer()
+                    Button{
+                        if editTimeslot {
+                            if sem == "1" {
+                                timeslots = genTimeSlot(classes, user.timetablesem1)
+                            } else if sem == "2" {
+                                timeslots = genTimeSlot(classes, user.timetablesem2)
+                            } else {
+                                timeslots = genTimeSlot(classes, user.timetablesem3)
+                            }
+                        }
+                        editTimeslot.toggle()
+                    } label: {
+                        if editTimeslot {
+                            Text("Apply")
+                                .foregroundColor(ColorAux1)
+                                .font(.system(size: 18))
+                                .bold()
+                        } else {
+                            Text("Edit")
+                                .foregroundColor(ColorAux1)
+                                .font(.system(size: 18))
+                                .bold()
+                        }
+                    }
                     .padding(.horizontal, 12)
                     .padding(.vertical, 12)
                     .background(ColorMain2)
                     .cornerRadius(10)
-                Spacer()
-                //Button - Edit (Action TBC)
-                Button{} label: {
-                    Text("Edit")
-                        .foregroundColor(ColorAux1)
-                        .font(.system(size: 18))
-                        .bold()
                 }
-                .padding(.horizontal, 12)
-                .padding(.vertical, 12)
-                .background(ColorMain2)
-                .cornerRadius(10)
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
             
             HStack {
                 Group {
@@ -61,6 +88,7 @@ struct CalendarList: View {
                     .padding(.horizontal, 15)
                     .padding(.vertical, 8)
                     .background(sem == "1" ? ColorMain2 : ColorMain4)
+                    .disabled(editTimeslot)
                     
                     Button("Sem 2", action: {
                         sem = "2"
@@ -70,6 +98,7 @@ struct CalendarList: View {
                     .padding(.horizontal, 15)
                     .padding(.vertical, 8)
                     .background(sem == "2" ? ColorMain2 : ColorMain4)
+                    .disabled(editTimeslot)
                     
                     Button("Sem S", action: {
                         sem = "S"
@@ -79,6 +108,7 @@ struct CalendarList: View {
                     .padding(.horizontal, 15)
                     .padding(.vertical, 8)
                     .background(sem == "S" ? ColorMain2 : ColorMain4)
+                    .disabled(editTimeslot)
                 }
                 .cornerRadius(10)
                 .font(.title3)
@@ -91,7 +121,7 @@ struct CalendarList: View {
             ScrollView {
                 ZStack(alignment: .top) {
                     TimetableView()
-                    TimetableCell(menu: $menu, course_desc: $course_desc, weekday: $weekday, timeslots: timeslots)
+                    TimetableCell(menu: $menu, course_desc: $course_desc, weekday: $weekday, editTimeslot: $editTimeslot, users: $users, uid: $uid, timeslots: timeslots)
                 }
             }
         }

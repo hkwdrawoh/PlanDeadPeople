@@ -104,6 +104,18 @@ func addClassTimetable(_ course: Course, _ user: User) -> () {
     }
 }
 
+// remove course / class from the user timetable
+func removeClassTimetable(_ course: Course, _ user: User) -> () {
+    if course.sem == "1" {
+        user.timetablesem1.removeAll(where: {$0 == course.cid})
+        print(user.timetablesem1)
+    } else if course.sem == "2" {
+        user.timetablesem2.removeAll(where: {$0 == course.cid})
+    } else {
+        user.timetablesem3.removeAll(where: {$0 == course.cid})
+    }
+}
+
 // generate timeslot for each timetable
 func genTimeSlot(_ classes: [CClass], _ timetable: [Int16]) -> [TimeSlots] {
     var timeslots: [TimeSlots] = []
