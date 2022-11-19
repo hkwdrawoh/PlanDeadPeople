@@ -52,6 +52,22 @@ enum Buildings: CaseIterable {
     }
 }
 
+// User: provide user stores details
+class User: Identifiable, Codable {
+    var uid: String
+    var username: String
+    var timetablesem1: [Int16]
+    var timetablesem2: [Int16]
+    var timetablesem3: [Int16]
+    
+    init(_ uid: String, _ username: String, _ timetablesem1: [Int16], _ timetablesem2: [Int16], _ timetablesem3: [Int16]) {
+        self.uid = uid
+        self.username = username
+        self.timetablesem1 = timetablesem1
+        self.timetablesem2 = timetablesem2
+        self.timetablesem3 = timetablesem3
+    }
+}
 
 // Course: provide course details
 class Course: Identifiable, Codable {

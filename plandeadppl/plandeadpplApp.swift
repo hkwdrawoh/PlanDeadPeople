@@ -9,12 +9,10 @@ import SwiftUI
 
 @main
 struct plandeadpplApp: App {
-    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             MainMenu()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

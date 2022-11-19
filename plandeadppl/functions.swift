@@ -6,15 +6,11 @@
 //
 
 import Foundation
-import CoreData
 
 // import course to Course
 func importCourse() -> [Course] {
-    
     var courses: [Course] = []
-    
     let pathString = Bundle.main.path(forResource: "CourseData", ofType: "json")
-    
     if let path = pathString {
         let url = URL(fileURLWithPath: path)
         do {
@@ -24,38 +20,25 @@ func importCourse() -> [Course] {
                 let courseData = try decoder.decode([Course].self, from: data)
                 courses = courseData
             }
-            catch {
-                print(error)
-            }
+            catch {print(error)}
         }
-        catch {
-            print(error)
-        }
+        catch {print(error)}
     }
-    
     return courses
 }
 
 // import user to User
-func importUser(_ viewContext: NSManagedObjectContext) {
-    for _ in 1..<2 {
-        let newUser = User(context: viewContext)
-        newUser.id = UUID()
-        newUser.uid = "guest"
-        newUser.uname = "Guest"
-        newUser.timetablesem1 = [1, 2, 3, 4, 5, 6, 7, 8]
-        newUser.timetablesem2 = [8, 7, 14, 16, 17, 19]
-        newUser.timetablesem3 = [6, 9, 13, 21, 22, 24]
-    }
+func importUser() -> [User] {
+    var users: [User] = []
+    users.append(User("guest", "Guest", [], [], []))
+    
+    return users
 }
 
 // import class to CClass
 func importClass() -> [CClass] {
-    
     var classes: [CClass] = []
-    
     let pathString = Bundle.main.path(forResource: "ClassData", ofType: "json")
-    
     if let path = pathString {
         let url = URL(fileURLWithPath: path)
         do {
@@ -65,15 +48,10 @@ func importClass() -> [CClass] {
                 let classData = try decoder.decode([CClass].self, from: data)
                 classes = classData
             }
-            catch {
-                print(error)
-            }
+            catch {print(error)}
         }
-        catch {
-            print(error)
-        }
+        catch {print(error)}
     }
-    
     return classes
 }
 

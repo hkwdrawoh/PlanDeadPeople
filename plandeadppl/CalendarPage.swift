@@ -12,7 +12,6 @@ struct CalendarList: View {
     
     @Binding var menu: String
     @Binding var course_desc: Course
-    @State var usernow = User()
     @State var username = "guest"
     @State var sem = "1"
     @State var weekday = "1"

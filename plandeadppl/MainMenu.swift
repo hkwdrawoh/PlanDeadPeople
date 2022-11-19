@@ -11,6 +11,7 @@ struct MainMenu: View {
     
     @State var menu = menuselect[0]
     @State var course = loadCourse()[0]
+    @State var users = importUser()
     @State var username = "guest"
     @State var user = "test"
     
