@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		372FB003291E98B9003E8D4D /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372FB002291E98B9003E8D4D /* WelcomePage.swift */; };
 		374574822927D28100A3085E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374574812927D28100A3085E /* LocationManager.swift */; };
+		AC2349E22928D0AB0047F2A7 /* ClassData.json in Resources */ = {isa = PBXBuildFile; fileRef = AC2349E12928D0AB0047F2A7 /* ClassData.json */; };
 		ACEF29882925D99100CADB98 /* CourseData.json in Resources */ = {isa = PBXBuildFile; fileRef = ACEF29872925D99100CADB98 /* CourseData.json */; };
 		C504FB5C2922943B00C8E376 /* TimetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504FB5B2922943B00C8E376 /* TimetableCell.swift */; };
 		C55990BD291E309B00C9DF7D /* CalendarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55990BC291E309B00C9DF7D /* CalendarPage.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		372FB002291E98B9003E8D4D /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		374574812927D28100A3085E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		AC2349E12928D0AB0047F2A7 /* ClassData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ClassData.json; sourceTree = "<group>"; };
 		ACEF29872925D99100CADB98 /* CourseData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseData.json; sourceTree = "<group>"; };
 		C504FB5B2922943B00C8E376 /* TimetableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableCell.swift; sourceTree = "<group>"; };
 		C55990BC291E309B00C9DF7D /* CalendarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPage.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				374574812927D28100A3085E /* LocationManager.swift */,
 				C5F5B658291951C200EE0BC5 /* plandeadppl.xcdatamodeld */,
 				ACEF29872925D99100CADB98 /* CourseData.json */,
+				AC2349E12928D0AB0047F2A7 /* ClassData.json */,
 				C5F5B651291951C200EE0BC5 /* Assets.xcassets */,
 				C5F5B653291951C200EE0BC5 /* Preview Content */,
 			);
@@ -278,6 +281,7 @@
 			files = (
 				C5F5B655291951C200EE0BC5 /* Preview Assets.xcassets in Resources */,
 				ACEF29882925D99100CADB98 /* CourseData.json in Resources */,
+				AC2349E22928D0AB0047F2A7 /* ClassData.json in Resources */,
 				C5F5B652291951C200EE0BC5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
