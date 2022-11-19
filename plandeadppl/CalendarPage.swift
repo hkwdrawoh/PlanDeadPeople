@@ -31,7 +31,7 @@ struct CalendarList: View {
                 usernow = user
             }
         }
-        let classes = loadClass(viewContext)!
+        let classes = loadClass()
         var timeslots: [TimeSlots] = GenTimeSlot(classes, Array(1...17))
 
         return VStack {

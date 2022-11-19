@@ -53,7 +53,7 @@ enum Buildings: CaseIterable {
 }
 
 
-// Courses: provide course details
+// Course: provide course details
 class Course: Identifiable, Codable {
     var cid: Int16
     var csub: String
@@ -64,54 +64,52 @@ class Course: Identifiable, Codable {
     var loc: String
     var room: String
     var prof: String
-    
+}
+
+// CClass: provide class details
+class CClass: Identifiable, Codable {
+    var cid: Int16
+    var classid: String
+    var cdate: String
+    var cstart: Int
+    var cend: Int
 }
 
 // Class TimeSlot: Generate timeslot in timetable
 class TimeSlots: Identifiable {
     var cid: Int16
-    var cdate: [String]
-    var cstart: [Int]
-    var cend: [Int]
+    var cdate: String
+    var cstart: Int
+    var cend: Int
     var div_total: Int
     var div_num: Int
-    var height_down: [Int]
+    var height_down: Int
     
     init(_ cclass: CClass) {
         self.cid = cclass.cid
-        self.cdate = cclass.cdate!
-        self.cstart = cclass.cstart!
-        self.cend = cclass.cend!
+        self.cdate = cclass.cdate
+        self.cstart = cclass.cstart
+        self.cend = cclass.cend
         self.div_total = 1
         self.div_num = 1
-        self.height_down = []
-        for i in 0..<cstart.count {
-            self.height_down.append((78 * (cstart[i] - 8)))
-        }
+        self.height_down = 78 * (cstart - 8)
     }
     
     // check time crash function: compare two timeslots
     func check_crash(_ class2: TimeSlots) -> Bool {
-        for i in 0..<cdate.count {
-            if class2.cdate.contains(cdate[i]) {
-                let j = class2.cdate.firstIndex(where: {$0 == cdate[i]})!
-                if cstart[i] >= class2.cstart[j] && cstart[i] < class2.cend[j] {
-                    return true
-                }
-                if class2.cstart[j] >= cstart[i] && class2.cstart[j] < cend[i] {
-                    return true
-                }
+        if class2.cdate == cdate {
+            if cstart >= class2.cstart && cstart < class2.cend {
+                return true
+            }
+            if class2.cstart >= cstart && class2.cstart < cend {
+                return true
             }
         }
         return false
     }
     
     func returnString() -> String {
-        var output: String = ""
-        for i in 0..<cdate.count {
-            output += "\(cdate[i]): \(cstart[i])-\(cend[i]), div: (\(div_total), \(div_num)), height: \(height_down[0])"
-        }
-        return output
+        return "\(cdate): \(cstart)-\(cend), div: (\(div_total), \(div_num)), height: \(height_down)"
     }
 }
 

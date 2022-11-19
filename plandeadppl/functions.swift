@@ -50,15 +50,31 @@ func importUser(_ viewContext: NSManagedObjectContext) {
 }
 
 // import class to CClass
-func importClass(_ viewContext: NSManagedObjectContext) {
-    for index in 1...40 {
-        let newClass = CClass(context: viewContext)
-        newClass.cid = Int16(index)
-        newClass.classid = ["A", "B", "C"].randomElement()
-        newClass.cdate = [["1", "2", "3", "4", "5", "6"].randomElement()!]
-        newClass.cstart = [[9, 10, 11, 12, 13, 14, 15, 16, 17].randomElement()!]
-        newClass.cend = [newClass.cstart![0]+2]
+func importClass() -> [CClass] {
+    
+    var classes: [CClass] = []
+    
+    let pathString = Bundle.main.path(forResource: "ClassData", ofType: "json")
+    
+    if let path = pathString {
+        let url = URL(fileURLWithPath: path)
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            do {
+                let classData = try decoder.decode([CClass].self, from: data)
+                classes = classData
+            }
+            catch {
+                print(error)
+            }
+        }
+        catch {
+            print(error)
+        }
     }
+    
+    return classes
 }
 
 // load courses from Course
@@ -68,16 +84,9 @@ func loadCourse() -> [Course] {
 }
 
 // load classes from CClass
-func loadClass(_ viewContext: NSManagedObjectContext) -> [CClass]? {
-    let Classes: NSFetchRequest<CClass> = CClass.fetchRequest()
-    
-    do {
-        let classes = try viewContext.fetch(Classes) as [CClass]
-        return classes
-    } catch {
-        
-    }
-    return nil
+func loadClass() -> [CClass] {
+    let classes = importClass()
+    return classes
 }
 
 // generate timeslot for each timetable
