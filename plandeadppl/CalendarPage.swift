@@ -61,7 +61,7 @@ struct CalendarList: View {
                         editTimeslot.toggle()
                     } label: {
                         if editTimeslot {
-                            Text("Apply")
+                            Text("Delete")
                                 .foregroundColor(ColorAux1)
                                 .font(.system(size: 18))
                                 .bold()

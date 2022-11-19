@@ -116,7 +116,7 @@ struct EachCell: View {
                                 if deleted {
                                     HStack {
                                         Spacer()
-                                        Text("DELETE")
+                                        Text("Selected")
                                             .bold()
                                             .font(.title3)
                                             .foregroundColor(ColorAux1)
@@ -129,7 +129,7 @@ struct EachCell: View {
                                 } else {
                                     HStack {
                                         Spacer()
-                                        Text("STAY")
+                                        Text("Not Selected")
                                             .bold()
                                             .font(.title3)
                                             .foregroundColor(ColorAux3)
