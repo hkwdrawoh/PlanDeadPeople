@@ -6,16 +6,9 @@
 //
 
 import SwiftUI
-import CoreData
 import UIKit
 
 struct CalendarList: View {
-
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \User.uid, ascending: true)],
-        animation: .default)
-    private var Users: FetchedResults<User>
     
     @Binding var menu: String
     @Binding var course_desc: Course
@@ -26,11 +19,6 @@ struct CalendarList: View {
     
     var body: some View {
         
-        for user in Users {
-            if user.uid == username {
-                usernow = user
-            }
-        }
         let classes = loadClass()
         var timeslots: [TimeSlots] = GenTimeSlot(classes, Array(1...17))
 
@@ -80,6 +68,6 @@ struct CalendarList: View {
 struct CalendarList_Previews: PreviewProvider {
     static var previews: some View {
         let courses = loadCourse()
-        CalendarList(menu: .constant(menuselect[1]), course_desc: .constant(courses[0])).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).previewInterfaceOrientation(.portrait)
+        CalendarList(menu: .constant(menuselect[1]), course_desc: .constant(courses[0]))
     }
 }

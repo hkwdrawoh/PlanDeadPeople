@@ -7,13 +7,11 @@
 // hi
 
 import SwiftUI
-import CoreData
 import UIKit
 
 // Course list main view
 struct CourseList: View {
     
-    @Environment(\.managedObjectContext) private var viewContext
     @Binding var menu: String
     @Binding var course_desc: Course
     @State var sem = "1"
@@ -128,6 +126,6 @@ struct CourseList: View {
 struct CourseList_Previews: PreviewProvider {
     static var previews: some View {
         let courses = loadCourse()
-        CourseList(menu: .constant(menuselect[2]), course_desc: .constant(courses[0])).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        CourseList(menu: .constant(menuselect[2]), course_desc: .constant(courses[0]))
     }
 }

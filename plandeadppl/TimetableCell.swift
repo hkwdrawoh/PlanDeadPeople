@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import CoreData
 
 struct TimetableCell: View {
     @Binding var menu: String
