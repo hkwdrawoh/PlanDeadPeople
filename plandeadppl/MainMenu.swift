@@ -13,6 +13,7 @@ struct MainMenu: View {
     @State var users = importUser()
     @State var menu = menuselect[0]
     @State var course = loadCourse()[0]
+    @State var flag1 = false
     
     var body: some View {
         let classes = loadClass()
@@ -21,6 +22,8 @@ struct MainMenu: View {
             switch menu {
             case menuselect[0]:
                 ScrollView{HomePage()}
+                    .transition(.move(edge: .leading))
+                    .animation(.easeInOut, value: flag1)
             case menuselect[1]:
                 CalendarList(uid: $uid, users: $users, menu: $menu, course_desc: $course, timeslots: genTimeSlot(classes, user.timetablesem1))
             case menuselect[2]:
@@ -35,7 +38,10 @@ struct MainMenu: View {
             
             HStack (alignment: .center) {
                 Spacer()
-                Button{menu = menuselect[0]} label: {
+                Button{
+                    menu = menuselect[0]
+                    flag1.toggle()
+                } label: {
                     Image(systemName: "house.fill")
                         .resizable(resizingMode: .stretch)
                         .frame(width: 45, height: 45)

@@ -108,7 +108,6 @@ func addClassTimetable(_ course: Course, _ user: User) -> () {
 func removeClassTimetable(_ course: Course, _ user: User) -> () {
     if course.sem == "1" {
         user.timetablesem1.removeAll(where: {$0 == course.cid})
-        print(user.timetablesem1)
     } else if course.sem == "2" {
         user.timetablesem2.removeAll(where: {$0 == course.cid})
     } else {
