@@ -34,6 +34,7 @@ struct MainMenu: View {
             default:
                 ScrollView{HomePage()}
             }
+            
             HStack (alignment: .center) {
                 Spacer()
                 Button{menu = menuselect[0]} label: {
