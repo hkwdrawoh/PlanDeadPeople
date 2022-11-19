@@ -21,6 +21,7 @@ struct HomePage: View {
                     .font(.system(size: 35))
                     .foregroundColor(ColorAux4)
                     .bold()
+                    .multilineTextAlignment(.center)
                 Button(action: {
                     if let yourURL = URL(string: "https://elink.eee.hku.hk/eeelife.html") {
                             UIApplication.shared.open(yourURL, options: [:], completionHandler: nil)
