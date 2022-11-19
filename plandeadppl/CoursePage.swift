@@ -16,32 +16,20 @@ struct CourseList: View {
     @Binding var course_desc: Course
     @State var sem = "1"
     @State var showSheet = false
-    @State var filter = ["Course code", "A"]
+    @State var filter_proposed = ["Course code", "A"]
     @State var filter_true = ["Course code", "A"]
     let coursesData = loadCourse()
     
 
     var body: some View {
-        
-        var courses = coursesData.sorted(by: {
-            if filter[0] == "Course code" {
-                if filter[1] == "A" {
-                    return $0.csub == $1.csub ? $0.cnum < $1.cnum : $0.csub < $1.csub
-                }
-                return $0.csub == $1.csub ? $0.cnum > $1.cnum : $0.csub > $1.csub
-            } else if filter[0] == "Course title" {
-                return filter[1] == "A" ? $0.title < $1.title : $0.title > $1.title
-            }
-            return filter[1] == "A" ? $0.title < $1.title : $0.title > $1.title
-        })
-        
+        let courses = filterCourse(coursesData, filter_true)
         NavigationView {
             VStack (spacing: 0) {
                 HStack {
                     //Button - Cancel<->Back Switching Mechanism
                     Button{
                         if showSheet {
-                            filter = filter_true
+                            filter_proposed = filter_true
                             showSheet.toggle()
                         } else {
                             menu = menuselect[0]
@@ -66,7 +54,7 @@ struct CourseList: View {
                     //Button - Filter<->Apply Switching Mechanism
                     Button{
                         if showSheet {
-                            filter_true = filter
+                            filter_true = filter_proposed
                         }
                         showSheet.toggle()
                     } label: {
@@ -95,7 +83,7 @@ struct CourseList: View {
                 
                 if showSheet {
                     //Call Filter Config view
-                    ListFilter(filter: $filter)
+                    ListFilter(filter: $filter_proposed)
                 } else {
                     //Show back CourseList default view
                     VStack {
@@ -105,7 +93,7 @@ struct CourseList: View {
                            ForEach(courses) { course in
                                if course.sem == sem {
                                    Rectangle()
-                                        .frame(width: .infinity, height: 1)
+                                        .frame(height: 1)
                                    Button {
                                        menu = menuselect[3]
                                        course_desc = course

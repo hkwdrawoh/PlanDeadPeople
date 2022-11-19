@@ -67,6 +67,7 @@ func loadClass() -> [CClass] {
     return classes
 }
 
+// change user
 func refreshUser(_ users: [User], _ uid: String) -> User {
     for user in users {
         if user.uid == uid {
@@ -74,6 +75,23 @@ func refreshUser(_ users: [User], _ uid: String) -> User {
         }
     }
     return users[0]
+}
+
+// sort and filter course list
+func filterCourse(_ coursesData: [Course], _ filter: [String]) -> [Course] {
+    var course: [Course] = []
+    course = coursesData.sorted(by: {
+        if filter[0] == "Course code" {
+            if filter[1] == "A" {
+                return $0.csub == $1.csub ? $0.cnum < $1.cnum : $0.csub < $1.csub
+            }
+            return $0.csub == $1.csub ? $0.cnum > $1.cnum : $0.csub > $1.csub
+        } else if filter[0] == "Course title" {
+            return filter[1] == "A" ? $0.title < $1.title : $0.title > $1.title
+        }
+        return filter[1] == "A" ? $0.title < $1.title : $0.title > $1.title
+    })
+    return course
 }
 
 // check whether course / class already exists in user timetable
