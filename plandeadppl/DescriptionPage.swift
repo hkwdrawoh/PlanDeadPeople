@@ -26,7 +26,7 @@ struct CourseDescription: View {
     
     var body: some View {
         
-        var dayname = ["MON", "TUE", "WED", "THUR", "FRI", "SAT"]
+        let dayname = ["MON", "TUE", "WED", "THUR", "FRI", "SAT"]
         
         let timeslots = loadClass()
         let timeslot = timeslots[timeslots.firstIndex(where: {$0.cid == course.cid})!]
@@ -121,7 +121,7 @@ struct CourseDescription: View {
                     Spacer()}
                 
                 HStack {
-                    Text("Time: \(dayname[timeslots.firstIndex(where: {$0.cid == course.cid})!]) \(timeslot.cstart):30-\(timeslot.cend):20")
+                    Text("Time: \(dayname[Int(timeslot.cdate)!-1]) \(timeslot.cstart):30-\(timeslot.cend):20")
                         .font(.system(size: 20))
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)
