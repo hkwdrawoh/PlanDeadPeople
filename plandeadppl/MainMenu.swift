@@ -26,7 +26,7 @@ struct MainMenu: View {
             case menuselect[2]:
                 CourseList(menu: $menu, course_desc: $course)
             case menuselect[3]:
-                CourseDescription(uid: $uid, users: $users, menu: $menu, course: $course, addedTimetable: checkClassinTimetable(course, user))
+                CourseDescription(uid: $uid, users: $users, menu: $menu, course: $course, addedTimetable: checkClassinTimetable(course, user), addedWishlist: checkWishlist(course, user))
             case menuselect[4]:
                 ScrollView{HomePage()}
             default:

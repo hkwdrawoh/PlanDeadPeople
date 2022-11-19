@@ -16,6 +16,7 @@ struct CourseDescription: View {
     @Binding var menu: String
     @Binding var course: Course
     @State var addedTimetable: Bool
+    @State var addedWishlist: Bool
     
     @EnvironmentObject var locationManager: LocationManager
     
@@ -50,11 +51,28 @@ struct CourseDescription: View {
                     .cornerRadius(10)
                 Spacer()
                 //Button - Add to fav
-                Button{} label: {
-                    Image(systemName: "heart")
-                        .resizable(resizingMode: .stretch)
-                        .frame(width: 22, height: 20)
-                        .foregroundColor(ColorAux1)
+                Button{
+                    if addedWishlist {
+                        removeWishlist(course, user)
+                        addedWishlist = false
+                    } else {
+                        addWishlist(course, user)
+                        addedWishlist = true
+                    }
+                } label: {
+                    if addedWishlist{
+                        Image(systemName: "heart.fill")
+                            .resizable(resizingMode: .stretch)
+                            .frame(width: 22, height: 20)
+                            .foregroundColor(ColorAux1)
+                    }
+                    else {
+                        Image(systemName: "heart")
+                            .resizable(resizingMode: .stretch)
+                            .frame(width: 22, height: 20)
+                            .foregroundColor(ColorAux1)
+                    }
+                    
                 }
                 .padding(.horizontal, 12)
                 .padding(.vertical, 13)
@@ -208,6 +226,6 @@ struct CourseDescription_Preview: PreviewProvider {
     static var previews: some View {
         let users = importUser()
         let courses = loadCourse()
-        CourseDescription(uid: .constant("guest"), users: .constant(users), menu: .constant(menuselect[3]), course: .constant(courses[0]), addedTimetable: false)
+        CourseDescription(uid: .constant("guest"), users: .constant(users), menu: .constant(menuselect[3]), course: .constant(courses[0]), addedTimetable: false, addedWishlist: false)
     }
 }

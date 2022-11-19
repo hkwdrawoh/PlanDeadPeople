@@ -30,8 +30,8 @@ func importCourse() -> [Course] {
 // import user to User
 func importUser() -> [User] {
     var users: [User] = []
-    users.append(User("guest", "Guest", [1, 2, 3, 4, 5, 6], [13, 23, 24, 25], [46]))
-    users.append(User("hkwdrawoh", "Howard Wan", [1, 2, 3, 4, 5, 6], [13, 23, 24, 25], [46]))
+    users.append(User("guest", "Guest", [1, 2, 3, 4, 5, 6], [13, 23, 24, 25], [46], [13, 23]))
+    users.append(User("hkwdrawoh", "Howard Wan", [1, 2, 3, 4, 5, 6], [13, 23, 24, 25], [46], [13, 23]))
     return users
 }
 
@@ -114,6 +114,25 @@ func removeClassTimetable(_ course: Course, _ user: User) -> () {
     } else {
         user.timetablesem3.removeAll(where: {$0 == course.cid})
     }
+}
+
+// check whether course / class already exists in user timetable
+func checkWishlist(_ course: Course, _ user: User) -> Bool {
+    return user.wishlist.contains(course.cid)
+}
+
+// add course / class to the wishlist
+func addWishlist(_ course: Course, _ user: User) -> () {
+    if !user.wishlist.contains(course.cid) {
+        user.wishlist.append(course.cid)
+        print(user.wishlist)
+    }
+}
+
+// remove course / class from the wishlist
+func removeWishlist (_ course: Course, _ user: User) -> () {
+    user.wishlist.removeAll(where: {$0 == course.cid})
+    print(user.wishlist)
 }
 
 // generate timeslot for each timetable
