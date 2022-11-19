@@ -9,19 +9,20 @@ import SwiftUI
 
 struct MainMenu: View {
     
+    @State var uid = "guest"
+    @State var users = importUser()
     @State var menu = menuselect[0]
     @State var course = loadCourse()[0]
-    @State var users = importUser()
-    @State var username = "guest"
-    @State var user = "test"
     
     var body: some View {
+        let classes = loadClass()
+        let user = users[users.firstIndex(where: {$0.uid == uid})!]
         VStack(spacing: 0) {
             switch menu {
             case menuselect[0]:
                 ScrollView{HomePage()}
             case menuselect[1]:
-                CalendarList(menu: $menu, course_desc: $course)
+                CalendarList(uid: $uid, users: $users, menu: $menu, course_desc: $course, timeslots: GenTimeSlot(classes, user.timetablesem1))
             case menuselect[2]:
                 CourseList(menu: $menu, course_desc: $course)
             case menuselect[3]:

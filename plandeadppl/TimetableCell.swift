@@ -62,7 +62,7 @@ struct EachCell: View {
             }) {
                 ZStack {
                     VStack (alignment: .leading) {
-                        Text("\(course.csub) \(course.cnum)\n\(course.loc) \(course.room)")
+                        Text("\(course.csub) \(course.cnum)\n\(course.loc)\(course.room)")
                             .bold()
                             .font(.title3)
                             .foregroundColor(ColorAux1)

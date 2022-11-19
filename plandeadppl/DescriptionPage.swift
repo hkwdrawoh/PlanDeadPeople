@@ -86,7 +86,7 @@ struct CourseDescription: View {
                 
                 //Hstack for Location and Button Placement
                 HStack (alignment: .center) {
-                    Text("Location: \(course.loc) \(course.room)")
+                    Text("Location: \(course.loc)\(course.room)")
                         .font(.system(size: 20))
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)

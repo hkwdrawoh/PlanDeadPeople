@@ -10,16 +10,19 @@ import UIKit
 
 struct CalendarList: View {
     
+    @Binding var uid: String
+    @Binding var users: [User]
     @Binding var menu: String
     @Binding var course_desc: Course
     @State var username = "guest"
     @State var sem = "1"
     @State var weekday = "1"
+    @State var timeslots: [TimeSlots]
     
     var body: some View {
         
         let classes = loadClass()
-        var timeslots: [TimeSlots] = GenTimeSlot(classes, Array(1...17))
+        let user = users[users.firstIndex(where: {$0.uid == uid})!]
 
         return VStack {
             HStack {
@@ -47,7 +50,40 @@ struct CalendarList: View {
             }
             .padding(.horizontal)
             
-            SemSelect(sem: $sem)
+            HStack {
+                Group {
+                    Button("Sem 1", action: {
+                        sem = "1"
+                        timeslots = GenTimeSlot(classes, user.timetablesem1)
+                    })
+                    .foregroundColor(sem == "1" ? ColorAux1 : ColorAux4)
+                    .padding(.horizontal, 15)
+                    .padding(.vertical, 8)
+                    .background(sem == "1" ? ColorMain2 : ColorMain4)
+                    
+                    Button("Sem 2", action: {
+                        sem = "2"
+                        timeslots = GenTimeSlot(classes, user.timetablesem2)
+                    })
+                    .foregroundColor(sem == "2" ? ColorAux1 : ColorAux4)
+                    .padding(.horizontal, 15)
+                    .padding(.vertical, 8)
+                    .background(sem == "2" ? ColorMain2 : ColorMain4)
+                    
+                    Button("Sem S", action: {
+                        sem = "S"
+                        timeslots = GenTimeSlot(classes, user.timetablesem3)
+                    })
+                    .foregroundColor(sem == "S" ? ColorAux1 : ColorAux4)
+                    .padding(.horizontal, 15)
+                    .padding(.vertical, 8)
+                    .background(sem == "S" ? ColorMain2 : ColorMain4)
+                }
+                .cornerRadius(10)
+                .font(.title3)
+            }
+            .padding(.bottom, 5)
+            .padding(.top, 5)
             
             WeekdaySelect(weekday: $weekday)
             
@@ -66,7 +102,9 @@ struct CalendarList: View {
 
 struct CalendarList_Previews: PreviewProvider {
     static var previews: some View {
+        let classes = loadClass()
         let courses = loadCourse()
-        CalendarList(menu: .constant(menuselect[1]), course_desc: .constant(courses[0]))
+        let users = importUser()
+        CalendarList(uid: .constant("guest"), users: .constant(users), menu: .constant(menuselect[1]), course_desc: .constant(courses[0]), timeslots: GenTimeSlot(classes, users[users.firstIndex(where: {$0.uid == "guest"})!].timetablesem1))
     }
 }

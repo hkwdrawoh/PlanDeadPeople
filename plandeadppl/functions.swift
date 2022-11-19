@@ -30,8 +30,8 @@ func importCourse() -> [Course] {
 // import user to User
 func importUser() -> [User] {
     var users: [User] = []
-    users.append(User("guest", "Guest", [], [], []))
-    
+    users.append(User("guest", "Guest", [1, 2, 3], [4, 5, 6], [7, 8, 9]))
+    users.append(User("hkwdrawoh", "Howard Wan", [], [], []))
     return users
 }
 
@@ -67,8 +67,17 @@ func loadClass() -> [CClass] {
     return classes
 }
 
+func refreshUser(_ users: [User], _ uid: String) -> User {
+    for user in users {
+        if user.uid == uid {
+            return user
+        }
+    }
+    return users[0]
+}
+
 // generate timeslot for each timetable
-func GenTimeSlot(_ classes: [CClass], _ timetable: [Int]) -> [TimeSlots] {
+func GenTimeSlot(_ classes: [CClass], _ timetable: [Int16]) -> [TimeSlots] {
     var timeslots: [TimeSlots] = []
     var timeslot1: TimeSlots
     for cid in timetable {
