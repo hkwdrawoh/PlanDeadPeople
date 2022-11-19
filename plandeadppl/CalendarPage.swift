@@ -27,11 +27,13 @@ struct CalendarList: View {
 
         return VStack {
             ZStack {
+                // Title
                 Text("2022 - 2023")
                     .font(.system(size: 25))
                     .foregroundColor(ColorAux4)
                     .bold()
                 
+                // Edit (change to Apply) button
                 HStack {
                     /*
                     Button{} label: {
@@ -78,6 +80,7 @@ struct CalendarList: View {
                 .padding(.horizontal)
             }
             
+            // Sem selection button
             HStack {
                 Group {
                     Button("Sem 1", action: {
@@ -116,8 +119,10 @@ struct CalendarList: View {
             .padding(.bottom, 5)
             .padding(.top, 5)
             
+            // Weekday selection button
             WeekdaySelect(weekday: $weekday)
             
+            // Timetable View
             ScrollView {
                 ZStack(alignment: .top) {
                     TimetableView()
