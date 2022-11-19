@@ -54,7 +54,7 @@ struct CalendarList: View {
                 Group {
                     Button("Sem 1", action: {
                         sem = "1"
-                        timeslots = GenTimeSlot(classes, user.timetablesem1)
+                        timeslots = genTimeSlot(classes, user.timetablesem1)
                     })
                     .foregroundColor(sem == "1" ? ColorAux1 : ColorAux4)
                     .padding(.horizontal, 15)
@@ -63,7 +63,7 @@ struct CalendarList: View {
                     
                     Button("Sem 2", action: {
                         sem = "2"
-                        timeslots = GenTimeSlot(classes, user.timetablesem2)
+                        timeslots = genTimeSlot(classes, user.timetablesem2)
                     })
                     .foregroundColor(sem == "2" ? ColorAux1 : ColorAux4)
                     .padding(.horizontal, 15)
@@ -72,7 +72,7 @@ struct CalendarList: View {
                     
                     Button("Sem S", action: {
                         sem = "S"
-                        timeslots = GenTimeSlot(classes, user.timetablesem3)
+                        timeslots = genTimeSlot(classes, user.timetablesem3)
                     })
                     .foregroundColor(sem == "S" ? ColorAux1 : ColorAux4)
                     .padding(.horizontal, 15)
@@ -105,6 +105,6 @@ struct CalendarList_Previews: PreviewProvider {
         let classes = loadClass()
         let courses = loadCourse()
         let users = importUser()
-        CalendarList(uid: .constant("guest"), users: .constant(users), menu: .constant(menuselect[1]), course_desc: .constant(courses[0]), timeslots: GenTimeSlot(classes, users[users.firstIndex(where: {$0.uid == "guest"})!].timetablesem1))
+        CalendarList(uid: .constant("guest"), users: .constant(users), menu: .constant(menuselect[1]), course_desc: .constant(courses[0]), timeslots: genTimeSlot(classes, users[users.firstIndex(where: {$0.uid == "guest"})!].timetablesem1))
     }
 }

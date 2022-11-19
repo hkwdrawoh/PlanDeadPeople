@@ -30,8 +30,8 @@ func importCourse() -> [Course] {
 // import user to User
 func importUser() -> [User] {
     var users: [User] = []
-    users.append(User("guest", "Guest", [1, 2, 3], [4, 5, 6], [7, 8, 9]))
-    users.append(User("hkwdrawoh", "Howard Wan", [], [], []))
+    users.append(User("guest", "Guest", [1, 2, 3, 4, 5, 6], [13, 23, 24, 25], [46]))
+    users.append(User("hkwdrawoh", "Howard Wan", [1, 2, 3, 4, 5, 6], [13, 23, 24, 25], [46]))
     return users
 }
 
@@ -76,8 +76,36 @@ func refreshUser(_ users: [User], _ uid: String) -> User {
     return users[0]
 }
 
+// check whether course / class already exists in user timetable
+func checkClassinTimetable(_ course: Course, _ user: User) -> Bool {
+    if course.sem == "1" {
+        return user.timetablesem1.contains(course.cid)
+    } else if course.sem == "2" {
+        return user.timetablesem2.contains(course.cid)
+    } else {
+        return user.timetablesem3.contains(course.cid)
+    }
+}
+
+// add course / class to the user timetable
+func addClassTimetable(_ course: Course, _ user: User) -> () {
+    if course.sem == "1" {
+        if !user.timetablesem1.contains(course.cid) {
+            user.timetablesem1.append(course.cid)
+        }
+    } else if course.sem == "2" {
+        if !user.timetablesem2.contains(course.cid) {
+            user.timetablesem2.append(course.cid)
+        }
+    } else {
+        if !user.timetablesem3.contains(course.cid) {
+            user.timetablesem3.append(course.cid)
+        }
+    }
+}
+
 // generate timeslot for each timetable
-func GenTimeSlot(_ classes: [CClass], _ timetable: [Int16]) -> [TimeSlots] {
+func genTimeSlot(_ classes: [CClass], _ timetable: [Int16]) -> [TimeSlots] {
     var timeslots: [TimeSlots] = []
     var timeslot1: TimeSlots
     for cid in timetable {

@@ -22,11 +22,11 @@ struct MainMenu: View {
             case menuselect[0]:
                 ScrollView{HomePage()}
             case menuselect[1]:
-                CalendarList(uid: $uid, users: $users, menu: $menu, course_desc: $course, timeslots: GenTimeSlot(classes, user.timetablesem1))
+                CalendarList(uid: $uid, users: $users, menu: $menu, course_desc: $course, timeslots: genTimeSlot(classes, user.timetablesem1))
             case menuselect[2]:
                 CourseList(menu: $menu, course_desc: $course)
             case menuselect[3]:
-                CourseDescription(menu: $menu, course: $course)
+                CourseDescription(uid: $uid, users: $users, menu: $menu, course: $course, addedTimetable: checkClassinTimetable(course, user))
             case menuselect[4]:
                 ScrollView{HomePage()}
             default:

@@ -21,7 +21,8 @@ let ColorAux2 = Color(UIColor(red: 0, green: 0, blue: 0, alpha: 1))             
 let ColorAux3 = Color(UIColor(red: 1, green: 0, blue: 0, alpha: 1))                         //red
 let ColorAux4 = Color(UIColor(red: 13/255, green: 47/255, blue: 48/255, alpha: 1))          //dark green
 
-// Time division
+// Day Time division
+let dayname = ["MON", "TUE", "WED", "THUR", "FRI", "SAT"]
 let timediv = ["08:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "15:30", "16:30", "17:30", "18:30", "19:30", "20:30", "21:30"]
 
 // Menu selection

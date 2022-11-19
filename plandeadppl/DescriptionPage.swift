@@ -11,8 +11,11 @@ import Contacts
 
 struct CourseDescription: View {
     
+    @Binding var uid: String
+    @Binding var users: [User]
     @Binding var menu: String
     @Binding var course: Course
+    @State var addedTimetable: Bool
     
     @EnvironmentObject var locationManager: LocationManager
     
@@ -26,12 +29,12 @@ struct CourseDescription: View {
     
     var body: some View {
         
-        let dayname = ["MON", "TUE", "WED", "THUR", "FRI", "SAT"]
-        
+        let user = users[users.firstIndex(where: {$0.uid == uid})!]
         let timeslots = loadClass()
         let timeslot = timeslots[timeslots.firstIndex(where: {$0.cid == course.cid})!]
         
         VStack (spacing: 0) {
+            
             //Top button icon
             HStack {
                 Button{menu = menuselect[2]} label: {
@@ -48,11 +51,11 @@ struct CourseDescription: View {
                 Button{} label: {
                     Image(systemName: "heart")
                         .resizable(resizingMode: .stretch)
-                        .frame(width: 22, height: 22)
+                        .frame(width: 22, height: 20)
                         .foregroundColor(ColorAux1)
                 }
                 .padding(.horizontal, 12)
-                .padding(.vertical, 12)
+                .padding(.vertical, 13)
                 .background(ColorMain2)
                 .cornerRadius(10)
             }
@@ -120,8 +123,9 @@ struct CourseDescription: View {
                     .cornerRadius(10)
                     Spacer()}
                 
+                //HStack for class timeslot
                 HStack {
-                    Text("Time: \(dayname[Int(timeslot.cdate)!-1]) \(timeslot.cstart):30-\(timeslot.cend):20")
+                    Text("Time: (Sem \(course.sem)) \(dayname[Int(timeslot.cdate)!-1]) \(timeslot.cstart):30-\(timeslot.cend):20")
                         .font(.system(size: 20))
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)
@@ -151,15 +155,28 @@ struct CourseDescription: View {
             }
             .background(ColorMain4)
             
-            //Add to Planner Button (Pending Action TBC)
-            Button{} label: {
+            //Add to Timetable Button
+            Button{
+                if addedTimetable {
+                    menu = menuselect[1]
+                } else {
+                    addClassTimetable(course, user)
+                    addedTimetable = checkClassinTimetable(course, user)
+                }
+            } label: {
                 HStack{
                     Spacer()
-                    Text("Add to Planner")
-                        .font(.title2)
-                        .foregroundColor(ColorAux1)
-                        .multilineTextAlignment(.center)
-                        .padding()
+                    if addedTimetable {
+                        Text("Added - View Timetable")
+                            .font(.system(size: 30))
+                            .foregroundColor(ColorAux1)
+                            .padding(10)
+                    } else {
+                        Text("Add to Timetable")
+                            .font(.system(size: 30))
+                            .foregroundColor(ColorAux1)
+                            .padding(10)
+                    }
                     Spacer()
                 }
             }.background(ColorMain2)
@@ -187,7 +204,8 @@ struct CourseDescription: View {
 
 struct CourseDescription_Preview: PreviewProvider {
     static var previews: some View {
+        let users = importUser()
         let courses = loadCourse()
-        CourseDescription(menu: .constant(menuselect[3]), course: .constant(courses[0]))
+        CourseDescription(uid: .constant("guest"), users: .constant(users), menu: .constant(menuselect[3]), course: .constant(courses[0]), addedTimetable: false)
     }
 }
