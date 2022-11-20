@@ -82,11 +82,21 @@ func filterCourse(_ user: User, _ coursesData: [Course], _ sort: [Bool], _ filte
     var courses: [Course] = coursesData
     
     // filtering
-    if filter[0] {
-        courses = courses.filter { course in
-            return user.wishlist.contains(course.cid)
-        }
-    }
+    if filter[0] {courses = courses.filter {return user.wishlist.contains($0.cid)}}
+    
+    if !filter[1] {courses = courses.filter {return $0.csub != "ELEC"}}
+    
+    if !filter[2] {courses = courses.filter {return $0.csub != "ENGG"}}
+    
+    if !filter[3] {courses = courses.filter {return $0.cnum.prefix(1) != "1"}}
+    
+    if !filter[4] {courses = courses.filter {return $0.cnum.prefix(1) != "2"}}
+    
+    if !filter[5] {courses = courses.filter {return $0.cnum.prefix(1) != "3"}}
+    
+    if !filter[6] {courses = courses.filter {return $0.cnum.prefix(1) != "4"}}
+    
+    if !filter[7] {courses = courses.filter {return $0.cnum.prefix(1) != "9"}}
     
     // sorting
     courses = courses.sorted(by: {

@@ -13,7 +13,6 @@ struct ListFilter: View {
     
     @Binding var sort: [Bool]
     @Binding var filter: [Bool]
-    @State var isWishlist = false
     
     init(sort: Binding<[Bool]>, filter: Binding<[Bool]>) {
         self._sort = sort
@@ -33,8 +32,7 @@ struct ListFilter: View {
                         .font(.title2)
                     Spacer()
                     Button{
-                        sort[0] = false
-                        sort[1] = false
+                        sort = sort_default
                     } label: {
                         Text("Reset")
                             .foregroundColor(ColorAux1)
@@ -54,7 +52,8 @@ struct ListFilter: View {
                         sort[0] = false
                     }, label: {
                         Text("Course code")
-                            .padding(8)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 8)
                             .foregroundColor(!sort[0] ? ColorAux1 : ColorAux4)
                             .background(!sort[0] ? ColorMain2 : ColorMain4)
                             .cornerRadius(50)
@@ -64,7 +63,8 @@ struct ListFilter: View {
                         sort[0] = true
                     }, label: {
                         Text("Course title")
-                            .padding(8)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 8)
                             .foregroundColor(sort[0] ? ColorAux1 : ColorAux4)
                             .background(sort[0] ? ColorMain2 : ColorMain4)
                             .cornerRadius(50)
@@ -87,7 +87,7 @@ struct ListFilter: View {
                         .font(.title2)
                     Spacer()
                     Button{
-                        filter[0] = false
+                        filter = filter_default
                     } label: {
                         Text("Clear")
                             .foregroundColor(ColorAux1)
@@ -100,9 +100,113 @@ struct ListFilter: View {
                     .cornerRadius(10)
                 }
                 
-                Toggle("Wishlist Only", isOn: $filter[0])
+                // filtering wishlist
+                Toggle("Wishlist Only:", isOn: $filter[0])
                     .padding(.horizontal)
                     .tint(ColorMain2)
+                
+                // filtering course sub
+                HStack {
+                    Text("Course subject:")
+                        .padding(.horizontal)
+                    Spacer()
+                }
+                
+                HStack (spacing: 0) {
+                    Spacer()
+                    Button(action: {
+                        filter[1].toggle()
+                    }, label: {
+                        Text("ELEC")
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 8)
+                            .foregroundColor(filter[1] ? ColorAux1 : ColorAux4)
+                            .background(filter[1] ? ColorMain2 : ColorMain4)
+                            .cornerRadius(50)
+                    })
+                    Spacer()
+                    Button(action: {
+                        filter[2].toggle()
+                    }, label: {
+                        Text("ENGG")
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 8)
+                            .foregroundColor(filter[2] ? ColorAux1 : ColorAux4)
+                            .background(filter[2] ? ColorMain2 : ColorMain4)
+                            .cornerRadius(50)
+                    })
+                    Spacer()
+                }
+                
+                // filtering course num
+                HStack {
+                    Text("Course level:")
+                        .padding(.horizontal)
+                    Spacer()
+                }
+                
+                HStack (spacing: 0) {
+                    Spacer()
+                    Button(action: {
+                        filter[3].toggle()
+                    }, label: {
+                        Text("Level 1")
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 8)
+                            .foregroundColor(filter[3] ? ColorAux1 : ColorAux4)
+                            .background(filter[3] ? ColorMain2 : ColorMain4)
+                            .cornerRadius(50)
+                    })
+                    Spacer()
+                    Button(action: {
+                        filter[4].toggle()
+                    }, label: {
+                        Text("Level 2")
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 8)
+                            .foregroundColor(filter[4] ? ColorAux1 : ColorAux4)
+                            .background(filter[4] ? ColorMain2 : ColorMain4)
+                            .cornerRadius(50)
+                    })
+                    Spacer()
+                    Button(action: {
+                        filter[5].toggle()
+                    }, label: {
+                        Text("Level 3")
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 8)
+                            .foregroundColor(filter[5] ? ColorAux1 : ColorAux4)
+                            .background(filter[5] ? ColorMain2 : ColorMain4)
+                            .cornerRadius(50)
+                    })
+                    Spacer()
+                }
+                
+                HStack (spacing: 0) {
+                    Spacer()
+                    Button(action: {
+                        filter[6].toggle()
+                    }, label: {
+                        Text("Level 4")
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 8)
+                            .foregroundColor(filter[6] ? ColorAux1 : ColorAux4)
+                            .background(filter[6] ? ColorMain2 : ColorMain4)
+                            .cornerRadius(50)
+                    })
+                    Spacer()
+                    Button(action: {
+                        filter[7].toggle()
+                    }, label: {
+                        Text("Level 9")
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 8)
+                            .foregroundColor(filter[7] ? ColorAux1 : ColorAux4)
+                            .background(filter[7] ? ColorMain2 : ColorMain4)
+                            .cornerRadius(50)
+                    })
+                    Spacer()
+                }
             }
             .font(.title3)
         }
@@ -114,6 +218,6 @@ struct ListFilter: View {
 
 struct ListFilter_Previews: PreviewProvider {
     static var previews: some View {
-        ListFilter(sort: .constant([false, false]), filter: .constant([false, false, false]))
+        ListFilter(sort: .constant(sort_default), filter: .constant(filter_default))
     }
 }

@@ -29,6 +29,10 @@ let timediv = ["08:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "1
 // Menu selection
 let menuselect = ["Welcome", "CourseList", "CourseDetail", "Timetable", "Personal"]
 
+// Default sorting and filtering array
+let sort_default = [false, false]
+let filter_default = [false, true, true, true, true, true, true, true]
+
 // Building locations enum
 enum Buildings: CaseIterable {
     case LE, MWT, CB, MB, CYPP

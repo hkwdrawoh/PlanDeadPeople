@@ -18,11 +18,10 @@ struct CourseList: View {
     @Binding var course_desc: Course
     @State var sem = "1"
     @State var showSheet = false
-    @State var sort_proposed = [false, false]
-    @State var sort_true = [false, false]
-    @State var filter_proposed = [false, false, false]
-    @State var filter_true = [false, false, false]
-    @State var isWishlist = false
+    @State var sort_proposed = sort_default
+    @State var sort_true = sort_default
+    @State var filter_proposed = filter_default
+    @State var filter_true = filter_default
     
     let coursesData = loadCourse()
 
@@ -100,7 +99,7 @@ struct CourseList: View {
                     ListFilter(sort: $sort_proposed, filter: $filter_proposed)
                 } else {
                     // Title
-                    Text(filter_true[0] ? "Course List - Filtered" : "Course List")
+                    Text(filter_true != filter_default ? "Course List - Filtered" : "Course List")
                         .font(.largeTitle)
                         .foregroundColor(ColorAux4)
                         .bold()
@@ -114,17 +113,24 @@ struct CourseList: View {
                         }
                         
                         ScrollView {
-                           ForEach(courses) { course in
-                               if course.sem == sem {
-                                   Rectangle()
-                                        .frame(height: 1)
-                                   Button {
-                                       menu = menuselect[3]
-                                       course_desc = course
-                                   } label: {
-                                       CourseRow(course: course)
-                                   }
-                               }
+                            if courses.filter({return $0.sem == sem}).count == 0 {
+                                Rectangle()
+                                    .frame(height: 1)
+                                Text("No courses found!")
+                                    .font(.title2)
+                            } else {
+                                ForEach(courses) { course in
+                                    if course.sem == sem {
+                                        Rectangle()
+                                            .frame(height: 1)
+                                        Button {
+                                            menu = menuselect[3]
+                                            course_desc = course
+                                        } label: {
+                                            CourseRow(course: course)
+                                        }
+                                    }
+                                }
                             }
                         }
                         .foregroundColor(ColorAux4)
