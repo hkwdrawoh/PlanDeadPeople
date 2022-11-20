@@ -129,7 +129,7 @@ struct EachCell: View {
                                 } else {
                                     HStack {
                                         Spacer()
-                                        Text("Not Selected")
+                                        Text("Unselected")
                                             .bold()
                                             .font(.title3)
                                             .foregroundColor(ColorAux3)
