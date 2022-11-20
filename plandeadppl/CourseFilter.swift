@@ -25,10 +25,10 @@ struct ListFilter: View {
         ScrollView {
             VStack (alignment: .center) {
                 Text("Filter")
-                    .font(.system(size: 30))
+                    .font(.title)
                 HStack {
                     Text("Sorted by:")
-                        .font(.system(size: 22))
+                        .font(.title2)
                     Spacer()
                 }
                 HStack {
@@ -48,6 +48,11 @@ struct ListFilter: View {
                         }
                     }
                     .pickerStyle(.segmented)
+                }
+                HStack {
+                    Text("\nFiltered by:")
+                        .font(.title2)
+                    Spacer()
                 }
             }
         }

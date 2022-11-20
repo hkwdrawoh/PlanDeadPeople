@@ -29,7 +29,7 @@ struct CalendarList: View {
             ZStack {
                 // Title
                 Text("2022 - 2023")
-                    .font(.system(size: 25))
+                    .font(.title)
                     .foregroundColor(ColorAux4)
                     .bold()
                 

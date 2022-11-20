@@ -44,7 +44,8 @@ struct MainMenu: View {
                 } label: {
                     Image(systemName: "house.fill")
                         .resizable(resizingMode: .stretch)
-                        .frame(width: 45, height: 45)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: 45)
                         .foregroundColor(ColorAux1)
                 }
                     .padding(10)
@@ -53,7 +54,8 @@ struct MainMenu: View {
                 Button{menu = menuselect[1]} label: {
                     Image(systemName: "calendar.badge.clock")
                         .resizable(resizingMode: .stretch)
-                        .frame(width: 45, height: 39)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: 45)
                         .foregroundColor(ColorAux1)
                 }
                     .padding(.horizontal, 10)
@@ -63,27 +65,30 @@ struct MainMenu: View {
                 Button{menu = menuselect[2]} label: {
                     Image(systemName: "text.book.closed.fill")
                         .resizable(resizingMode: .stretch)
-                        .frame(width: 39, height: 45)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: 37)
                         .foregroundColor(ColorAux1)
                 }
-                    .padding(.horizontal, 13)
+                    .padding(.horizontal, 12)
                     .padding(.vertical, 10)
                     .background(menu == menuselect[2] ? ColorMain2 : nil)
                     .cornerRadius(10)
                 Button{menu = menuselect[3]} label: {
                     Image(systemName: "doc.text.magnifyingglass")
                         .resizable(resizingMode: .stretch)
-                        .frame(width: 39, height: 45)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: 37)
                         .foregroundColor(ColorAux1)
                 }
-                    .padding(.horizontal, 13)
+                    .padding(.horizontal, 12)
                     .padding(.vertical, 10)
                     .background(menu == menuselect[3] ? ColorMain2 : nil)
                     .cornerRadius(10)
                 Button{menu = menuselect[4]} label: {
                     Image(systemName: "person.crop.circle")
                         .resizable(resizingMode: .stretch)
-                        .frame(width: 45, height: 45)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: 45)
                         .foregroundColor(ColorAux1)
                 }
                     .padding(10)

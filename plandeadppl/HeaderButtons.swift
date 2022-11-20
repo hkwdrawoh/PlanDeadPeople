@@ -12,7 +12,7 @@ struct SemSelect: View {
     @Binding var sem: String
     
     var body: some View {
-        HStack {
+        HStack (spacing: 0) {
             Group {
                 Button("Sem 1", action: {sem = "1"})
                 .foregroundColor(sem == "1" ? ColorAux1 : ColorAux4)
@@ -48,6 +48,8 @@ struct WeekdaySelect: View {
     
     var body: some View {
         HStack {
+            Spacer()
+            
             Group {
                 Button("Mon", action: {weekday = "1"})
                 .foregroundColor(weekday == "1" ? ColorAux1 : ColorAux4)
@@ -55,29 +57,43 @@ struct WeekdaySelect: View {
                 .padding(.vertical, 8)
                 .background(weekday == "1" ? ColorMain2 : ColorMain4)
                 
+                Spacer()
+                
                 Button("Tue", action: {weekday = "2"})
                 .foregroundColor(weekday == "2" ? ColorAux1 : ColorAux4)
                 .frame(width: 50)
                 .padding(.vertical, 8)
                 .background(weekday == "2" ? ColorMain2 : ColorMain4)
                 
+                Spacer()
+                
                 Button("Wed", action: {weekday = "3"})
                 .foregroundColor(weekday == "3" ? ColorAux1 : ColorAux4)
                 .frame(width: 50)
                 .padding(.vertical, 8)
                 .background(weekday == "3" ? ColorMain2 : ColorMain4)
-                
+            }
+            .cornerRadius(10)
+            .font(.title3)
+            
+            Spacer()
+            
+            Group {
                 Button("Thu", action: {weekday = "4"})
                 .foregroundColor(weekday == "4" ? ColorAux1 : ColorAux4)
                 .frame(width: 50)
                 .padding(.vertical, 8)
                 .background(weekday == "4" ? ColorMain2 : ColorMain4)
                 
+                Spacer()
+                
                 Button("Fri", action: {weekday = "5"})
                 .foregroundColor(weekday == "5" ? ColorAux1 : ColorAux4)
                 .frame(width: 50)
                 .padding(.vertical, 8)
                 .background(weekday == "5" ? ColorMain2 : ColorMain4)
+                
+                Spacer()
                 
                 Button("Sat", action: {weekday = "6"})
                 .foregroundColor(weekday == "6" ? ColorAux1 : ColorAux4)
@@ -87,6 +103,8 @@ struct WeekdaySelect: View {
             }
             .cornerRadius(10)
             .font(.title3)
+            
+            Spacer()
         }
         .padding(.bottom, 5)
     }

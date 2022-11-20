@@ -14,11 +14,11 @@ struct HomePage: View {
             ColorMain4.ignoresSafeArea()
             VStack {
                 Text("Timetable Planner")
-                    .font(.system(size: 35))
+                    .font(.largeTitle)
                     .foregroundColor(ColorAux4)
                     .bold()
                 Text("Let's Survive This Year!")
-                    .font(.system(size: 35))
+                    .font(.largeTitle)
                     .foregroundColor(ColorAux4)
                     .bold()
                     .multilineTextAlignment(.center)

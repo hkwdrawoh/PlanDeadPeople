@@ -86,13 +86,13 @@ struct CourseDescription: View {
             ScrollView {
                 
                 Text("\(course.csub) \(course.cnum)")
-                    .font(.system(size: 38))
+                    .font(.largeTitle)
                     .foregroundColor(ColorAux4)
                     .bold()
                     .padding(.vertical, -5)
                 
                 Text(course.title)
-                    .font(.system(size: 25))
+                    .font(.title)
                     .foregroundColor(ColorAux4)
                     .bold()
                     .padding(.vertical, -5)
@@ -101,7 +101,7 @@ struct CourseDescription: View {
                 //HStack for Teacher
                 HStack {
                     Text("Teacher: "+course.prof)
-                        .font(.system(size: 20))
+                        .font(.title3)
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)
                         .padding([.top, .leading, .trailing], 10.0)
@@ -110,7 +110,7 @@ struct CourseDescription: View {
                 //Hstack for Location and Button Placement
                 HStack (alignment: .center) {
                     Text("Location: \(course.loc)\(course.room)")
-                        .font(.system(size: 20))
+                        .font(.title3)
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)
                         .padding([.top, .leading, .trailing], 10)
@@ -146,7 +146,7 @@ struct CourseDescription: View {
                 //HStack for class timeslot
                 HStack {
                     Text("Time: (Sem \(course.sem)) \(dayname[Int(timeslot.cdate)!-1]) \(timeslot.cstart):30-\(timeslot.cend):20")
-                        .font(.system(size: 20))
+                        .font(.title3)
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)
                         .padding([.top, .leading, .trailing], 10.0)
@@ -156,7 +156,7 @@ struct CourseDescription: View {
                 //HStack for course desc header
                 HStack {
                     Text("Description: ")
-                        .font(.system(size: 20))
+                        .font(.title3)
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)
                         .padding([.top, .leading, .trailing], 10.0)
@@ -165,7 +165,7 @@ struct CourseDescription: View {
                 //HStack for course desc_full
                 HStack {
                     Text(course.desc)
-                        .font(.system(size: 20))
+                        .font(.title3)
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)
                         .padding(.horizontal, 10.0)
@@ -188,12 +188,12 @@ struct CourseDescription: View {
                     Spacer()
                     if addedTimetable {
                         Text("Added - View Timetable")
-                            .font(.system(size: 30))
+                            .font(.title)
                             .foregroundColor(ColorAux1)
                             .padding(10)
                     } else {
                         Text("Add to Timetable")
-                            .font(.system(size: 30))
+                            .font(.title)
                             .foregroundColor(ColorAux1)
                             .padding(10)
                     }

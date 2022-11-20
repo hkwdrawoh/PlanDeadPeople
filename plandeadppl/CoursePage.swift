@@ -38,6 +38,7 @@ struct CourseList: View {
                         if showSheet {
                             Text("Cancel")
                                 .foregroundColor(ColorAux1)
+                                .font(.system(size: 18))
                                 .bold()
                         } else {
                             Image(systemName: "arrow.uturn.backward")
@@ -61,6 +62,7 @@ struct CourseList: View {
                         if showSheet {
                             Text("Apply")
                                 .foregroundColor(ColorAux1)
+                                .font(.system(size: 18))
                                 .bold()
                         } else {
                             Image(systemName: "list.bullet.indent")
@@ -77,7 +79,7 @@ struct CourseList: View {
                 .padding(.horizontal)
                 
                 Text("Course List")
-                    .font(.system(size: 38))
+                    .font(.largeTitle)
                     .foregroundColor(ColorAux4)
                     .bold()
                 
