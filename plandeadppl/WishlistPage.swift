@@ -20,7 +20,6 @@ struct WishlistPage: View {
     var body: some View {
         
         let user = users[users.firstIndex(where: {$0.uid == uid})!]
-        var courses = [Int16]()
         
         ZStack {
             ColorMain4.ignoresSafeArea()
@@ -43,7 +42,7 @@ struct WishlistPage: View {
                         }
                     }
                 }
-            }
+            }.foregroundColor(ColorAux4)
         }
     }
 }
