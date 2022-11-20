@@ -28,10 +28,12 @@ struct CalendarList: View {
         return VStack {
             ZStack {
                 // Title
-                Text("2022 - 2023")
-                    .font(.title)
-                    .foregroundColor(ColorAux4)
-                    .bold()
+                if !editTimeslot {
+                    Text("2022 - 2023")
+                        .font(.title)
+                        .foregroundColor(ColorAux4)
+                        .bold()
+                }
                 
                 // Edit (change to Apply) button
                 HStack {
@@ -82,39 +84,46 @@ struct CalendarList: View {
             
             // Sem selection button
             HStack {
-                Group {
-                    Button("Sem 1", action: {
-                        sem = "1"
-                        timeslots = genTimeSlot(classes, user.timetablesem1)
-                    })
-                    .foregroundColor(sem == "1" ? ColorAux1 : ColorAux4)
-                    .padding(.horizontal, 15)
-                    .padding(.vertical, 8)
-                    .background(sem == "1" ? ColorMain2 : ColorMain4)
-                    .disabled(editTimeslot)
-                    
-                    Button("Sem 2", action: {
-                        sem = "2"
-                        timeslots = genTimeSlot(classes, user.timetablesem2)
-                    })
-                    .foregroundColor(sem == "2" ? ColorAux1 : ColorAux4)
-                    .padding(.horizontal, 15)
-                    .padding(.vertical, 8)
-                    .background(sem == "2" ? ColorMain2 : ColorMain4)
-                    .disabled(editTimeslot)
-                    
-                    Button("Sem S", action: {
-                        sem = "S"
-                        timeslots = genTimeSlot(classes, user.timetablesem3)
-                    })
-                    .foregroundColor(sem == "S" ? ColorAux1 : ColorAux4)
-                    .padding(.horizontal, 15)
-                    .padding(.vertical, 8)
-                    .background(sem == "S" ? ColorMain2 : ColorMain4)
-                    .disabled(editTimeslot)
+                if editTimeslot {
+                    Text("Edit Timetable - Sem \(sem)")
+                        .font(.title)
+                        .foregroundColor(ColorAux4)
+                        .bold()
+                } else {
+                    Group {
+                        Button("Sem 1", action: {
+                            sem = "1"
+                            timeslots = genTimeSlot(classes, user.timetablesem1)
+                        })
+                        .foregroundColor(sem == "1" ? ColorAux1 : ColorAux4)
+                        .padding(.horizontal, 15)
+                        .padding(.vertical, 8)
+                        .background(sem == "1" ? ColorMain2 : ColorMain4)
+                        .disabled(editTimeslot)
+                        
+                        Button("Sem 2", action: {
+                            sem = "2"
+                            timeslots = genTimeSlot(classes, user.timetablesem2)
+                        })
+                        .foregroundColor(sem == "2" ? ColorAux1 : ColorAux4)
+                        .padding(.horizontal, 15)
+                        .padding(.vertical, 8)
+                        .background(sem == "2" ? ColorMain2 : ColorMain4)
+                        .disabled(editTimeslot)
+                        
+                        Button("Sem S", action: {
+                            sem = "S"
+                            timeslots = genTimeSlot(classes, user.timetablesem3)
+                        })
+                        .foregroundColor(sem == "S" ? ColorAux1 : ColorAux4)
+                        .padding(.horizontal, 15)
+                        .padding(.vertical, 8)
+                        .background(sem == "S" ? ColorMain2 : ColorMain4)
+                        .disabled(editTimeslot)
+                    }
+                    .cornerRadius(10)
+                    .font(.title3)
                 }
-                .cornerRadius(10)
-                .font(.title3)
             }
             .padding(.bottom, 5)
             .padding(.top, 5)
