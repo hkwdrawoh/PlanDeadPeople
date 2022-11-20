@@ -41,8 +41,7 @@ struct ListFilter: View {
                         sort[0] = false
                     }, label: {
                         Text("Course code")
-                            .padding(.horizontal)
-                            .padding(.vertical, 5)
+                            .padding(8)
                             .foregroundColor(!sort[0] ? ColorAux1 : ColorAux4)
                             .background(!sort[0] ? ColorMain2 : ColorMain4)
                             .cornerRadius(50)
@@ -52,8 +51,7 @@ struct ListFilter: View {
                         sort[0] = true
                     }, label: {
                         Text("Course title")
-                            .padding(.horizontal)
-                            .padding(.vertical, 5)
+                            .padding(8)
                             .foregroundColor(sort[0] ? ColorAux1 : ColorAux4)
                             .background(sort[0] ? ColorMain2 : ColorMain4)
                             .cornerRadius(50)

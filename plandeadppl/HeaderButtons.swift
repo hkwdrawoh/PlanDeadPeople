@@ -47,7 +47,7 @@ struct WeekdaySelect: View {
     @Binding var weekday: String
     
     var body: some View {
-        HStack {
+        HStack (spacing: 0) {
             Spacer()
             
             Group {
