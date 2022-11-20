@@ -47,7 +47,7 @@ struct CourseDescription: View {
                 }
                     .padding(.horizontal, 12)
                     .padding(.vertical, 12)
-                    .background(ColorMain2)
+                    .background(ColorMain3)
                     .cornerRadius(10)
                 Spacer()
                 //Button - Add to fav
@@ -76,7 +76,7 @@ struct CourseDescription: View {
                 }
                 .padding(.horizontal, 12)
                 .padding(.vertical, 13)
-                .background(ColorMain2)
+                .background(ColorMain3)
                 .cornerRadius(10)
             }
             .padding(.horizontal)
@@ -139,7 +139,7 @@ struct CourseDescription: View {
                     }
                     .padding(.horizontal, 8)
                     .padding(.vertical, 8)
-                    .background(ColorMain2)
+                    .background(ColorMain3)
                     .cornerRadius(10)
                     Spacer()}
                 
@@ -199,7 +199,7 @@ struct CourseDescription: View {
                     }
                     Spacer()
                 }
-            }.background(ColorMain2)
+            }.background(ColorMain3)
         }
     }
     

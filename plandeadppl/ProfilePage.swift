@@ -36,7 +36,7 @@ struct ProfilePage: View {
                             }
                             .padding(.horizontal, 12)
                             .padding(.vertical, 12)
-                            .background(ColorMain2)
+                            .background(ColorMain3)
                             .cornerRadius(10)
                             Spacer()
                         }
@@ -59,7 +59,7 @@ struct ProfilePage: View {
                                 }
                                 .padding(.horizontal, 12)
                                 .padding(.vertical, 12)
-                                .background(ColorMain2)
+                                .background(ColorMain3)
                                 .cornerRadius(10)
                             }
                             .padding(.horizontal)
