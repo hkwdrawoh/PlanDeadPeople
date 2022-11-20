@@ -30,8 +30,8 @@ func importCourse() -> [Course] {
 // import user to User
 func importUser() -> [User] {
     var users: [User] = []
-    users.append(User("guest", "Guest", [1, 2, 3, 4, 5, 6], [13, 23, 24, 25], [46], [13, 23], "BEng(EE)"))
-    users.append(User("hkwdrawoh", "Howard Wan", [1, 2, 3, 4, 5, 6], [13, 23, 24, 25], [46], [13, 23], "BEng(ElecE)"))
+    users.append(User("guest", "Guest", [1, 2, 3, 4, 5, 6], [25, 27, 28, 31], [46], [13, 23], "BEng(EE)"))
+    users.append(User("hkwdrawoh", "Howard Wan", [1, 2, 3, 4, 5, 6], [25, 27, 28, 31], [46], [13, 23], "BEng(ElecE)"))
     return users
 }
 
