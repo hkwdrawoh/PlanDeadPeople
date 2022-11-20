@@ -52,6 +52,7 @@ struct ProfilePage: View {
                         .foregroundColor(ColorAux4)
                         .bold()
                         .padding(.vertical, -5)
+                    
                     //Degree
                     Text(user.degree)
                         .font(.system(size: 25))
@@ -113,8 +114,8 @@ struct ProfilePage: View {
                             .frame(height: 1)
                             .overlay(.white)
                     }.background(ColorMain1)
-                        .frame(width: 370, height: 200, alignment: .center)
-                        .padding(.vertical, 20.0)
+                        .frame(height: 200, alignment: .center)
+                        .padding(.all, 20.0)
                 }
                 //Banner Img
                 Image("hkubanner")
