@@ -26,10 +26,6 @@ struct ListFilter: View {
     
     var body: some View {
         ScrollView {
-            // title
-            Text("Filter")
-                .font(.title)
-            
             VStack (alignment: .center) {
                 // sorting sub-title
                 HStack {

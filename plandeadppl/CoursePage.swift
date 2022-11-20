@@ -84,15 +84,25 @@ struct CourseList: View {
                 }
                 .padding(.horizontal)
                 
-                Text("Course List")
-                    .font(.largeTitle)
-                    .foregroundColor(ColorAux4)
-                    .bold()
+                
                 
                 if showSheet {
+                    // Title
+                    Text("Course List - Filter")
+                        .font(.largeTitle)
+                        .foregroundColor(ColorAux4)
+                        .bold()
+                        .multilineTextAlignment(.center)
+                    
                     //Call Filter Config view
                     ListFilter(sort: $sort_proposed, filter: $filter_proposed)
                 } else {
+                    // Title
+                    Text("Course List")
+                        .font(.largeTitle)
+                        .foregroundColor(ColorAux4)
+                        .bold()
+                    
                     //Show back CourseList default view
                     VStack {
                         SemSelect(sem: $sem)    //HeaderButtons
