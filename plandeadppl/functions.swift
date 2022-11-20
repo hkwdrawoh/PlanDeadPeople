@@ -133,7 +133,7 @@ func removeClassTimetable(_ course: Course, _ user: User) -> () {
     }
 }
 
-// check whether course / class already exists in user timetable
+// check whether course / class already exists in wishlist
 func checkWishlist(_ course: Course, _ user: User) -> Bool {
     return user.wishlist.contains(course.cid)
 }

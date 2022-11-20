@@ -18,6 +18,8 @@ struct CourseList: View {
     @State var showSheet = false
     @State var filter_proposed = ["Course code", "A"]
     @State var filter_true = ["Course code", "A"]
+    @State var isWishlist = false
+    
     let coursesData = loadCourse()
     
 

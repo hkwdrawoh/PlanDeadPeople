@@ -12,6 +12,7 @@ import SwiftUI
 struct ListFilter: View {
     
     @Binding var filter: [String]
+    @State var isWishlist = false
     
     init(filter: Binding<[String]>) {
         self._filter = filter
@@ -54,6 +55,7 @@ struct ListFilter: View {
                         .font(.title2)
                     Spacer()
                 }
+                Toggle("Wishlist", isOn: $isWishlist)
             }
         }
         .padding()
