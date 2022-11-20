@@ -62,6 +62,7 @@ struct ListFilter: View {
                 // sorting order
                 Toggle(sort[1] ? "Descending" : "Ascending", isOn: $sort[1])
                     .padding(.horizontal)
+                    .tint(ColorAux5)
             }
             .font(.title3)
             
@@ -73,8 +74,9 @@ struct ListFilter: View {
                     Spacer()
                 }
                 
-                Toggle("Wishlist", isOn: $isWishlist)
+                Toggle("Wishlist Only", isOn: $sort[2])
                     .padding(.horizontal)
+                    .tint(ColorMain2)
             }
             .font(.title3)
         }
@@ -86,6 +88,6 @@ struct ListFilter: View {
 
 struct ListFilter_Previews: PreviewProvider {
     static var previews: some View {
-        ListFilter(sort: .constant([false, false]), filter: .constant(["Course code", "A"]))
+        ListFilter(sort: .constant([false, false, false]), filter: .constant(["Course code", "A"]))
     }
 }

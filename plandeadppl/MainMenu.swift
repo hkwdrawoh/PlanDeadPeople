@@ -27,7 +27,7 @@ struct MainMenu: View {
             case menuselect[1]:
                 CalendarList(uid: $uid, users: $users, menu: $menu, course_desc: $course, timeslots: genTimeSlot(classes, user.timetablesem1))
             case menuselect[2]:
-                CourseList(menu: $menu, course_desc: $course)
+                CourseList(uid: $uid, users: $users, menu: $menu, course_desc: $course)
             case menuselect[3]:
                 CourseDescription(uid: $uid, users: $users, menu: $menu, course: $course, addedTimetable: checkClassinTimetable(course, user), addedWishlist: checkWishlist(course, user))
             case menuselect[4]:

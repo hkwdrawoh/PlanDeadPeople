@@ -12,20 +12,22 @@ import UIKit
 // Course list main view
 struct CourseList: View {
     
+    @Binding var uid: String
+    @Binding var users: [User]
     @Binding var menu: String
     @Binding var course_desc: Course
     @State var sem = "1"
     @State var showSheet = false
-    @State var sort_proposed = [false, false]
-    @State var sort_true = [false, false]
+    @State var sort_proposed = [false, false, false]
+    @State var sort_true = [false, false, false]
     @State var filter_proposed = ["Course code", "A"]
     @State var filter_true = ["Course code", "A"]
     @State var isWishlist = false
     
     let coursesData = loadCourse()
-    
 
     var body: some View {
+        let user = users[users.firstIndex(where: {$0.uid == uid})!]
         let courses = filterCourse(coursesData, sort_true, filter_true)
         NavigationView {
             VStack (spacing: 0) {
@@ -135,7 +137,8 @@ struct CourseList: View {
 
 struct CourseList_Previews: PreviewProvider {
     static var previews: some View {
+        let users = importUser()
         let courses = loadCourse()
-        CourseList(menu: .constant(menuselect[2]), course_desc: .constant(courses[0]))
+        CourseList(uid: .constant("guest"), users: .constant(users), menu: .constant(menuselect[2]), course_desc: .constant(courses[0]))
     }
 }

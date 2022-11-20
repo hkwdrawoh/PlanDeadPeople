@@ -20,6 +20,7 @@ let ColorAux1 = Color(UIColor(red: 1, green: 1, blue: 1, alpha: 1))             
 let ColorAux2 = Color(UIColor(red: 0, green: 0, blue: 0, alpha: 1))                         //black
 let ColorAux3 = Color(UIColor(red: 1, green: 0, blue: 0, alpha: 1))                         //red
 let ColorAux4 = Color(UIColor(red: 13/255, green: 47/255, blue: 48/255, alpha: 1))          //dark green
+let ColorAux5 = Color(UIColor(red: 194/255, green: 208/255, blue: 210/255, alpha: 1))       //grey
 
 // Day Time division
 let dayname = ["MON", "TUE", "WED", "THUR", "FRI", "SAT"]
