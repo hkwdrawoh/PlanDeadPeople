@@ -28,7 +28,7 @@ struct CourseList: View {
 
     var body: some View {
         let user = users[users.firstIndex(where: {$0.uid == uid})!]
-        let courses = filterCourse(coursesData, sort_true, filter_true)
+        let courses = filterCourse(user, coursesData, sort_true, filter_true)
         NavigationView {
             VStack (spacing: 0) {
                 HStack {
@@ -56,7 +56,7 @@ struct CourseList: View {
                     }
                         .padding(.horizontal, 12)
                         .padding(.vertical, 12)
-                        .background(ColorMain2)
+                        .background(ColorMain3)
                         .cornerRadius(10)
                     Spacer()
                     //Button - Filter<->Apply Switching Mechanism
@@ -81,7 +81,7 @@ struct CourseList: View {
                     }
                     .padding(.horizontal, 12)
                     .padding(.vertical, 12)
-                    .background(ColorMain2)
+                    .background(ColorMain3)
                     .cornerRadius(10)
                 }
                 .padding(.horizontal)
@@ -100,14 +100,18 @@ struct CourseList: View {
                     ListFilter(sort: $sort_proposed, filter: $filter_proposed)
                 } else {
                     // Title
-                    Text("Course List")
+                    Text(sort_true[2] ? "Course List - Filtered" : "Course List")
                         .font(.largeTitle)
                         .foregroundColor(ColorAux4)
                         .bold()
+                        .padding(.bottom)
                     
                     //Show back CourseList default view
                     VStack {
-                        SemSelect(sem: $sem)    //HeaderButtons
+                        if !sort_true[2] {
+                            SemSelect(sem: $sem)    //HeaderButtons
+                                .padding(.top, -10)
+                        }
                         
                         ScrollView {
                            ForEach(courses) { course in

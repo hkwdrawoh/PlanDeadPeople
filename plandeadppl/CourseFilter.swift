@@ -32,6 +32,19 @@ struct ListFilter: View {
                     Text("Sorted by:")
                         .font(.title2)
                     Spacer()
+                    Button{
+                        sort[0] = false
+                        sort[1] = false
+                    } label: {
+                        Text("Reset")
+                            .foregroundColor(ColorAux1)
+                            .font(.system(size: 18))
+                            .bold()
+                    }
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .background(ColorMain3)
+                    .cornerRadius(10)
                 }
                 
                 // sorting choices
@@ -65,13 +78,26 @@ struct ListFilter: View {
                     .tint(ColorAux5)
             }
             .font(.title3)
+            .padding(.bottom)
             
             VStack (alignment: .center) {
                 // filtering sub-title
                 HStack {
-                    Text("\nFiltered by:")
+                    Text("Filtered by:")
                         .font(.title2)
                     Spacer()
+                    Button{
+                        sort[2] = false
+                    } label: {
+                        Text("Clear")
+                            .foregroundColor(ColorAux1)
+                            .font(.system(size: 18))
+                            .bold()
+                    }
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .background(ColorMain3)
+                    .cornerRadius(10)
                 }
                 
                 Toggle("Wishlist Only", isOn: $sort[2])

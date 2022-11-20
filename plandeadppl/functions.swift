@@ -78,9 +78,18 @@ func refreshUser(_ users: [User], _ uid: String) -> User {
 }
 
 // sort and filter course list
-func filterCourse(_ coursesData: [Course], _ sort: [Bool], _ filter: [String]) -> [Course] {
-    var course: [Course] = []
-    course = coursesData.sorted(by: {
+func filterCourse(_ user: User, _ coursesData: [Course], _ sort: [Bool], _ filter: [String]) -> [Course] {
+    var courses: [Course] = coursesData
+    
+    // filtering
+    if sort[2] {
+        courses = courses.filter { course in
+            return user.wishlist.contains(course.cid)
+        }
+    }
+    
+    // sorting
+    courses = courses.sorted(by: {
         if !sort[0] {
             if !sort[1] {
                 return $0.csub == $1.csub ? $0.cnum < $1.cnum : $0.csub < $1.csub
@@ -90,7 +99,8 @@ func filterCourse(_ coursesData: [Course], _ sort: [Bool], _ filter: [String]) -
             return !sort[1] ? $0.title < $1.title : $0.title > $1.title
         }
     })
-    return course
+    
+    return courses
 }
 
 // check whether course / class already exists in user timetable
