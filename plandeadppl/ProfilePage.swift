@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-/*if showWishlist {
- WishlistPage(uid: $uid, users: $users, menu: $menu, course: $course)
-} else {*/
-
 struct ProfilePage: View {
     @Binding var uid: String
     @Binding var users: [User]
