@@ -46,7 +46,6 @@ struct ProfilePage: View {
                             WishlistPage(uid: $uid, users: $users, menu: $menu, course: $course)
                         }
                     } else {
-                    
                         VStack {
                             HStack {
                                 Spacer()

@@ -10,6 +10,7 @@
 		372FB003291E98B9003E8D4D /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372FB002291E98B9003E8D4D /* WelcomePage.swift */; };
 		374574822927D28100A3085E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374574812927D28100A3085E /* LocationManager.swift */; };
 		37F28C08292A3AD600A1EFA6 /* WishlistPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F28C07292A3AD600A1EFA6 /* WishlistPage.swift */; };
+		37F28C0A292A837C00A1EFA6 /* ProfileSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F28C09292A837C00A1EFA6 /* ProfileSetting.swift */; };
 		AC2349E22928D0AB0047F2A7 /* ClassData.json in Resources */ = {isa = PBXBuildFile; fileRef = AC2349E12928D0AB0047F2A7 /* ClassData.json */; };
 		AC33CB012929EAD70074FBBF /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC33CB002929EAD70074FBBF /* ProfilePage.swift */; };
 		ACEF29882925D99100CADB98 /* CourseData.json in Resources */ = {isa = PBXBuildFile; fileRef = ACEF29872925D99100CADB98 /* CourseData.json */; };
@@ -53,6 +54,7 @@
 		372FB002291E98B9003E8D4D /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		374574812927D28100A3085E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		37F28C07292A3AD600A1EFA6 /* WishlistPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistPage.swift; sourceTree = "<group>"; };
+		37F28C09292A837C00A1EFA6 /* ProfileSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetting.swift; sourceTree = "<group>"; };
 		AC2349E12928D0AB0047F2A7 /* ClassData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ClassData.json; sourceTree = "<group>"; };
 		AC33CB002929EAD70074FBBF /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		ACEF29872925D99100CADB98 /* CourseData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseData.json; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				C504FB5B2922943B00C8E376 /* TimetableCell.swift */,
 				C55990BE291E49D500C9DF7D /* TimetableLine.swift */,
 				C5F5B684291A5A3F00EE0BC5 /* CourseRow.swift */,
+				37F28C09292A837C00A1EFA6 /* ProfileSetting.swift */,
 				C57990A529276A5D00453E9C /* CourseFilter.swift */,
 				37F28C07292A3AD600A1EFA6 /* WishlistPage.swift */,
 				C59E27ED2925CD5400C4742F /* HeaderButtons.swift */,
@@ -315,6 +318,7 @@
 				C59E27EE2925CD5400C4742F /* HeaderButtons.swift in Sources */,
 				C59E27F02925E1BB00C4742F /* functions.swift in Sources */,
 				C55990BD291E309B00C9DF7D /* CalendarPage.swift in Sources */,
+				37F28C0A292A837C00A1EFA6 /* ProfileSetting.swift in Sources */,
 				C55990BF291E49D500C9DF7D /* TimetableLine.swift in Sources */,
 				372FB003291E98B9003E8D4D /* WelcomePage.swift in Sources */,
 				C57990A629276A5E00453E9C /* CourseFilter.swift in Sources */,
