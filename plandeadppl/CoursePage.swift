@@ -112,14 +112,14 @@ struct CourseList: View {
                     }
                     
                     ScrollView {
-                        if courses.filter({return $0.sem == sem}).count == 0 {
+                        if courses.filter({return $0.sem == sem || filter_true[0]}).count == 0 {
                             Rectangle()
                                 .frame(height: 1)
-                            Text("No courses found!")
+                            Text("\nNo courses found!")
                                 .font(.title2)
                         } else {
                             ForEach(courses) { course in
-                                if course.sem == sem {
+                                if course.sem == sem || filter_true[0] {
                                     Rectangle()
                                         .frame(height: 1)
                                     Button {
