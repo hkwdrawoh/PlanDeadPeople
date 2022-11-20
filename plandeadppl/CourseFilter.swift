@@ -12,10 +12,10 @@ import SwiftUI
 struct ListFilter: View {
     
     @Binding var sort: [Bool]
-    @Binding var filter: [String]
+    @Binding var filter: [Bool]
     @State var isWishlist = false
     
-    init(sort: Binding<[Bool]>, filter: Binding<[String]>) {
+    init(sort: Binding<[Bool]>, filter: Binding<[Bool]>) {
         self._sort = sort
         self._filter = filter
         
@@ -87,7 +87,7 @@ struct ListFilter: View {
                         .font(.title2)
                     Spacer()
                     Button{
-                        sort[2] = false
+                        filter[0] = false
                     } label: {
                         Text("Clear")
                             .foregroundColor(ColorAux1)
@@ -100,7 +100,7 @@ struct ListFilter: View {
                     .cornerRadius(10)
                 }
                 
-                Toggle("Wishlist Only", isOn: $sort[2])
+                Toggle("Wishlist Only", isOn: $filter[0])
                     .padding(.horizontal)
                     .tint(ColorMain2)
             }
@@ -114,6 +114,6 @@ struct ListFilter: View {
 
 struct ListFilter_Previews: PreviewProvider {
     static var previews: some View {
-        ListFilter(sort: .constant([false, false, false]), filter: .constant(["Course code", "A"]))
+        ListFilter(sort: .constant([false, false]), filter: .constant([false, false, false]))
     }
 }

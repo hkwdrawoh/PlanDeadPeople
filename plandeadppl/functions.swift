@@ -78,11 +78,11 @@ func refreshUser(_ users: [User], _ uid: String) -> User {
 }
 
 // sort and filter course list
-func filterCourse(_ user: User, _ coursesData: [Course], _ sort: [Bool], _ filter: [String]) -> [Course] {
+func filterCourse(_ user: User, _ coursesData: [Course], _ sort: [Bool], _ filter: [Bool]) -> [Course] {
     var courses: [Course] = coursesData
     
     // filtering
-    if sort[2] {
+    if filter[0] {
         courses = courses.filter { course in
             return user.wishlist.contains(course.cid)
         }

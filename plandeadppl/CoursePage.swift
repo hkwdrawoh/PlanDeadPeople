@@ -18,10 +18,10 @@ struct CourseList: View {
     @Binding var course_desc: Course
     @State var sem = "1"
     @State var showSheet = false
-    @State var sort_proposed = [false, false, false]
-    @State var sort_true = [false, false, false]
-    @State var filter_proposed = ["Course code", "A"]
-    @State var filter_true = ["Course code", "A"]
+    @State var sort_proposed = [false, false]
+    @State var sort_true = [false, false]
+    @State var filter_proposed = [false, false, false]
+    @State var filter_true = [false, false, false]
     @State var isWishlist = false
     
     let coursesData = loadCourse()
@@ -100,7 +100,7 @@ struct CourseList: View {
                     ListFilter(sort: $sort_proposed, filter: $filter_proposed)
                 } else {
                     // Title
-                    Text(sort_true[2] ? "Course List - Filtered" : "Course List")
+                    Text(filter_true[0] ? "Course List - Filtered" : "Course List")
                         .font(.largeTitle)
                         .foregroundColor(ColorAux4)
                         .bold()
@@ -108,7 +108,7 @@ struct CourseList: View {
                     
                     //Show back CourseList default view
                     VStack {
-                        if !sort_true[2] {
+                        if !filter_true[0] {
                             SemSelect(sem: $sem)    //HeaderButtons
                                 .padding(.top, -10)
                         }
