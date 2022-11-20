@@ -78,18 +78,17 @@ func refreshUser(_ users: [User], _ uid: String) -> User {
 }
 
 // sort and filter course list
-func filterCourse(_ coursesData: [Course], _ filter: [String]) -> [Course] {
+func filterCourse(_ coursesData: [Course], _ sort: [Bool], _ filter: [String]) -> [Course] {
     var course: [Course] = []
     course = coursesData.sorted(by: {
-        if filter[0] == "Course code" {
-            if filter[1] == "A" {
+        if !sort[0] {
+            if !sort[1] {
                 return $0.csub == $1.csub ? $0.cnum < $1.cnum : $0.csub < $1.csub
             }
             return $0.csub == $1.csub ? $0.cnum > $1.cnum : $0.csub > $1.csub
-        } else if filter[0] == "Course title" {
-            return filter[1] == "A" ? $0.title < $1.title : $0.title > $1.title
+        } else {
+            return !sort[1] ? $0.title < $1.title : $0.title > $1.title
         }
-        return filter[1] == "A" ? $0.title < $1.title : $0.title > $1.title
     })
     return course
 }

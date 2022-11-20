@@ -16,6 +16,8 @@ struct CourseList: View {
     @Binding var course_desc: Course
     @State var sem = "1"
     @State var showSheet = false
+    @State var sort_proposed = [false, false]
+    @State var sort_true = [false, false]
     @State var filter_proposed = ["Course code", "A"]
     @State var filter_true = ["Course code", "A"]
     @State var isWishlist = false
@@ -24,13 +26,14 @@ struct CourseList: View {
     
 
     var body: some View {
-        let courses = filterCourse(coursesData, filter_true)
+        let courses = filterCourse(coursesData, sort_true, filter_true)
         NavigationView {
             VStack (spacing: 0) {
                 HStack {
                     //Button - Cancel<->Back Switching Mechanism
                     Button{
                         if showSheet {
+                            sort_proposed = sort_true
                             filter_proposed = filter_true
                             showSheet.toggle()
                         } else {
@@ -57,6 +60,7 @@ struct CourseList: View {
                     //Button - Filter<->Apply Switching Mechanism
                     Button{
                         if showSheet {
+                            sort_true = sort_proposed
                             filter_true = filter_proposed
                         }
                         showSheet.toggle()
@@ -87,7 +91,7 @@ struct CourseList: View {
                 
                 if showSheet {
                     //Call Filter Config view
-                    ListFilter(filter: $filter_proposed)
+                    ListFilter(sort: $sort_proposed, filter: $filter_proposed)
                 } else {
                     //Show back CourseList default view
                     VStack {
