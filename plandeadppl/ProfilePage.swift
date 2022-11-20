@@ -32,11 +32,11 @@ struct ProfilePage: View {
                         Button{}label: {
                             Image(systemName: "gearshape")
                                 .resizable(resizingMode: .stretch)
-                                .frame(width: 22, height: 20)
+                                .frame(width: 22, height: 22)
                                 .foregroundColor(ColorAux1)
                         }
                         .padding(.horizontal, 12)
-                        .padding(.vertical, 13)
+                        .padding(.vertical, 12)
                         .background(ColorMain2)
                         .cornerRadius(10)
                     }
@@ -45,17 +45,18 @@ struct ProfilePage: View {
                     
                     //Profile Pic
                     Image(img)
+                        .cornerRadius(8000)
                     
                     //Name
                     Text("\(user.username)")
-                        .font(.system(size: 38))
+                        .font(.largeTitle)
                         .foregroundColor(ColorAux4)
                         .bold()
                         .padding(.vertical, -5)
                     
                     //Degree
                     Text(user.degree)
-                        .font(.system(size: 25))
+                        .font(.title)
                         .foregroundColor(ColorAux4)
                         .bold()
                         .padding(.vertical, -5)
@@ -64,14 +65,13 @@ struct ProfilePage: View {
                     //VStack Box for content
                     VStack{
                         //Credits Taken
-                        Spacer()
                         HStack{
                             Text("Credits Taken")
                                 .foregroundColor(ColorAux1)
-                                .font(.system(size: 20))
+                                .font(.title3)
                             Spacer()
                             Text("\(credit)/240 ").foregroundColor(ColorAux1)
-                                .font(.system(size: 20))
+                                .font(.title3)
                         }
                         .padding(.all, 5.0)
                         Rectangle()
@@ -81,7 +81,7 @@ struct ProfilePage: View {
                         //Course Wishlist Redirect
                         Button{}label: {
                             Text("Course Wishlist")
-                                .font(.system(size: 20))
+                                .font(.title3)
                                 .foregroundColor(ColorAux1)
                             Spacer()
                         }
@@ -93,7 +93,7 @@ struct ProfilePage: View {
                         //Timetable history
                         Button{}label: {
                             Text("Timetable History")
-                                .font(.system(size: 20))
+                                .font(.title3)
                                 .foregroundColor(ColorAux1)
                             Spacer()
                         }
@@ -105,23 +105,22 @@ struct ProfilePage: View {
                         //Profile Settings
                         Button{}label: {
                             Text("Profile Settings")
-                                .font(.system(size: 20))
+                                .font(.title3)
                                 .foregroundColor(ColorAux1)
                             Spacer()
                         }
                         .padding([.top, .leading, .trailing], 5.0)
-                        Rectangle()
-                            .frame(height: 1)
-                            .overlay(.white)
-                    }.background(ColorMain1)
-                        .frame(height: 200, alignment: .center)
-                        .padding(.all, 20.0)
+                    }
+                    .padding()
+                    .background(ColorMain1)
+                    .cornerRadius(10)
+                    .padding()
                 }
+                
                 //Banner Img
                 Image("hkubanner")
                     .resizable(resizingMode: .stretch)
                     .aspectRatio(contentMode: .fit)
-                    
             }
         }
     }
