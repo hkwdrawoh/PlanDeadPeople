@@ -15,7 +15,7 @@ struct ProfilePage: View {
     @State var img = "default"
     @State var credit = 0
     @State var showWishlist = false
-    //@State var clickedSetting: Bool
+    @State var showProfileSetting = false
     
     var body: some View {
         let user = users[users.firstIndex(where: {$0.uid == uid})!]
@@ -45,12 +45,33 @@ struct ProfilePage: View {
                         ScrollView {
                             WishlistPage(uid: $uid, users: $users, menu: $menu, course: $course)
                         }
+                    } else if showProfileSetting {
+                        HStack {
+                            Button{showProfileSetting.toggle()} label: {
+                                Image(systemName: "arrow.uturn.backward")
+                                    .resizable(resizingMode: .stretch)
+                                    .frame(width: 22, height: 22)
+                                    .foregroundColor(ColorAux1)
+                            }
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 12)
+                            .background(ColorMain3)
+                            .cornerRadius(10)
+                            Spacer()
+                        }
+                        .padding(.horizontal)
+                        .background(ColorMain4)
+                        ScrollView {
+                            ProfileSetting(uid: $uid, users: $users, menu: $menu)
+                        }
                     } else {
                         VStack {
                             HStack {
                                 Spacer()
                                 //Button - Settings
-                                Button{} label: {
+                                Button{
+                                    showProfileSetting.toggle()
+                                } label: {
                                     Image(systemName: "gearshape")
                                         .resizable(resizingMode: .stretch)
                                         .frame(width: 22, height: 22)
@@ -125,7 +146,9 @@ struct ProfilePage: View {
                                         .overlay(.white)
                                     
                                     //Profile Settings
-                                    Button{}label: {
+                                    Button{
+                                        showProfileSetting.toggle()
+                                    }label: {
                                         Text("Profile Settings")
                                             .font(.title3)
                                             .foregroundColor(ColorAux1)
