@@ -10,6 +10,7 @@
 		372FB003291E98B9003E8D4D /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372FB002291E98B9003E8D4D /* WelcomePage.swift */; };
 		374574822927D28100A3085E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374574812927D28100A3085E /* LocationManager.swift */; };
 		AC2349E22928D0AB0047F2A7 /* ClassData.json in Resources */ = {isa = PBXBuildFile; fileRef = AC2349E12928D0AB0047F2A7 /* ClassData.json */; };
+		AC33CB012929EAD70074FBBF /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC33CB002929EAD70074FBBF /* ProfilePage.swift */; };
 		ACEF29882925D99100CADB98 /* CourseData.json in Resources */ = {isa = PBXBuildFile; fileRef = ACEF29872925D99100CADB98 /* CourseData.json */; };
 		C504FB5C2922943B00C8E376 /* TimetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504FB5B2922943B00C8E376 /* TimetableCell.swift */; };
 		C55990BD291E309B00C9DF7D /* CalendarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55990BC291E309B00C9DF7D /* CalendarPage.swift */; };
@@ -51,6 +52,7 @@
 		372FB002291E98B9003E8D4D /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		374574812927D28100A3085E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		AC2349E12928D0AB0047F2A7 /* ClassData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ClassData.json; sourceTree = "<group>"; };
+		AC33CB002929EAD70074FBBF /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		ACEF29872925D99100CADB98 /* CourseData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CourseData.json; sourceTree = "<group>"; };
 		C504FB5B2922943B00C8E376 /* TimetableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableCell.swift; sourceTree = "<group>"; };
 		C55990BC291E309B00C9DF7D /* CalendarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPage.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				C55990BC291E309B00C9DF7D /* CalendarPage.swift */,
 				C5F5B64F291951BC00EE0BC5 /* CoursePage.swift */,
 				C57990A3292626E900453E9C /* DescriptionPage.swift */,
+				AC33CB002929EAD70074FBBF /* ProfilePage.swift */,
 				C504FB5B2922943B00C8E376 /* TimetableCell.swift */,
 				C55990BE291E49D500C9DF7D /* TimetableLine.swift */,
 				C5F5B684291A5A3F00EE0BC5 /* CourseRow.swift */,
@@ -313,6 +316,7 @@
 				C57990A629276A5E00453E9C /* CourseFilter.swift in Sources */,
 				C59E27F22925E3D900C4742F /* MainMenu.swift in Sources */,
 				C5F5B650291951BC00EE0BC5 /* CoursePage.swift in Sources */,
+				AC33CB012929EAD70074FBBF /* ProfilePage.swift in Sources */,
 				C5F5B67F291A38EA00EE0BC5 /* objects.swift in Sources */,
 				C5F5B64E291951BC00EE0BC5 /* plandeadpplApp.swift in Sources */,
 			);

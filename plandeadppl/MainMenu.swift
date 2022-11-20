@@ -31,7 +31,7 @@ struct MainMenu: View {
             case menuselect[3]:
                 CourseDescription(uid: $uid, users: $users, menu: $menu, course: $course, addedTimetable: checkClassinTimetable(course, user), addedWishlist: checkWishlist(course, user))
             case menuselect[4]:
-                ScrollView{HomePage()}
+                ScrollView{ProfilePage(uid: $uid,  users: $users, menu: $menu, course: $course)}
             default:
                 ScrollView{HomePage()}
             }

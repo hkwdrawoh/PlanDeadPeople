@@ -61,14 +61,16 @@ class User: Identifiable, Codable {
     var timetablesem2: [Int16]
     var timetablesem3: [Int16]
     var wishlist: [Int16]
+    var degree: String
     
-    init(_ uid: String, _ username: String, _ timetablesem1: [Int16], _ timetablesem2: [Int16], _ timetablesem3: [Int16], _ wishlist: [Int16]) {
+    init(_ uid: String, _ username: String, _ timetablesem1: [Int16], _ timetablesem2: [Int16], _ timetablesem3: [Int16], _ wishlist: [Int16], _ degree: String) {
         self.uid = uid
         self.username = username
         self.timetablesem1 = timetablesem1
         self.timetablesem2 = timetablesem2
         self.timetablesem3 = timetablesem3
         self.wishlist = wishlist
+        self.degree = degree
     }
 }
 
