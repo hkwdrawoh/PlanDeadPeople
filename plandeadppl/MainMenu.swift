@@ -14,6 +14,8 @@ struct MainMenu: View {
     @State var menu = menuselect[0]
     @State var course = loadCourse()[0]
     @State var flag1 = false
+    @State var sem = "1"
+    @State var weekday = "1"
     
     var body: some View {
         let classes = loadClass()
@@ -25,11 +27,11 @@ struct MainMenu: View {
                     .transition(.move(edge: .leading))
                     .animation(.easeInOut, value: flag1)
             case menuselect[1]:
-                CalendarList(uid: $uid, users: $users, menu: $menu, course_desc: $course, timeslots: genTimeSlot(classes, user.timetablesem1))
+                CalendarList(uid: $uid, users: $users, menu: $menu, course_desc: $course, sem: $sem, weekday: $weekday, timeslots: genTimeSlot(classes, user, sem))
             case menuselect[2]:
                 CourseList(uid: $uid, users: $users, menu: $menu, course_desc: $course)
             case menuselect[3]:
-                CourseDescription(uid: $uid, users: $users, menu: $menu, course: $course, addedTimetable: checkClassinTimetable(course, user), addedWishlist: checkWishlist(course, user))
+                CourseDescription(uid: $uid, users: $users, menu: $menu, course: $course, sem: $sem, weekday: $weekday, addedTimetable: checkClassinTimetable(course, user), addedWishlist: checkWishlist(course, user))
             case menuselect[4]:
                 ProfilePage(uid: $uid,  users: $users, menu: $menu, course: $course)
             default:

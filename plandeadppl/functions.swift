@@ -172,7 +172,16 @@ func removeWishlist (_ course: Course, _ user: User) -> () {
 }
 
 // generate timeslot for each timetable
-func genTimeSlot(_ classes: [CClass], _ timetable: [Int16]) -> [TimeSlots] {
+func genTimeSlot(_ classes: [CClass], _ user: User, _ sem: String) -> [TimeSlots] {
+    var timetable: [Int16] = []
+    if sem == "1" {
+        timetable = user.timetablesem1
+    } else if sem == "2" {
+        timetable = user.timetablesem2
+    } else {
+        timetable = user.timetablesem3
+    }
+    
     var timeslots: [TimeSlots] = []
     var timeslot1: TimeSlots
     for cid in timetable {

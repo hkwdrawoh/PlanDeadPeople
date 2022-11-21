@@ -15,6 +15,8 @@ struct CourseDescription: View {
     @Binding var users: [User]
     @Binding var menu: String
     @Binding var course: Course
+    @Binding var sem: String
+    @Binding var weekday: String
     @State var addedTimetable: Bool
     @State var addedWishlist: Bool
     
@@ -178,6 +180,8 @@ struct CourseDescription: View {
             //Add to Timetable Button
             Button{
                 if addedTimetable {
+                    sem = course.sem
+                    weekday = timeslot.cdate
                     menu = menuselect[1]
                 } else {
                     addClassTimetable(course, user)
@@ -226,6 +230,6 @@ struct CourseDescription_Preview: PreviewProvider {
     static var previews: some View {
         let users = importUser()
         let courses = loadCourse()
-        CourseDescription(uid: .constant("guest"), users: .constant(users), menu: .constant(menuselect[3]), course: .constant(courses[0]), addedTimetable: false, addedWishlist: false)
+        CourseDescription(uid: .constant("guest"), users: .constant(users), menu: .constant(menuselect[3]), course: .constant(courses[0]), sem: .constant("1"), weekday: .constant("1"), addedTimetable: false, addedWishlist: false)
     }
 }
