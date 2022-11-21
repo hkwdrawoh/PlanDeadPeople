@@ -100,8 +100,10 @@ struct MainMenu: View {
             }
             .padding(.vertical, 10)
             .background(ColorMain1)
+            .ignoresSafeArea(.keyboard)
         }
         .background(ColorMain4)
+        .ignoresSafeArea(.keyboard)
     }
 }
 
