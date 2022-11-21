@@ -80,7 +80,7 @@ struct ProfileSetting: View {
                         .frame(width: 120, height: 120)
                         .padding(.bottom, 50)
                     
-                    HStack {
+                    HStack (alignment: .top) {
                         VStack (alignment: .leading) {
                             Text("User ID:")
                                 .padding(12)
@@ -89,7 +89,8 @@ struct ProfileSetting: View {
                             Text("Student ID:")
                                 .padding(12)
                             Text("Degree:")
-                                .padding(12)
+                                .padding(.vertical, editProfile ? 25 : 12)
+                                .padding(.horizontal, 12)
                         }
                         Spacer()
                         VStack (alignment: .trailing) {
@@ -100,14 +101,20 @@ struct ProfileSetting: View {
                                     .padding(5)
                                     .border(ColorAux4, width: 2)
                                     .padding(5)
-                                TextField("Enter your username", text: $user.studentid)
+                                TextField("Enter your student id", text: $user.studentid)
                                     .padding(5)
                                     .border(ColorAux4, width: 2)
                                     .padding(5)
-                                TextField("Enter your username", text: $user.degree)
-                                    .padding(5)
-                                    .border(ColorAux4, width: 2)
-                                    .padding(5)
+                                Picker("Enter your degree", selection: $user.degree) {
+                                    ForEach(["BEng(CivE)", "BEng(CompSc)", "BEng(CE)", "BEng(EE)", "BEng(ElecE)", "BEng(IELM)", "BEng(ME)"], id: \.self) {
+                                        Text($0).tag($0)
+                                    }
+                                }
+                                .pickerStyle(.inline)
+                                .frame(maxWidth: .infinity, maxHeight: 80, alignment: .leading)
+                                .padding(5)
+                                .border(ColorAux4, width: 2)
+                                .padding(5)
                             } else {
                                 Text(user.uid)
                                     .padding(12)
