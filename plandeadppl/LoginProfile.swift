@@ -41,74 +41,77 @@ struct LoginProfile: View {
                 .padding(.horizontal)
                 .background(ColorMain4)
                 
-                //Name
-                Text("Log in to enjoy many features!")
-                    .font(.largeTitle)
-                    .foregroundColor(ColorAux4)
-                    .bold()
-                    .padding(.vertical, -5)
-                    .multilineTextAlignment(.center)
-                
-                //VStack Box for content
-                HStack (alignment: .top) {
-                    VStack (alignment: .leading) {
-                        Text("User ID:")
-                            .padding(12)
-                        Text("Password:")
-                            .padding(12)
-                    }
-                    Spacer()
-                    VStack (alignment: .trailing) {
-                        TextField("User ID", text: $uid_input)
-                            .padding(5)
-                            .border(ColorAux4, width: 2)
-                            .padding(5)
-                            .autocorrectionDisabled(true)
-                            .autocapitalization(.none)
-                        SecureField("Password", text: $password_input)
-                            .padding(5)
-                            .border(ColorAux4, width: 2)
-                            .padding(5)
-                    }
-                }
-                .padding()
-                .font(.title2)
-                .foregroundColor(ColorAux4)
-                
-                if wrong_input {
-                    Text("Wrong user ID / password.\nPlease try again.")
-                        .font(.title3)
-                        .foregroundColor(ColorAux3)
+                ScrollView {
+                    
+                    //Name
+                    Text("Log in to enjoy many features!")
+                        .font(.largeTitle)
+                        .foregroundColor(ColorAux4)
+                        .bold()
+                        .padding(.vertical, -5)
                         .multilineTextAlignment(.center)
-                        .padding(.horizontal)
-                }
-                
-                //Profile Settings
-                Button{
-                    if let i = users.firstIndex(where: {$0.uid == uid_input}) {
-                        if users[i].password == password_input && uid_input != "guest" {
-                            wrong_input = false
-                            uid = uid_input
-                            showLoginPage = false
+                    
+                    //VStack Box for content
+                    HStack (alignment: .top) {
+                        VStack (alignment: .leading) {
+                            Text("User ID:")
+                                .padding(12)
+                            Text("Password:")
+                                .padding(12)
+                        }
+                        Spacer()
+                        VStack (alignment: .trailing) {
+                            TextField("User ID", text: $uid_input)
+                                .padding(5)
+                                .border(ColorAux4, width: 2)
+                                .padding(5)
+                                .autocorrectionDisabled(true)
+                                .autocapitalization(.none)
+                            SecureField("Password", text: $password_input)
+                                .padding(5)
+                                .border(ColorAux4, width: 2)
+                                .padding(5)
+                        }
+                    }
+                    .padding()
+                    .font(.title2)
+                    .foregroundColor(ColorAux4)
+                    
+                    if wrong_input {
+                        Text("Wrong user ID / password.\nPlease try again.")
+                            .font(.title3)
+                            .foregroundColor(ColorAux3)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                    }
+                    
+                    //Profile Settings
+                    Button{
+                        if let i = users.firstIndex(where: {$0.uid == uid_input}) {
+                            if users[i].password == password_input && uid_input != "guest" {
+                                wrong_input = false
+                                uid = uid_input
+                                showLoginPage = false
+                            } else {
+                                wrong_input = true
+                            }
                         } else {
                             wrong_input = true
                         }
-                    } else {
-                        wrong_input = true
+                    }label: {
+                        Spacer()
+                        Text("Log In")
+                            .font(.title)
+                            .foregroundColor(ColorAux1)
+                        Spacer()
                     }
-                }label: {
-                    Spacer()
-                    Text("Log In")
-                        .font(.title)
-                        .foregroundColor(ColorAux1)
+                    .padding(.vertical, 5)
+                    .background(uid == "guest" ? ColorMain3 : ColorAux3)
+                    .cornerRadius(10)
+                    .padding(.horizontal)
+                    
                     Spacer()
                 }
-                .padding(.vertical, 5)
-                .background(uid == "guest" ? ColorMain3 : ColorAux3)
-                .cornerRadius(10)
-                .padding(.horizontal)
-                
-                Spacer()
             }
         }
     }

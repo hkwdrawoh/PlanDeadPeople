@@ -48,9 +48,7 @@ struct ProfilePage: View {
                     
                     // show profile settings view
                     } else if showProfileSetting {
-                        ScrollView {
-                            ProfileSetting(showProfileSetting: $showProfileSetting, menu: $menu, user: user)
-                        }
+                        ProfileSetting(showProfileSetting: $showProfileSetting, menu: $menu, user: user)
                         
                         // show login page view
                     } else if showLoginPage {
