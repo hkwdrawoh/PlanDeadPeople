@@ -12,7 +12,6 @@ struct ProfilePage: View {
     @Binding var users: [User]
     @Binding var menu: String
     @Binding var course: Course
-    @State var img = "default"
     @State var credit = 0
     @State var showWishlist = false
     @State var showProfileSetting = false
@@ -83,10 +82,14 @@ struct ProfilePage: View {
                             ScrollView {
                                 //Profile Pic
                                 HStack (spacing: 0) {
-                                    Image(img)
-                                        .resizable(resizingMode: .stretch)
-                                        .cornerRadius(8000)
+                                    user.picture
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
                                         .frame(width: 180, height: 180)
+                                        .clipped()
+                                        .aspectRatio(1, contentMode: .fit)
+                                        .cornerRadius(8000)
+                                        .padding(.bottom, 10)
                                 }
                                 
                                 //Name

@@ -13,6 +13,10 @@ struct ProfileSetting: View {
     @Binding var menu: String
     @State var user: User
     @State var editProfile = false
+    @State var showImagePicker = false
+    @State var selectedImageSource = UIImagePickerController.SourceType.photoLibrary
+    @State var image: UIImage? = nil
+    @State var imagestatus = "0"
     
     var body: some View {
         
@@ -52,7 +56,10 @@ struct ProfileSetting: View {
                     .background(ColorMain3)
                     .cornerRadius(10)
                     Spacer()
-                    Button{editProfile.toggle()} label: {
+                    Button{
+                        editProfile.toggle()
+                        imagestatus = "0"
+                    } label: {
                         if editProfile {
                             Text("Confirm")
                                 .foregroundColor(ColorAux1)
@@ -74,12 +81,64 @@ struct ProfileSetting: View {
                 .background(ColorMain4)
                 
                 ScrollView {
-                    Image("default")
-                        .resizable(resizingMode: .stretch)
-                        .cornerRadius(8000)
+                    // image
+                    user.picture
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
                         .frame(width: 120, height: 120)
-                        .padding(.bottom, 50)
+                        .clipped()
+                        .aspectRatio(1, contentMode: .fit)
+                        .cornerRadius(8000)
+                        .padding(.bottom, 10)
                     
+                    // remove / change image
+                    HStack (spacing: 0) {
+                        if editProfile {
+                            Spacer()
+                            Button(action: {
+                                imagestatus = "1"
+                                user.picture = Image("default")
+                                editProfile.toggle()
+                            }, label: {
+                                Text("Remove Photo")
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 8)
+                                    .foregroundColor(ColorAux1)
+                                    .background(ColorAux3)
+                                    .cornerRadius(10)
+                            })
+                            Spacer()
+                            Button(action: {
+                                image = nil
+                                selectedImageSource = .photoLibrary
+                                showImagePicker = true
+                            }, label: {
+                                Text("Change Photo")
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 8)
+                                    .foregroundColor(ColorAux1)
+                                    .background(ColorMain3)
+                                    .cornerRadius(10)
+                            })
+                            Spacer()
+                        } else if imagestatus == "-1" {
+                            Text("No image imported. Please try again.")
+                                .multilineTextAlignment(.center)
+                                .padding(.vertical, 8)
+                                .foregroundColor(ColorAux3)
+                        } else if imagestatus == "1" {
+                            Text("Photo removed successfully.")
+                                .padding(.vertical, 8)
+                                .foregroundColor(ColorAux4)
+                        } else if imagestatus == "2" {
+                            Text("Photo added successfully.")
+                                .padding(.vertical, 8)
+                                .foregroundColor(ColorAux4)
+                        }
+                    }
+                    .padding(.bottom, 20)
+                    
+                    // personal info
                     HStack (alignment: .top) {
                         VStack (alignment: .leading) {
                             Text("User ID:")
@@ -136,6 +195,14 @@ struct ProfileSetting: View {
                 .font(.title2)
                 .foregroundColor(ColorAux4)
             }
+        }
+        // image picker from library
+        .sheet(isPresented: $showImagePicker, onDismiss: {
+            user.picture = (image == nil) ? user.picture : Image(uiImage: image!)
+            imagestatus = (image == nil) ? "-1" : "2"
+            editProfile.toggle()
+        }) {
+            ImagePicker(image: self.$image, selectedSource: selectedImageSource)
         }
     }
 }
