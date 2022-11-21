@@ -56,6 +56,13 @@ struct ProfileSetting: View {
                     .background(ColorMain3)
                     .cornerRadius(10)
                     Spacer()
+                    if !editProfile {
+                        Text("Settings")
+                            .font(.title)
+                            .foregroundColor(ColorAux4)
+                            .bold()
+                    }
+                    Spacer()
                     Button{
                         editProfile.toggle()
                         imagestatus = "0"
@@ -166,18 +173,21 @@ struct ProfileSetting: View {
                                     .padding(5)
                                     .border(ColorAux4, width: 2)
                                     .padding(5)
-                                Picker("Enter your degree", selection: $user.degree) {
-                                    ForEach(["BEng(CivE)", "BEng(CompSc)", "BEng(CE)", "BEng(EE)", "BEng(ElecE)", "BEng(IELM)", "BEng(ME)"], id: \.self) {
-                                        Text($0).tag($0)
+                                VStack {
+                                    Picker("Enter your degree", selection: $user.degree) {
+                                        ForEach(["BEng(CivE)", "BEng(CompSc)", "BEng(CE)", "BEng(EE)", "BEng(ElecE)", "BEng(IELM)", "BEng(ME)"], id: \.self) {
+                                            Text($0).tag($0)
+                                        }
                                     }
+                                    .pickerStyle(.wheel)
+                                    .frame(width: 150, height: 80, alignment: .center)
+                                    .clipped()
+                                    .compositingGroup()
+                                    .padding(5)
+                                    .border(ColorAux4, width: 2)
+                                    .padding(5)
                                 }
-                                .pickerStyle(.wheel)
-                                .frame(width: 150, height: 80, alignment: .center)
-                                .clipped()
-                                .compositingGroup()
-                                .padding(5)
-                                .border(ColorAux4, width: 2)
-                                .padding(5)
+                                .zIndex(-2)
                             } else {
                                 Text(user.uid)
                                     .padding(12)
