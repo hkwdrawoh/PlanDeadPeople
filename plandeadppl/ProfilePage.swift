@@ -54,7 +54,7 @@ struct ProfilePage: View {
                         
                         // show login page view
                     } else if showLoginPage {
-                        
+                        LoginProfile(uid: $uid, users: $users, showLoginPage: $showLoginPage)
                     
                     // show main profile page view
                     } else {
@@ -63,7 +63,11 @@ struct ProfilePage: View {
                                 Spacer()
                                 //Button - Settings
                                 Button{
-                                    showProfileSetting.toggle()
+                                    if uid == "guest" {
+                                        showLoginPage.toggle()
+                                    } else {
+                                        showProfileSetting.toggle()
+                                    }
                                 } label: {
                                     Image(systemName: "gearshape")
                                         .resizable(resizingMode: .stretch)
@@ -168,7 +172,7 @@ struct ProfilePage: View {
                                 //Profile Settings
                                 Button{
                                     if uid == "guest" {
-                                        uid = "hkwdrawoh"
+                                        showLoginPage.toggle()
                                     } else {
                                         uid = "guest"
                                     }
