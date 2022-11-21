@@ -87,8 +87,12 @@ struct ProfilePage: View {
                             
                             ScrollView {
                                 //Profile Pic
-                                Image(img)
-                                    .cornerRadius(8000)
+                                HStack (spacing: 0) {
+                                    Image(img)
+                                        .resizable(resizingMode: .stretch)
+                                        .cornerRadius(8000)
+                                        .frame(width: 180, height: 180)
+                                }
                                 
                                 //Name
                                 Text("\(user.username)")
@@ -140,26 +144,38 @@ struct ProfilePage: View {
                                             .foregroundColor(ColorAux1)
                                         Spacer()
                                     }
-                                    .padding([.top, .leading, .trailing], 5.0)
-                                    Rectangle()
-                                        .frame(height: 1)
-                                        .overlay(.white)
-                                    
-                                    //Profile Settings
-                                    Button{
-                                        showProfileSetting.toggle()
-                                    }label: {
-                                        Text("Profile Settings")
-                                            .font(.title3)
-                                            .foregroundColor(ColorAux1)
-                                        Spacer()
-                                    }
-                                    .padding([.top, .leading, .trailing], 5.0)
+                                    .padding(5)
                                 }
                                 .padding()
                                 .background(ColorMain1)
                                 .cornerRadius(10)
                                 .padding()
+                                
+                                //Profile Settings
+                                Button{
+                                    if uid == "guest" {
+                                        uid = "hkwdrawoh"
+                                    } else {
+                                        uid = "guest"
+                                    }
+                                }label: {
+                                    Spacer()
+                                    if uid == "guest" {
+                                        Text("Log In")
+                                            .font(.title)
+                                            .foregroundColor(ColorAux1)
+                                    } else {
+                                        Text("Sign Out")
+                                            .font(.title)
+                                            .foregroundColor(ColorAux1)
+                                    }
+                                    Spacer()
+                                }
+                                .padding(.vertical, 5)
+                                .background(ColorMain3)
+                                .cornerRadius(10)
+                                .padding(.horizontal)
+                                .padding(.top, -10)
                             }
                             
                             //Banner Img

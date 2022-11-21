@@ -27,8 +27,10 @@ struct ProfileSetting: View {
             ColorMain4.ignoresSafeArea()
             VStack {
                 Image("default")
+                    .resizable(resizingMode: .stretch)
                     .cornerRadius(8000)
-                    .padding(.all, 10.0)
+                    .frame(width: 180, height: 180)
+                    .padding(.bottom, 50)
                 HStack {
                     Text("Username:")
                     TextField("Enter your username", text: $dummyusername)
