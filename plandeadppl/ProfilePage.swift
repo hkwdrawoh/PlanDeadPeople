@@ -19,8 +19,6 @@ struct ProfilePage: View {
     
     var body: some View {
         let user = users[users.firstIndex(where: {$0.uid == uid})!]
-        let timeslots = loadClass()
-        let timeslot = timeslots[timeslots.firstIndex(where: {$0.cid == course.cid})!]
         
         NavigationView {
             ZStack {
@@ -46,23 +44,8 @@ struct ProfilePage: View {
                             WishlistPage(uid: $uid, users: $users, menu: $menu, course: $course)
                         }
                     } else if showProfileSetting {
-                        HStack {
-                            Button{showProfileSetting.toggle()} label: {
-                                Image(systemName: "arrow.uturn.backward")
-                                    .resizable(resizingMode: .stretch)
-                                    .frame(width: 22, height: 22)
-                                    .foregroundColor(ColorAux1)
-                            }
-                            .padding(.horizontal, 12)
-                            .padding(.vertical, 12)
-                            .background(ColorMain3)
-                            .cornerRadius(10)
-                            Spacer()
-                        }
-                        .padding(.horizontal)
-                        .background(ColorMain4)
                         ScrollView {
-                            ProfileSetting(uid: $uid, users: $users, menu: $menu)
+                            ProfileSetting(showProfileSetting: $showProfileSetting, menu: $menu, user: user, user2: user)
                         }
                     } else {
                         VStack {

@@ -161,14 +161,12 @@ func checkWishlist(_ course: Course, _ user: User) -> Bool {
 func addWishlist(_ course: Course, _ user: User) -> () {
     if !user.wishlist.contains(course.cid) {
         user.wishlist.append(course.cid)
-        print(user.wishlist)
     }
 }
 
 // remove course / class from the wishlist
 func removeWishlist (_ course: Course, _ user: User) -> () {
     user.wishlist.removeAll(where: {$0 == course.cid})
-    print(user.wishlist)
 }
 
 // generate timeslot for each timetable

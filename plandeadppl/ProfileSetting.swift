@@ -9,74 +9,102 @@ import SwiftUI
 
 struct ProfileSetting: View {
     
-    @Binding var uid: String
-    @Binding var users: [User]
+    @Binding var showProfileSetting: Bool
     @Binding var menu: String
-    @State var dummyusername = ""
-    @State var username = ""
+    @State var user: User
     @State var dummyUID = ""
-    @State var UID = ""
-    @State var dummydegree = ""
-    @State var degree = ""
+    @State var editProfile = false
+    var user2: User
     
     var body: some View {
         
-        let user = users[users.firstIndex(where: {$0.uid == uid})!]
+        let username = user.username
+//        let uid = ""
+        let degree = user.degree
         
         ZStack {
             ColorMain4.ignoresSafeArea()
             VStack {
-                Image("default")
-                    .resizable(resizingMode: .stretch)
-                    .cornerRadius(8000)
-                    .frame(width: 180, height: 180)
-                    .padding(.bottom, 50)
-                HStack {
-                    Text("Username:")
-                    TextField("Enter your username", text: $dummyusername)
-                }
-                .padding(.horizontal, 10.0)
-                HStack {
-                    Text("UID:")
-                    TextField("Enter your UID", text: $dummyUID)
-                }
-                .padding(.horizontal, 10.0)
-                HStack {
-                    Text("Degree:")
-                    TextField("Enter your degree", text: $dummydegree)
-                }
-                .padding(.horizontal, 10.0)
+                
                 HStack {
                     Button{
-                        dummyusername = ""
-                        dummyUID = ""
-                        dummydegree = ""
+                        if editProfile {
+                            user.username = username
+                            user.degree = degree
+                            editProfile.toggle()
+                        } else {
+                            showProfileSetting.toggle()
+                        }
                     } label: {
-                        HStack {
-                            Spacer()
-                            Text("Clear Changes")
+                        if editProfile {
+                            Text("Cancel")
                                 .foregroundColor(ColorAux1)
-                            Spacer()
+                                .font(.system(size: 18))
+                                .bold()
+                        } else {
+                            Image(systemName: "arrow.uturn.backward")
+                                .resizable(resizingMode: .stretch)
+                                .frame(width: 22, height: 22)
+                                .foregroundColor(ColorAux1)
                         }
                     }
-                    .padding(.vertical, 10.0)
-                    .background(ColorAux3)
-                    
-                    Button{
-                        username = dummyusername
-                        UID = dummyUID
-                        degree = dummydegree
-                        // need update user list function
-                    } label: {
-                        HStack {
-                            Spacer()
-                            Text("Confirm Changes")
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 12)
+                    .background(ColorMain3)
+                    .cornerRadius(10)
+                    Spacer()
+                    Button{editProfile.toggle()} label: {
+                        if editProfile {
+                            Text("Confirm")
                                 .foregroundColor(ColorAux1)
-                            Spacer()
+                                .font(.system(size: 18))
+                                .bold()
+                        } else {
+                            Text("Edit")
+                                .foregroundColor(ColorAux1)
+                                .font(.system(size: 18))
+                                .bold()
                         }
                     }
-                    .padding(.vertical, 10.0)
-                    .background(ColorMain2)
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 12)
+                    .background(ColorMain3)
+                    .cornerRadius(10)
+                }
+                .padding(.horizontal)
+                .background(ColorMain4)
+                
+                ScrollView {
+                    Image("default")
+                        .resizable(resizingMode: .stretch)
+                        .cornerRadius(8000)
+                        .frame(width: 120, height: 120)
+                        .padding(.bottom, 50)
+                    HStack {
+                        Text("Name:")
+                        Spacer()
+                        if editProfile {
+                            TextField("Enter your username", text: $user.username)
+                        } else {
+                            Text(user.username)
+                        }
+                    }
+                    .padding(.horizontal, 10.0)
+                    HStack {
+                        Text("UID:")
+                        TextField("Enter your UID", text: $dummyUID)
+                    }
+                    .padding(.horizontal, 10.0)
+                    HStack {
+                        Text("Degree:")
+                        Spacer()
+                        if editProfile {
+                            TextField("Enter your degree", text: $user.degree)
+                        } else {
+                            Text(user.degree)
+                        }
+                    }
+                    .padding(.horizontal, 10.0)
                 }
             }
         }
@@ -86,7 +114,6 @@ struct ProfileSetting: View {
 struct ProfileSetting_Previews: PreviewProvider {
     static var previews: some View {
         let users = importUser()
-        let courses = loadCourse()
-        ProfileSetting(uid: .constant("guest"), users: .constant(users), menu: .constant(menuselect[4]))
+        ProfileSetting(showProfileSetting: .constant(false), menu: .constant(menuselect[4]), user: users[users.firstIndex(where: {$0.uid == "guest"})!], user2: users[users.firstIndex(where: {$0.uid == "guest"})!])
     }
 }
