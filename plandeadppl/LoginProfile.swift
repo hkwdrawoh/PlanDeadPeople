@@ -62,6 +62,7 @@ struct LoginProfile: View {
                         Spacer()
                         VStack (alignment: .trailing) {
                             TextField("User ID", text: $uid_input)
+                                .keyboardType(.alphabet)
                                 .padding(5)
                                 .border(ColorAux4, width: 2)
                                 .padding(5)
