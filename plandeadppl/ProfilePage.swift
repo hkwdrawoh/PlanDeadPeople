@@ -112,18 +112,36 @@ struct ProfilePage: View {
                                 //VStack Box for content
                                 VStack{
                                     //Credits Taken
+                                    if uid != "guest" {
+                                        HStack{
+                                            Text("Credits Taken")
+                                                .foregroundColor(ColorAux1)
+                                                .font(.title3)
+                                            Spacer()
+                                            Text("\(user.prev_credit)/240 ").foregroundColor(ColorAux1)
+                                                .font(.title3)
+                                        }
+                                        .padding(.all, 5.0)
+                                        Rectangle()
+                                            .frame(height: 1)
+                                            .overlay(.white)
+                                        
+                                    }
+                                    
+                                    //Credits Taken
                                     HStack{
-                                        Text("Credits Taken")
+                                        Text("Credits Taking")
                                             .foregroundColor(ColorAux1)
                                             .font(.title3)
                                         Spacer()
-                                        Text("\(credit)/240 ").foregroundColor(ColorAux1)
+                                        Text("\((user.timetablesem1.count + user.timetablesem2.count + user.timetablesem3.count) * 6)/240 ").foregroundColor(ColorAux1)
                                             .font(.title3)
                                     }
                                     .padding(.all, 5.0)
                                     Rectangle()
                                         .frame(height: 1)
                                         .overlay(.white)
+                                        
                                     
                                     //Course Wishlist Redirect
                                     Button{showWishlist = true} label: {
@@ -133,18 +151,21 @@ struct ProfilePage: View {
                                         Spacer()
                                     }
                                     .padding([.top, .leading, .trailing], 5.0)
-                                    Rectangle()
-                                        .frame(height: 1)
-                                        .overlay(.white)
                                     
-                                    //Timetable history
-                                    Button{}label: {
-                                        Text("Timetable History")
-                                            .font(.title3)
-                                            .foregroundColor(ColorAux1)
-                                        Spacer()
+                                    if uid != "guest" {
+                                        Rectangle()
+                                            .frame(height: 1)
+                                            .overlay(.white)
+                                        
+                                        //Timetable history
+                                        Button{}label: {
+                                            Text("Timetable History")
+                                                .font(.title3)
+                                                .foregroundColor(ColorAux1)
+                                            Spacer()
+                                        }
+                                        .padding(5)
                                     }
-                                    .padding(5)
                                 }
                                 .padding()
                                 .background(ColorMain1)
@@ -172,7 +193,7 @@ struct ProfilePage: View {
                                     Spacer()
                                 }
                                 .padding(.vertical, 5)
-                                .background(ColorMain3)
+                                .background(uid == "guest" ? ColorMain3 : ColorAux3)
                                 .cornerRadius(10)
                                 .padding(.horizontal)
                                 .padding(.top, -10)

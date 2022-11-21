@@ -68,8 +68,9 @@ class User: Identifiable, Codable {
     var timetablesem3: [Int16]
     var wishlist: [Int16]
     var degree: String
+    var prev_credit: Int
     
-    init(_ uid: String, _ username: String, _ password: String, _ timetablesem1: [Int16], _ timetablesem2: [Int16], _ timetablesem3: [Int16], _ wishlist: [Int16], _ degree: String) {
+    init(_ uid: String, _ username: String, _ password: String, _ timetablesem1: [Int16], _ timetablesem2: [Int16], _ timetablesem3: [Int16], _ wishlist: [Int16], _ degree: String, _ prev_credit: Int) {
         self.uid = uid
         self.username = username
         self.password = password
@@ -78,6 +79,7 @@ class User: Identifiable, Codable {
         self.timetablesem3 = timetablesem3
         self.wishlist = wishlist
         self.degree = degree
+        self.prev_credit = prev_credit
     }
 }
 
