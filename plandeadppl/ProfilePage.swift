@@ -16,6 +16,7 @@ struct ProfilePage: View {
     @State var credit = 0
     @State var showWishlist = false
     @State var showProfileSetting = false
+    @State var showLoginPage = false
     
     var body: some View {
         let user = users[users.firstIndex(where: {$0.uid == uid})!]
@@ -24,6 +25,7 @@ struct ProfilePage: View {
             ZStack {
                 ColorMain4.ignoresSafeArea()
                 VStack (spacing: 0) {
+                    // show course wishlist view
                     if showWishlist {
                         HStack {
                             Button{showWishlist.toggle()} label: {
@@ -43,10 +45,18 @@ struct ProfilePage: View {
                         ScrollView {
                             WishlistPage(uid: $uid, users: $users, menu: $menu, course: $course)
                         }
+                    
+                    // show profile settings view
                     } else if showProfileSetting {
                         ScrollView {
                             ProfileSetting(showProfileSetting: $showProfileSetting, menu: $menu, user: user)
                         }
+                        
+                        // show login page view
+                    } else if showLoginPage {
+                        
+                    
+                    // show main profile page view
                     } else {
                         VStack {
                             HStack {
