@@ -45,7 +45,7 @@ struct ProfilePage: View {
                         }
                     } else if showProfileSetting {
                         ScrollView {
-                            ProfileSetting(showProfileSetting: $showProfileSetting, menu: $menu, user: user, user2: user)
+                            ProfileSetting(showProfileSetting: $showProfileSetting, menu: $menu, user: user)
                         }
                     } else {
                         VStack {

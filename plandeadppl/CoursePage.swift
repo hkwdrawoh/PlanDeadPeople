@@ -71,7 +71,7 @@ struct CourseList: View {
                             .font(.system(size: 18))
                             .bold()
                     } else {
-                        Image(systemName: "list.bullet.indent")
+                        Image(systemName: "slider.horizontal.3")
                             .resizable(resizingMode: .stretch)
                             .frame(width: 22, height: 22)
                             .foregroundColor(ColorAux1)

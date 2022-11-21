@@ -12,14 +12,12 @@ struct ProfileSetting: View {
     @Binding var showProfileSetting: Bool
     @Binding var menu: String
     @State var user: User
-    @State var dummyUID = ""
     @State var editProfile = false
-    var user2: User
     
     var body: some View {
         
         let username = user.username
-//        let uid = ""
+        let studentid = user.studentid
         let degree = user.degree
         
         ZStack {
@@ -30,6 +28,7 @@ struct ProfileSetting: View {
                     Button{
                         if editProfile {
                             user.username = username
+                            user.studentid = studentid
                             user.degree = degree
                             editProfile.toggle()
                         } else {
@@ -80,32 +79,51 @@ struct ProfileSetting: View {
                         .cornerRadius(8000)
                         .frame(width: 120, height: 120)
                         .padding(.bottom, 50)
+                    
                     HStack {
-                        Text("Name:")
+                        VStack (alignment: .leading) {
+                            Text("User ID:")
+                                .padding(12)
+                            Text("User Name:")
+                                .padding(12)
+                            Text("Student ID:")
+                                .padding(12)
+                            Text("Degree:")
+                                .padding(12)
+                        }
                         Spacer()
-                        if editProfile {
-                            TextField("Enter your username", text: $user.username)
-                        } else {
-                            Text(user.username)
+                        VStack (alignment: .trailing) {
+                            if editProfile {
+                                Text(user.uid)
+                                    .padding(12)
+                                TextField("Enter your username", text: $user.username)
+                                    .padding(5)
+                                    .border(ColorAux4, width: 2)
+                                    .padding(5)
+                                TextField("Enter your username", text: $user.studentid)
+                                    .padding(5)
+                                    .border(ColorAux4, width: 2)
+                                    .padding(5)
+                                TextField("Enter your username", text: $user.degree)
+                                    .padding(5)
+                                    .border(ColorAux4, width: 2)
+                                    .padding(5)
+                            } else {
+                                Text(user.uid)
+                                    .padding(12)
+                                Text(user.username)
+                                    .padding(12)
+                                Text(user.studentid)
+                                    .padding(12)
+                                Text(user.degree)
+                                    .padding(12)
+                            }
                         }
                     }
-                    .padding(.horizontal, 10.0)
-                    HStack {
-                        Text("UID:")
-                        TextField("Enter your UID", text: $dummyUID)
-                    }
-                    .padding(.horizontal, 10.0)
-                    HStack {
-                        Text("Degree:")
-                        Spacer()
-                        if editProfile {
-                            TextField("Enter your degree", text: $user.degree)
-                        } else {
-                            Text(user.degree)
-                        }
-                    }
-                    .padding(.horizontal, 10.0)
+                    .foregroundColor(ColorAux4)
                 }
+                .font(.title2)
+                .foregroundColor(ColorAux4)
             }
         }
     }
@@ -114,6 +132,6 @@ struct ProfileSetting: View {
 struct ProfileSetting_Previews: PreviewProvider {
     static var previews: some View {
         let users = importUser()
-        ProfileSetting(showProfileSetting: .constant(false), menu: .constant(menuselect[4]), user: users[users.firstIndex(where: {$0.uid == "guest"})!], user2: users[users.firstIndex(where: {$0.uid == "guest"})!])
+        ProfileSetting(showProfileSetting: .constant(false), menu: .constant(menuselect[4]), user: users[users.firstIndex(where: {$0.uid == "hkwdrawoh"})!])
     }
 }
