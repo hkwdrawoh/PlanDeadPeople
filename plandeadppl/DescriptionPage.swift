@@ -11,8 +11,14 @@ import Contacts
 
 struct CourseDescription: View {
     
+    @Binding var uid: String
+    @Binding var users: [User]
     @Binding var menu: String
     @Binding var course: Course
+    @Binding var sem: String
+    @Binding var weekday: String
+    @State var addedTimetable: Bool
+    @State var addedWishlist: Bool
     
     @EnvironmentObject var locationManager: LocationManager
     
@@ -26,14 +32,15 @@ struct CourseDescription: View {
     
     var body: some View {
         
-        var dayname = ["MON", "TUE", "WED", "THUR", "FRI", "SAT"]
-        
+        let user = users[users.firstIndex(where: {$0.uid == uid})!]
         let timeslots = loadClass()
         let timeslot = timeslots[timeslots.firstIndex(where: {$0.cid == course.cid})!]
         
         VStack (spacing: 0) {
+            
             //Top button icon
             HStack {
+                //Button - Back
                 Button{menu = menuselect[2]} label: {
                     Image(systemName: "arrow.uturn.backward")
                         .resizable(resizingMode: .stretch)
@@ -42,18 +49,36 @@ struct CourseDescription: View {
                 }
                     .padding(.horizontal, 12)
                     .padding(.vertical, 12)
-                    .background(ColorMain2)
+                    .background(ColorMain3)
                     .cornerRadius(10)
                 Spacer()
-                Button{} label: {
-                    Image(systemName: "heart")
-                        .resizable(resizingMode: .stretch)
-                        .frame(width: 22, height: 22)
-                        .foregroundColor(ColorAux1)
+                //Button - Add to fav
+                Button{
+                    if addedWishlist {
+                        removeWishlist(course, user)
+                        addedWishlist = false
+                    } else {
+                        addWishlist(course, user)
+                        addedWishlist = true
+                    }
+                } label: {
+                    if addedWishlist{
+                        Image(systemName: "heart.fill")
+                            .resizable(resizingMode: .stretch)
+                            .frame(width: 22, height: 20)
+                            .foregroundColor(ColorAux1)
+                    }
+                    else {
+                        Image(systemName: "heart")
+                            .resizable(resizingMode: .stretch)
+                            .frame(width: 22, height: 20)
+                            .foregroundColor(ColorAux1)
+                    }
+                    
                 }
                 .padding(.horizontal, 12)
-                .padding(.vertical, 12)
-                .background(ColorMain2)
+                .padding(.vertical, 13)
+                .background(ColorMain3)
                 .cornerRadius(10)
             }
             .padding(.horizontal)
@@ -63,13 +88,13 @@ struct CourseDescription: View {
             ScrollView {
                 
                 Text("\(course.csub) \(course.cnum)")
-                    .font(.system(size: 38))
+                    .font(.largeTitle)
                     .foregroundColor(ColorAux4)
                     .bold()
                     .padding(.vertical, -5)
                 
                 Text(course.title)
-                    .font(.system(size: 25))
+                    .font(.title)
                     .foregroundColor(ColorAux4)
                     .bold()
                     .padding(.vertical, -5)
@@ -78,7 +103,7 @@ struct CourseDescription: View {
                 //HStack for Teacher
                 HStack {
                     Text("Teacher: "+course.prof)
-                        .font(.system(size: 20))
+                        .font(.title3)
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)
                         .padding([.top, .leading, .trailing], 10.0)
@@ -86,8 +111,8 @@ struct CourseDescription: View {
                 
                 //Hstack for Location and Button Placement
                 HStack (alignment: .center) {
-                    Text("Location: \(course.loc) \(course.room)")
-                        .font(.system(size: 20))
+                    Text("Location: \(course.loc)\(course.room)")
+                        .font(.title3)
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)
                         .padding([.top, .leading, .trailing], 10)
@@ -116,13 +141,14 @@ struct CourseDescription: View {
                     }
                     .padding(.horizontal, 8)
                     .padding(.vertical, 8)
-                    .background(ColorMain2)
+                    .background(ColorMain3)
                     .cornerRadius(10)
                     Spacer()}
                 
+                //HStack for class timeslot
                 HStack {
-                    Text("Time: \(dayname[timeslots.firstIndex(where: {$0.cid == course.cid})!]) \(timeslot.cstart):30-\(timeslot.cend):20")
-                        .font(.system(size: 20))
+                    Text("Time: (Sem \(course.sem)) \(dayname[Int(timeslot.cdate)!-1]) \(timeslot.cstart):30-\(timeslot.cend):20")
+                        .font(.title3)
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)
                         .padding([.top, .leading, .trailing], 10.0)
@@ -132,7 +158,7 @@ struct CourseDescription: View {
                 //HStack for course desc header
                 HStack {
                     Text("Description: ")
-                        .font(.system(size: 20))
+                        .font(.title3)
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)
                         .padding([.top, .leading, .trailing], 10.0)
@@ -141,7 +167,7 @@ struct CourseDescription: View {
                 //HStack for course desc_full
                 HStack {
                     Text(course.desc)
-                        .font(.system(size: 20))
+                        .font(.title3)
                         .foregroundColor(ColorAux4)
                         .multilineTextAlignment(.leading)
                         .padding(.horizontal, 10.0)
@@ -151,18 +177,33 @@ struct CourseDescription: View {
             }
             .background(ColorMain4)
             
-            //Add to Planner Button (Pending Action TBC)
-            Button{} label: {
+            //Add to Timetable Button
+            Button{
+                if addedTimetable {
+                    sem = course.sem
+                    weekday = timeslot.cdate
+                    menu = menuselect[1]
+                } else {
+                    addClassTimetable(course, user)
+                    addedTimetable = checkClassinTimetable(course, user)
+                }
+            } label: {
                 HStack{
                     Spacer()
-                    Text("Add to Planner")
-                        .font(.title2)
-                        .foregroundColor(ColorAux1)
-                        .multilineTextAlignment(.center)
-                        .padding()
+                    if addedTimetable {
+                        Text("Added - View Timetable")
+                            .font(.title)
+                            .foregroundColor(ColorAux1)
+                            .padding(10)
+                    } else {
+                        Text("Add to Timetable")
+                            .font(.title)
+                            .foregroundColor(ColorAux1)
+                            .padding(10)
+                    }
                     Spacer()
                 }
-            }.background(ColorMain2)
+            }.background(ColorMain3)
         }
     }
     
@@ -187,7 +228,8 @@ struct CourseDescription: View {
 
 struct CourseDescription_Preview: PreviewProvider {
     static var previews: some View {
+        let users = importUser()
         let courses = loadCourse()
-        CourseDescription(menu: .constant(menuselect[3]), course: .constant(courses[0]))
+        CourseDescription(uid: .constant("guest"), users: .constant(users), menu: .constant(menuselect[3]), course: .constant(courses[0]), sem: .constant("1"), weekday: .constant("1"), addedTimetable: false, addedWishlist: false)
     }
 }

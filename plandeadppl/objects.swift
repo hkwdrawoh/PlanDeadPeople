@@ -20,12 +20,18 @@ let ColorAux1 = Color(UIColor(red: 1, green: 1, blue: 1, alpha: 1))             
 let ColorAux2 = Color(UIColor(red: 0, green: 0, blue: 0, alpha: 1))                         //black
 let ColorAux3 = Color(UIColor(red: 1, green: 0, blue: 0, alpha: 1))                         //red
 let ColorAux4 = Color(UIColor(red: 13/255, green: 47/255, blue: 48/255, alpha: 1))          //dark green
+let ColorAux5 = Color(UIColor(red: 194/255, green: 208/255, blue: 210/255, alpha: 1))       //grey
 
-// Time division
+// Day Time division
+let dayname = ["MON", "TUE", "WED", "THUR", "FRI", "SAT"]
 let timediv = ["08:30", "09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "15:30", "16:30", "17:30", "18:30", "19:30", "20:30", "21:30"]
 
 // Menu selection
 let menuselect = ["Welcome", "CourseList", "CourseDetail", "Timetable", "Personal"]
+
+// Default sorting and filtering array
+let sort_default = [false, false]
+let filter_default = [false, true, true, true, true, true, true, true]
 
 // Building locations enum
 enum Buildings: CaseIterable {
@@ -52,6 +58,34 @@ enum Buildings: CaseIterable {
     }
 }
 
+// User: provide user stores details
+class User: Identifiable {
+    var uid: String
+    var username: String
+    var password: String
+    var studentid: String
+    var timetablesem1: [Int16]
+    var timetablesem2: [Int16]
+    var timetablesem3: [Int16]
+    var wishlist: [Int16]
+    var degree: String
+    var prev_credit: Int
+    var picture: Image
+    
+    init(_ uid: String, _ username: String, _ password: String, _ studentid: String, _ timetablesem1: [Int16], _ timetablesem2: [Int16], _ timetablesem3: [Int16], _ wishlist: [Int16], _ degree: String, _ prev_credit: Int, _ picture: Image) {
+        self.uid = uid
+        self.username = username
+        self.password = password
+        self.studentid = studentid
+        self.timetablesem1 = timetablesem1
+        self.timetablesem2 = timetablesem2
+        self.timetablesem3 = timetablesem3
+        self.wishlist = wishlist
+        self.degree = degree
+        self.prev_credit = prev_credit
+        self.picture = picture
+    }
+}
 
 // Course: provide course details
 class Course: Identifiable, Codable {

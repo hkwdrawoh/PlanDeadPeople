@@ -14,13 +14,16 @@ struct HomePage: View {
             ColorMain4.ignoresSafeArea()
             VStack {
                 Text("Timetable Planner")
-                    .font(.system(size: 35))
+                    .font(.largeTitle)
                     .foregroundColor(ColorAux4)
                     .bold()
+                    .padding(.horizontal)
                 Text("Let's Survive This Year!")
-                    .font(.system(size: 35))
+                    .font(.largeTitle)
                     .foregroundColor(ColorAux4)
                     .bold()
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
                 Button(action: {
                     if let yourURL = URL(string: "https://elink.eee.hku.hk/eeelife.html") {
                             UIApplication.shared.open(yourURL, options: [:], completionHandler: nil)

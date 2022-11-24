@@ -16,11 +16,11 @@ struct CourseRow: View {
                 Spacer()
                     .frame(width: 3)
                 Text(course.csub + " " + course.cnum)
-                    .font(.system(size: 20))
+                    .font(.title3)
                     .frame(width: 115)
                     .multilineTextAlignment(.leading)
                 Text(course.title)
-                    .font(.system(size: 18))
+                    .font(.headline)
                     .multilineTextAlignment(.leading)
                 Spacer()
             }
