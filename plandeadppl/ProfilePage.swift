@@ -16,6 +16,7 @@ struct ProfilePage: View {
     @State var showWishlist = false
     @State var showProfileSetting = false
     @State var showLoginPage = false
+    @State var showHistory = false
     
     var body: some View {
         let user = users[users.firstIndex(where: {$0.uid == uid})!]
@@ -49,9 +50,13 @@ struct ProfilePage: View {
                     } else if showProfileSetting {
                         ProfileSetting(showProfileSetting: $showProfileSetting, menu: $menu, user: user)
                         
-                        // show login page view
+                    // show login page view
                     } else if showLoginPage {
                         LoginProfile(uid: $uid, users: $users, showLoginPage: $showLoginPage)
+                        
+                    // show timetable history page view
+                    } else if showHistory {
+                        HistoryList(uid: $uid, users: $users, menu: $menu, course_desc: $course, showHistory: $showHistory)
                     
                     // show main profile page view
                     } else {
@@ -156,7 +161,7 @@ struct ProfilePage: View {
                                             .overlay(.white)
                                         
                                         //Timetable history
-                                        Button{}label: {
+                                        Button{showHistory = true}label: {
                                             Text("Timetable History")
                                                 .font(.title3)
                                                 .foregroundColor(ColorAux1)
@@ -216,7 +221,7 @@ struct ProfilePage_Previews: PreviewProvider {
     static var previews: some View {
         let users = importUser()
         let courses = loadCourse()
-        ProfilePage(uid: .constant("guest"), users: .constant(users), menu: .constant(menuselect[4]), course: .constant(courses[0]))
+        ProfilePage(uid: .constant("hkwdrawoh"), users: .constant(users), menu: .constant(menuselect[4]), course: .constant(courses[0]))
     }
 }
 

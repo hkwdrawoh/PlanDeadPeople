@@ -24,6 +24,7 @@
 		C59E27F22925E3D900C4742F /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E27F12925E3D900C4742F /* MainMenu.swift */; };
 		C5DEDD2F292B766F00AEE7F2 /* LoginProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DEDD2E292B766F00AEE7F2 /* LoginProfile.swift */; };
 		C5DEDD31292BB37A00AEE7F2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DEDD30292BB37A00AEE7F2 /* ImagePicker.swift */; };
+		C5DEDD33292F06F500AEE7F2 /* HistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DEDD32292F06F500AEE7F2 /* HistoryList.swift */; };
 		C5F5B64E291951BC00EE0BC5 /* plandeadpplApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5B64D291951BC00EE0BC5 /* plandeadpplApp.swift */; };
 		C5F5B650291951BC00EE0BC5 /* CoursePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5B64F291951BC00EE0BC5 /* CoursePage.swift */; };
 		C5F5B652291951C200EE0BC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F5B651291951C200EE0BC5 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		C59E27F12925E3D900C4742F /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		C5DEDD2E292B766F00AEE7F2 /* LoginProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProfile.swift; sourceTree = "<group>"; };
 		C5DEDD30292BB37A00AEE7F2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C5DEDD32292F06F500AEE7F2 /* HistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryList.swift; sourceTree = "<group>"; };
 		C5F5B64A291951BC00EE0BC5 /* plandeadppl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plandeadppl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F5B64D291951BC00EE0BC5 /* plandeadpplApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plandeadpplApp.swift; sourceTree = "<group>"; };
 		C5F5B64F291951BC00EE0BC5 /* CoursePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePage.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				C5F5B684291A5A3F00EE0BC5 /* CourseRow.swift */,
 				37F28C09292A837C00A1EFA6 /* ProfileSetting.swift */,
 				C5DEDD2E292B766F00AEE7F2 /* LoginProfile.swift */,
+				C5DEDD32292F06F500AEE7F2 /* HistoryList.swift */,
 				C57990A529276A5D00453E9C /* CourseFilter.swift */,
 				37F28C07292A3AD600A1EFA6 /* WishlistPage.swift */,
 				C59E27ED2925CD5400C4742F /* HeaderButtons.swift */,
@@ -334,6 +337,7 @@
 				C5F5B650291951BC00EE0BC5 /* CoursePage.swift in Sources */,
 				AC33CB012929EAD70074FBBF /* ProfilePage.swift in Sources */,
 				C5F5B67F291A38EA00EE0BC5 /* objects.swift in Sources */,
+				C5DEDD33292F06F500AEE7F2 /* HistoryList.swift in Sources */,
 				C5F5B64E291951BC00EE0BC5 /* plandeadpplApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
