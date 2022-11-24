@@ -31,7 +31,9 @@ let menuselect = ["Welcome", "CourseList", "CourseDetail", "Timetable", "Persona
 
 // Default sorting and filtering array
 let sort_default = [false, false]
+//sort[0]: False: Code | True: Title  sort[1]: False:Ascending | True:Descending
 let filter_default = [false, true, true, true, true, true, true, true]
+// filter[0]: False: Wishlist Off | filter[1]:ELEC| filter[2]:ENGG | filter[3]:Lvl 1 .........
 
 // Building locations enum
 enum Buildings: CaseIterable {

@@ -51,7 +51,7 @@ struct LoginProfile: View {
                         .padding(.vertical, -5)
                         .multilineTextAlignment(.center)
                     
-                    //VStack Box for content
+                    //HStack Box
                     HStack (alignment: .top) {
                         VStack (alignment: .leading) {
                             Text("User ID:")
@@ -60,6 +60,7 @@ struct LoginProfile: View {
                                 .padding(12)
                         }
                         Spacer()
+                        //User Input TextField
                         VStack (alignment: .trailing) {
                             TextField("User ID", text: $uid_input)
                                 .keyboardType(.alphabet)

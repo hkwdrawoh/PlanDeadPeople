@@ -27,7 +27,7 @@ struct ProfileSetting: View {
         ZStack {
             ColorMain4.ignoresSafeArea()
             VStack {
-                
+                //Top Button - Cancel <-> Back
                 HStack {
                     Button{
                         if editProfile {
@@ -63,6 +63,8 @@ struct ProfileSetting: View {
                             .bold()
                     }
                     Spacer()
+                    
+                    //Top Button - Edit
                     Button{
                         editProfile.toggle()
                         imagestatus = "0"
@@ -88,7 +90,7 @@ struct ProfileSetting: View {
                 .background(ColorMain4)
                 
                 ScrollView {
-                    // image
+                    // Profile Image
                     user.picture
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -98,10 +100,11 @@ struct ProfileSetting: View {
                         .cornerRadius(8000)
                         .padding(.bottom, 10)
                     
-                    // remove / change image
+                    // Remove / Change image
                     HStack (spacing: 0) {
                         if editProfile {
                             Spacer()
+                            //Remove Photo Button
                             Button(action: {
                                 imagestatus = "1"
                                 user.picture = Image("default")
@@ -115,6 +118,7 @@ struct ProfileSetting: View {
                                     .cornerRadius(10)
                             })
                             Spacer()
+                            // Change Photo Button
                             Button(action: {
                                 image = nil
                                 selectedImageSource = .photoLibrary
@@ -145,7 +149,7 @@ struct ProfileSetting: View {
                     }
                     .padding(.bottom, 20)
                     
-                    // personal info
+                    // Personal info
                     HStack (alignment: .top) {
                         VStack (alignment: .leading) {
                             Text("User ID:")
@@ -210,7 +214,7 @@ struct ProfileSetting: View {
                 .foregroundColor(ColorAux4)
             }
         }
-        // image picker from library
+        // Image Picker from Library
         .sheet(isPresented: $showImagePicker, onDismiss: {
             user.picture = (image == nil) ? user.picture : Image(uiImage: image!)
             imagestatus = (image == nil) ? "-1" : "2"
