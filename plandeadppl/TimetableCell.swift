@@ -53,11 +53,12 @@ struct EachCell: View {
         let courses = loadCourse()
         let course = courses[courses.firstIndex(where: {$0.cid == timeslot.cid})!]
         let maxHeight = CGFloat(78*(timeslot.cend - timeslot.cstart))-3
+        
         HStack {
             Spacer()
                 .frame(width: 65)
             
-            // left separation
+            // left separation between concurrent cells
             ForEach(1..<div_num) { _ in
                 Spacer()
                     .frame(maxWidth: .infinity)
@@ -65,14 +66,16 @@ struct EachCell: View {
                     .frame(width: 3)
             }
             
-            // actual cell
+            // Redirect to course description when tap on cell
             Button(action: {
                 if !editTimeslot {
                     course_desc = course
                     menu = menuselect[3]
                 }
             }) {
+                //ZStack the layout of the cell
                 ZStack {
+                    //Text in cell
                     VStack (alignment: .leading) {
                         Text("\(course.csub) \(course.cnum)\n\(course.loc)\(course.room)")
                             .bold()
@@ -106,9 +109,11 @@ struct EachCell: View {
                             Spacer()
                             Button(action: {
                                 if deleted {
+                                    // Retains unselected course
                                     addClassTimetable(course, users[users.firstIndex(where: {$0.uid == uid})!])
                                     deleted.toggle()
                                 } else {
+                                    // Delete selected course
                                     removeClassTimetable(course, users[users.firstIndex(where: {$0.uid == uid})!])
                                     deleted.toggle()
                                 }
@@ -150,7 +155,7 @@ struct EachCell: View {
                 .multilineTextAlignment(.leading)
             }
             
-            // right separation
+            // right separation between concurrent cells
             ForEach(0..<(div_total - div_num)) { _ in
                 Spacer()
                     .frame(width: 3)
