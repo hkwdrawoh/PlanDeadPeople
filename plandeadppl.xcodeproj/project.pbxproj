@@ -497,10 +497,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"plandeadppl/Preview Content\"";
-				DEVELOPMENT_TEAM = G89M5PUH7X;
+				DEVELOPMENT_TEAM = 4GKFC9G2UL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to camera";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires access to location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires access to location";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -528,10 +530,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"plandeadppl/Preview Content\"";
-				DEVELOPMENT_TEAM = G89M5PUH7X;
+				DEVELOPMENT_TEAM = 4GKFC9G2UL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to camera";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires access to location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires access to location";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
